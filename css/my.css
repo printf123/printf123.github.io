@@ -8,6 +8,7 @@
     position: relative;
     margin: 0 3px !important;
     padding: 0;
+    font-family: "微软雅黑","黑体","宋体";
 }
 .github-emoji:hover{
     animation: emoji-face 5s infinite ease-in-out;
