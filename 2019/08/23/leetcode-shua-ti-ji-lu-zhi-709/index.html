@@ -4,9 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之237, 锦瑟博客">
-    <meta name="description" content="237、删除链表中的节点请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。现有一个链表 – head = [4,5,1,9]，它可以表示为:示例 1:
-输入: head = [4,5,1,9], no">
+    <meta name="keywords" content="leetcode刷题记录之709, 锦瑟博客">
+    <meta name="description" content="709、转换成小写字母&amp;emsp;&amp;emsp;实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。示例 1:
+输入: &amp;quot;Hello&amp;quot;
+输出:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之237 | 锦瑟博客</title>
+    <title>leetcode刷题记录之709 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +262,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之237
+                        leetcode刷题记录之709
                     </div>
                 </div>
             </div>
@@ -409,7 +410,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        611
+                        538
                     </div>
                     
 
@@ -432,92 +433,54 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="237、删除链表中的节点"><a href="#237、删除链表中的节点" class="headerlink" title="237、删除链表中的节点"></a>237、删除链表中的节点</h3><p>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。<br>现有一个链表 – head = [4,5,1,9]，它可以表示为:<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hc3NldHMubGVldGNvZGUtY24uY29tL2FsaXl1bi1sYy11cGxvYWQvdXBsb2Fkcy8yMDE5LzAxLzE5LzIzN19leGFtcGxlLnBuZw?x-oss-process=image/format,png" alt><br><strong>示例 1:</strong></p>
-<pre><code>输入: head = [4,5,1,9], node = 5
-输出: [4,1,9]
-解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.
-</code></pre><p><strong>示例 2:</strong></p>
-<pre><code>输入: head = [4,5,1,9], node = 1
-输出: [4,5,9]
-解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9.
-</code></pre><p><strong>说明:</strong></p>
-<ul>
-<li>链表至少包含两个节点。</li>
-<li>链表中所有节点的值都是唯一的。</li>
-<li>给定的节点为非末尾节点并且一定是链表中的一个有效节点。</li>
-<li>不要从你的函数中返回任何结果。</li>
-</ul>
-<p>难度：简单&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/delete-node-in-a-linked-list/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */</span>
-<span class="token keyword">void</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span><span class="token keyword">struct</span> ListNode<span class="token operator">*</span> node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        node<span class="token operator">-></span>val <span class="token operator">=</span> node<span class="token operator">-></span>next<span class="token operator">-></span>val<span class="token punctuation">;</span>
-        node<span class="token operator">-></span>next <span class="token operator">=</span> node<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
+                <h3 id="709、转换成小写字母"><a href="#709、转换成小写字母" class="headerlink" title="709、转换成小写字母"></a>709、转换成小写字母</h3><p>&emsp;&emsp;实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。<br><strong>示例 1:</strong></p>
+<pre><code>输入: &quot;Hello&quot;
+输出: &quot;hello&quot;
+</code></pre><p> <strong>示例 2:</strong></p>
+<pre><code>输入: &quot;here&quot;
+输出: &quot;here&quot;
+</code></pre><p> <strong>示例三：</strong></p>
+<pre><code>输入: &quot;LOVELY&quot;
+输出: &quot;lovely&quot;
+</code></pre><p>难度：简单 &emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/to-lower-case/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/to-lower-case/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"> <span class="token keyword">char</span> <span class="token operator">*</span> <span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> <span class="token string">'A'</span> <span class="token operator">&amp;&amp;</span> str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token string">'Z'</span><span class="token punctuation">)</span>
+            str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">32</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> str<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span>ListNode node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
-         node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+<p><strong>解释：</strong> 遍历字符串数组str，如果存在大写字符就转换成小写字符，并且返回。</p>
+<p><strong>知识点回顾：</strong> ASCII 码小写字母比大写字母大32。</p>
+<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> String <span class="token function">toLowerCase</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span>
-<span class="token comment" spellcheck="true"># class ListNode:</span>
-<span class="token comment" spellcheck="true">#     def __init__(self, x):</span>
-<span class="token comment" spellcheck="true">#         self.val = x</span>
-<span class="token comment" spellcheck="true">#         self.next = None</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
-        """</span>
-        node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val
-        node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next
+<p><strong>解释：</strong> 直接将str中全部大写字母转化成小写的。</p>
+<p><strong>知识点回顾：</strong><br>1、toLowerCase() 方法用于将大写字符转换为小写。<br>2、toUpperCase() 方法将字符串从小写转为大写。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">toLowerCase</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> str<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> str<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
+<p><strong>解释：</strong> 直接将str中全部大写字母转化成小写的。</p>
+<p><strong>知识点回顾：</strong><br>1、upper()：把所有字符中的小写字母转换成大写字母。<br>2、lower()：把所有字符中的大写字母转换成小写字母。<br>3、capitalize()：把第一个字母转化为大写字母，其余小写。<br>4、title()：把每个单词的第一个字母转化为大写，其余小写 。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
+ * @param {string} str
+ * @return {string}
  */</span>
-<span class="token comment" spellcheck="true">/**
- * @param {ListNode} node
- * @return {void} Do not return anything, modify node in-place instead.
- */</span>
-<span class="token keyword">var</span> deleteNode <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
-     node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>    
+<span class="token keyword">var</span> toLowerCase <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
+<p><strong>解释：</strong> 直接将str中全部大写字母转化成小写的。</p>
+<p><strong>知识点回顾：</strong><br>1、toLocaleUpperCase：将字符串中所有的字母字符都将被转换为大写的，同时适应宿主环境的当前区域设置。<br>2、toUpperCase：将字符串中的所有字母都被转化为大写字母。<br>3、toLocaleLowerCase：将字符串所有的字母字符都被转换为小写，同时考虑到宿主环境的当前区域设置。<br>4、toLowerCase：将字符串中的字母被转换为小写字母。</p>
 
             </div>
             <hr/>
@@ -676,9 +639,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之237》
+                    《leetcode刷题记录之709》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-237/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-709/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -977,9 +940,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-709/">
                     <div class="card-image">
@@ -999,9 +963,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1014,6 +978,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1032,20 +997,20 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-1108/">
+                <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-237/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode刷题记录之1108">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="leetcode刷题记录之237">
                         
-                        <span class="card-title">leetcode刷题记录之1108</span>
+                        <span class="card-title">leetcode刷题记录之237</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1108、IP 地址无效化给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。所谓无效化 IP 地址，其实就是用 “[.]” 代替了每个 “.”。示例 1:
-输入：address = &quot;1.1.1.1
+                            237、删除链表中的节点请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。现有一个链表 – head = [4,5,1,9]，它可以表示为:示例 1:
+输入: head = [4,5,1,9], no
                         
                     </div>
                     <div class="publish-info">
