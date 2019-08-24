@@ -435,7 +435,7 @@
 <pre><code>给定 nums = [2, 7, 11, 15], target = 9
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
-</code></pre><p>难度：简单&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></p>
+</code></pre><p>难度：简单&emsp;&emsp;;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></p>
 <h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
  * Note: The returned array must be malloced, assume caller calls free().
  */</span>
@@ -454,10 +454,9 @@
     <span class="token punctuation">}</span>    
     <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p><strong>解释：</strong> 暴力解法，双重循环，当有2个数的和为target时，返回，否则返回NULL。</p>
-<p><strong>知识点回顾：</strong><br>1、在我们日常使用过程中，static通常有两个作用：</p>
+<p><strong>知识点回顾：</strong><br>1、在我们日常使用过程中，static通常有两个作用:</p>
 <ul>
 <li>修饰变量<br>&emsp;&emsp;静态全局变量：全局变量前加static修饰，该变量就成为了静态全局变量。我们知道，全部变量在整个工程都可以被访问（一个文件中定义，其它文件使用的时候添加extern关键字声明 ），而在添加了static关键字之后，这个变量就只能在本文件内被访问了。因此，在这里，static的作用就是限定作用域。<br>&emsp;&emsp;静态局部变量：局不变量添加了static修饰之后，该变量就成为了静态局部变量。我们知道局部变量在离开了被定义的函数后，就会被销毁，而当使用static修饰之后，它的作用域就一直到整个程序结束。因此，在这里static的作用就是限定生命周期。</li>
 <li>修饰函数<br>&emsp;&emsp;修饰函数则该函数成为静态函数，函数的作用域仅限于本文件，而不能被其它文件调用。</li>
@@ -474,7 +473,6 @@
         <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"No two sum solution"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p><strong>解释：</strong> </p>
 <ul>
@@ -496,7 +494,6 @@
                 <span class="token keyword">return</span> <span class="token punctuation">[</span>hashmap<span class="token punctuation">[</span>result<span class="token punctuation">]</span><span class="token punctuation">,</span> index<span class="token punctuation">]</span>
             hashmap<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> index
         <span class="token keyword">return</span> None
-
 </code></pre>
 <p><strong>解释：</strong> 类似于Java求解的思路。</p>
 <p><strong>知识点回顾：</strong><br>1、enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。<br>语法：enumerate(sequence, [start=0])<br>sequence：一个序列、迭代器或其他支持迭代对象。<br>start：下标起始位置。<br>返回值：返回 enumerate(枚举) 对象。</p>
@@ -514,7 +511,6 @@
        map<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p><strong>解释：</strong> 类似于Java的求解思路。</p>
 <p><strong>知识点回顾：</strong> 哈希表的相关内容，将在数据结构篇中单独描述。</p>
