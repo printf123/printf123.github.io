@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之237, 锦瑟博客">
-    <meta name="description" content="237、删除链表中的节点请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。现有一个链表 – head = [4,5,1,9]，它可以表示为:示例 1:
-输入: head = [4,5,1,9], no">
+    <meta name="keywords" content="leetcode刷题记录之1, 锦瑟博客">
+    <meta name="description" content="1、两数之和&amp;emsp;&amp;emsp;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&amp;emsp;&amp;emsp;你可以假设每种输入只会对应一个答案。但是，你不能重复利用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之237 | 锦瑟博客</title>
+    <title>leetcode刷题记录之1 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之237
+                        leetcode刷题记录之1
                     </div>
                 </div>
             </div>
@@ -402,21 +401,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-23
+                    2019-08-24
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        623
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        4 分
                     </div>
                     
                 
@@ -432,88 +431,93 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="237、删除链表中的节点"><a href="#237、删除链表中的节点" class="headerlink" title="237、删除链表中的节点"></a>237、删除链表中的节点</h3><p>请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。<br>现有一个链表 – head = [4,5,1,9]，它可以表示为:<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hc3NldHMubGVldGNvZGUtY24uY29tL2FsaXl1bi1sYy11cGxvYWQvdXBsb2Fkcy8yMDE5LzAxLzE5LzIzN19leGFtcGxlLnBuZw?x-oss-process=image/format,png" alt><br><strong>示例 1:</strong></p>
-<pre><code>输入: head = [4,5,1,9], node = 5
-输出: [4,1,9]
-解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 1 -&gt; 9.
-</code></pre><p><strong>示例 2:</strong></p>
-<pre><code>输入: head = [4,5,1,9], node = 1
-输出: [4,5,9]
-解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -&gt; 5 -&gt; 9.
-</code></pre><p><strong>说明:</strong></p>
-<ul>
-<li>链表至少包含两个节点。</li>
-<li>链表中所有节点的值都是唯一的。</li>
-<li>给定的节点为非末尾节点并且一定是链表中的一个有效节点。</li>
-<li>不要从你的函数中返回任何结果。</li>
-</ul>
-<p>难度：简单&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/delete-node-in-a-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/delete-node-in-a-linked-list/</a></p>
+                <h3 id="1、两数之和"><a href="#1、两数之和" class="headerlink" title="1、两数之和"></a>1、两数之和</h3><p>&emsp;&emsp;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>&emsp;&emsp;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br><strong>示例一：</strong></p>
+<pre><code>给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+</code></pre><p>难度：简单&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></p>
 <h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
+ * Note: The returned array must be malloced, assume caller calls free().
  */</span>
-<span class="token keyword">void</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span><span class="token keyword">struct</span> ListNode<span class="token operator">*</span> node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        node<span class="token operator">-></span>val <span class="token operator">=</span> node<span class="token operator">-></span>next<span class="token operator">-></span>val<span class="token punctuation">;</span>
-        node<span class="token operator">-></span>next <span class="token operator">=</span> node<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
+<span class="token keyword">int</span><span class="token operator">*</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token operator">*</span> returnSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token operator">*</span>returnSize <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+                a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
+                <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>    
+    <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
+
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span>ListNode node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
-         node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+<p><strong>解释：</strong> 暴力解法，双重循环，当有2个数的和为target时，返回，否则返回NULL。</p>
+<p><strong>知识点回顾：</strong><br>1、在我们日常使用过程中，static通常有两个作用：</p>
+<ul>
+<li>修饰变量<br>&emsp;&emsp;静态全局变量：全局变量前加static修饰，该变量就成为了静态全局变量。我们知道，全部变量在整个工程都可以被访问（一个文件中定义，其它文件使用的时候添加extern关键字声明 ），而在添加了static关键字之后，这个变量就只能在本文件内被访问了。因此，在这里，static的作用就是限定作用域。<br>&emsp;&emsp;静态局部变量：局不变量添加了static修饰之后，该变量就成为了静态局部变量。我们知道局部变量在离开了被定义的函数后，就会被销毁，而当使用static修饰之后，它的作用域就一直到整个程序结束。因此，在这里static的作用就是限定生命周期。</li>
+<li>修饰函数<br>&emsp;&emsp;修饰函数则该函数成为静态函数，函数的作用域仅限于本文件，而不能被其它文件调用。</li>
+</ul>
+<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>target<span class="token operator">-</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>i<span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"No two sum solution"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span>
-<span class="token comment" spellcheck="true"># class ListNode:</span>
-<span class="token comment" spellcheck="true">#     def __init__(self, x):</span>
-<span class="token comment" spellcheck="true">#         self.val = x</span>
-<span class="token comment" spellcheck="true">#         self.next = None</span>
 
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">deleteNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        :type node: ListNode
-        :rtype: void Do not return anything, modify node in-place instead.
-        """</span>
-        node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val
-        node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
+<p><strong>解释：</strong> </p>
+<ul>
+<li>标签：哈希映射</li>
+<li>这道题本身如果通过暴力遍历的话也是很容易解决的，时间复杂度在 O(n2)</li>
+<li>由于哈希查找的时间复杂度为 O(1)，所以可以利用哈希容器 map 降低时间复杂度</li>
+<li>遍历数组 nums，i 为当前下标，每个值都判断map中是否存在 target-nums[i] 的 key 值</li>
+<li>如果存在则找到了两个值，如果不存在则将当前的 (nums[i],i) 存入 map 中，继续遍历直到找到为止</li>
+<li>如果最终都没有结果则抛出异常</li>
+<li>时间复杂度：O(n)</li>
+</ul>
+<p><strong>知识点回顾：</strong><br>1、 containsKey()方法用于检查特定键是否被映射到HashMap。它将key元素作为参数，如果该元素在map中映射，则返回True。<br>语法：Hash_Map.containsKey（key_element）<br>参数：该方法只接受一个参数key_element，该参数引用应在map内检查其映射的键。<br>返回值：如果检测到密钥的存在，则该方法返回布尔值true，否则返回false。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        hashmap <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token keyword">for</span> index<span class="token punctuation">,</span> num <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            result <span class="token operator">=</span> target <span class="token operator">-</span> num
+            <span class="token keyword">if</span> result <span class="token keyword">in</span> hashmap<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token punctuation">[</span>hashmap<span class="token punctuation">[</span>result<span class="token punctuation">]</span><span class="token punctuation">,</span> index<span class="token punctuation">]</span>
+            hashmap<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> index
+        <span class="token keyword">return</span> None
+
+</code></pre>
+<p><strong>解释：</strong> 类似于Java求解的思路。</p>
+<p><strong>知识点回顾：</strong><br>1、enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。<br>语法：enumerate(sequence, [start=0])<br>sequence：一个序列、迭代器或其他支持迭代对象。<br>start：下标起始位置。<br>返回值：返回 enumerate(枚举) 对象。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
  */</span>
-<span class="token comment" spellcheck="true">/**
- * @param {ListNode} node
- * @return {void} Do not return anything, modify node in-place instead.
- */</span>
-<span class="token keyword">var</span> deleteNode <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>val<span class="token punctuation">;</span>
-     node<span class="token punctuation">.</span>next <span class="token operator">=</span> node<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>    
+<span class="token keyword">var</span> twoSum <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        
+        <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">[</span>map<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span>
+           <span class="token punctuation">}</span>
+       map<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
 </code></pre>
-<p><strong>解释：</strong> node下一个结点的值赋值给node，并且node下一个节点的指针域赋值给node1的指针域。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识，将在数据结构篇中单独描述。</p>
+<p><strong>解释：</strong> 类似于Java的求解思路。</p>
+<p><strong>知识点回顾：</strong> 哈希表的相关内容，将在数据结构篇中单独描述。</p>
 
             </div>
             <hr/>
@@ -672,9 +676,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之237》
+                    《leetcode刷题记录之1》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-237/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/24/leetcode-shua-ti-ji-lu-zhi-1/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -973,31 +977,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-709/">
+                <a href="/2019/08/24/leetcode-shua-ti-ji-lu-zhi-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之709">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="leetcode刷题记录之1">
                         
-                        <span class="card-title">leetcode刷题记录之709</span>
+                        <span class="card-title">leetcode刷题记录之1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            709、转换成小写字母&emsp;&emsp;实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。示例 1:
-输入: &quot;Hello&quot;
-输出:
+                            1、两数之和&emsp;&emsp;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&emsp;&emsp;你可以假设每种输入只会对应一个答案。但是，你不能重复利用
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1010,6 +1013,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1028,20 +1032,21 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-1108/">
+                <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-709/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode刷题记录之1108">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之709">
                         
-                        <span class="card-title">leetcode刷题记录之1108</span>
+                        <span class="card-title">leetcode刷题记录之709</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1108、IP 地址无效化给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。所谓无效化 IP 地址，其实就是用 “[.]” 代替了每个 “.”。示例 1:
-输入：address = &quot;1.1.1.1
+                            709、转换成小写字母&emsp;&emsp;实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。示例 1:
+输入: &quot;Hello&quot;
+输出:
                         
                     </div>
                     <div class="publish-info">
