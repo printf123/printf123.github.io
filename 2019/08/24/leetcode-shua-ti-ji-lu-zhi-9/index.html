@@ -5,7 +5,13 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="leetcode刷题记录之1, 锦瑟博客">
-    <meta name="description" content="1、两数之和&amp;emsp;&amp;emsp;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。&amp;emsp;&amp;emsp;你可以假设每种输入只会对应一个答案。但是，你不能重复利用">
+    <meta name="description" content="9、回文数&amp;emsp;&amp;emsp;判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。示例 1：
+输入: 121
+输出: true
+示例 2：
+输入: -121
+输出: false
+解释: 从左向右读, ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -381,8 +387,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/哈希表/" target="_blank">
-                                <span class="chip bg-color">哈希表</span>
+                            <a href="/tags/字符串/" target="_blank">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                     </div>
@@ -412,14 +418,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.1k
+                        1.7k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        6 分
                     </div>
                     
                 
@@ -435,89 +441,96 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1、两数之和"><a href="#1、两数之和" class="headerlink" title="1、两数之和"></a>1、两数之和</h3><p>&emsp;&emsp;给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>&emsp;&emsp;你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br><strong>示例一：</strong></p>
-<pre><code>给定 nums = [2, 7, 11, 15], target = 9
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
- * Note: The returned array must be malloced, assume caller calls free().
- */</span>
-<span class="token keyword">int</span><span class="token operator">*</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">int</span> <span class="token operator">*</span> returnSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token operator">*</span>returnSize <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> i<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
-    <span class="token keyword">static</span> <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>    
-    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
-                a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
-                <span class="token keyword">return</span> a<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+                <h3 id="9、回文数"><a href="#9、回文数" class="headerlink" title="9、回文数"></a>9、回文数</h3><p>&emsp;&emsp;判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。<br><strong>示例 1：</strong></p>
+<pre><code>输入: 121
+输出: true
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入: -121
+输出: false
+解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。
+</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入: 10
+输出: false
+解释: 从右向左读, 为 01 。因此它不是一个回文数。
+</code></pre><p><strong>进阶：</strong><br>&emsp;&emsp;你能不将整数转为字符串来解决这个问题吗？<br>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/palindrome-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/palindrome-number/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法一</span>
+bool <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">,</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> s<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        a <span class="token operator">=</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        s<span class="token punctuation">[</span>i<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">;</span>
+        x <span class="token operator">/</span><span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> s<span class="token punctuation">[</span><span class="token operator">--</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>    
-    <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 暴力解法，双重循环，当有2个数的和为target时，返回，否则返回NULL。</p>
-<p><strong>知识点回顾：</strong><br>1、在我们日常使用过程中，static通常有两个作用:</p>
-<ul>
-<li>修饰变量<br>&emsp;&emsp;静态全局变量：全局变量前加static修饰，该变量就成为了静态全局变量。我们知道，全部变量在整个工程都可以被访问（一个文件中定义，其它文件使用的时候添加extern关键字声明 ），而在添加了static关键字之后，这个变量就只能在本文件内被访问了。因此，在这里，static的作用就是限定作用域。<br>&emsp;&emsp;静态局部变量：局不变量添加了static修饰之后，该变量就成为了静态局部变量。我们知道局部变量在离开了被定义的函数后，就会被销毁，而当使用static修饰之后，它的作用域就一直到整个程序结束。因此，在这里static的作用就是限定生命周期。</li>
-<li>修饰函数<br>&emsp;&emsp;修饰函数则该函数成为静态函数，函数的作用域仅限于本文件，而不能被其它文件调用。</li>
-</ul>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法二</span>
+bool <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> y <span class="token operator">=</span> x <span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">//用y记住原先值</span>
+    <span class="token keyword">long</span> res<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//直接定义为long型，用于存储翻转后的数据，因为int型取值范围内倒转可能会溢出</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         res <span class="token operator">=</span> res<span class="token operator">*</span><span class="token number">10</span> <span class="token operator">+</span> x<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">;</span>   
+         x <span class="token operator">=</span> x<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>res <span class="token operator">==</span> y<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 解法一：当x小于0直接返回false，当x大于0时，先将整数各位分别存放数组中，再从首尾遍历，进行判断。解法二：将x倒序，和原来的值进行比较，相等为true。否则为false。</p>
+<p><strong>知识点回顾：</strong> 回文的知识，数值的倒序求法。</p>
 <h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">twoSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>target<span class="token operator">-</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>i<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 特殊情况：</span>
+        <span class="token comment" spellcheck="true">// 如上所述，当 x &lt; 0 时，x 不是回文数。</span>
+        <span class="token comment" spellcheck="true">// 同样地，如果数字的最后一位是 0，为了使该数字为回文，</span>
+        <span class="token comment" spellcheck="true">// 则其第一位数字也应该是 0</span>
+        <span class="token comment" spellcheck="true">// 只有 0 满足这一属性</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> x <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"No two sum solution"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> revertedNumber <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">></span> revertedNumber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            revertedNumber <span class="token operator">=</span> revertedNumber <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">+</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
+            x <span class="token operator">/=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 当数字长度为奇数时，我们可以通过 revertedNumber/10 去除处于中位的数字。</span>
+        <span class="token comment" spellcheck="true">// 例如，当输入为 12321 时，在 while 循环的末尾我们可以得到 x = 12，revertedNumber = 123，</span>
+        <span class="token comment" spellcheck="true">// 由于处于中位的数字不影响回文（它总是与自己相等），所以我们可以简单地将其去除。</span>
+        <span class="token keyword">return</span> x <span class="token operator">==</span> revertedNumber <span class="token operator">||</span> x <span class="token operator">==</span> revertedNumber<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> </p>
-<ul>
-<li>标签：哈希映射</li>
-<li>这道题本身如果通过暴力遍历的话也是很容易解决的，时间复杂度在 O(n2)</li>
-<li>由于哈希查找的时间复杂度为 O(1)，所以可以利用哈希容器 map 降低时间复杂度</li>
-<li>遍历数组 nums，i 为当前下标，每个值都判断map中是否存在 target-nums[i] 的 key 值</li>
-<li>如果存在则找到了两个值，如果不存在则将当前的 (nums[i],i) 存入 map 中，继续遍历直到找到为止</li>
-<li>如果最终都没有结果则抛出异常</li>
-<li>时间复杂度：O(n)</li>
-</ul>
-<p><strong>知识点回顾：</strong><br>1、 containsKey()方法用于检查特定键是否被映射到HashMap。它将key元素作为参数，如果该元素在map中映射，则返回True。<br>语法：Hash_Map.containsKey（key_element）<br>参数：该方法只接受一个参数key_element，该参数引用应在map内检查其映射的键。<br>返回值：如果检测到密钥的存在，则该方法返回布尔值true，否则返回false。</p>
+<p><strong>解释：</strong> 映入脑海的第一个想法是将数字转换为字符串，并检查字符串是否为回文。但是，这需要额外的非常量空间来创建问题描述中所不允许的字符串。第二个想法是将数字本身反转，然后将反转后的数字与原始数字进行比较，如果它们是相同的，那么这个数字就是回文。但是，如果反转后的数字大于 int.MAX，我们将遇到整数溢出问题。按照第二个想法，为了避免数字反转可能导致的溢出问题，为什么不考虑只反转 int数字的一半？毕竟，如果该数字是回文，其后半部分反转后应该与原始数字的前半部分相同。例如，输入 1221，我们可以将数字 “1221” 的后半部分从 “21” 反转为 “12”，并将其与前半部分 “12” 进行比较，因为二者相同，我们得知数字 1221 是回文。让我们看看如何将这个想法转化为一个算法。<br>&emsp;&emsp;首先，我们应该处理一些临界情况。所有负数都不可能是回文，例如：-123 不是回文，因为 - 不等于 3。所以我们可以对所有负数返回 false。现在，让我们来考虑如何反转后半部分的数字。对于数字 1221，如果执行 1221 % 10，我们将得到最后一位数字 1，要得到倒数第二位数字，我们可以先通过除以 10 把最后一位数字从 1221 中移除，1221 / 10 = 122，再求出上一步结果除以 10 的余数，122 % 10 = 2，就可以得到倒数第二位数字。如果我们把最后一位数字乘以 10，再加上倒数第二位数字，1 * 10 + 2 = 12，就得到了我们想要的反转后的数字。如果继续这个过程，我们将得到更多位数的反转数字。现在的问题是，我们如何知道反转数字的位数已经达到原始数字位数的一半？我们将原始数字除以 10，然后给反转后的数字乘上 10，所以，当原始数字小于反转后的数字时，就意味着我们已经处理了一半位数的数字。</p>
+<p><strong>知识点回顾：</strong> 回文的知识，数值的倒序求法。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
-        hashmap <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-        <span class="token keyword">for</span> index<span class="token punctuation">,</span> num <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            result <span class="token operator">=</span> target <span class="token operator">-</span> num
-            <span class="token keyword">if</span> result <span class="token keyword">in</span> hashmap<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token punctuation">[</span>hashmap<span class="token punctuation">[</span>result<span class="token punctuation">]</span><span class="token punctuation">,</span> index<span class="token punctuation">]</span>
-            hashmap<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> index
-        <span class="token keyword">return</span> None
+    <span class="token keyword">def</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">==</span> str<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
 </code></pre>
-<p><strong>解释：</strong> 类似于Java求解的思路。</p>
-<p><strong>知识点回顾：</strong><br>1、enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。<br>语法：enumerate(sequence, [start=0])<br>sequence：一个序列、迭代器或其他支持迭代对象。<br>start：下标起始位置。<br>返回值：返回 enumerate(枚举) 对象。</p>
+<p><strong>解释：</strong> 利用切片，直接进行比较。</p>
+<p><strong>知识点回顾：</strong> 回文的知识。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+ * @param {number} x
+ * @return {boolean}
  */</span>
-<span class="token keyword">var</span> twoSum <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        
-        <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token punctuation">[</span>map<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>target <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span>
-           <span class="token punctuation">}</span>
-       map<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
+<span class="token keyword">var</span> isPalindrome <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> x1 <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token keyword">let</span> arr <span class="token operator">=</span> x1<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">==</span> x1<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 类似于Java的求解思路。</p>
-<p><strong>知识点回顾：</strong> 哈希表的相关内容，将在数据结构篇中单独描述。</p>
+<p><strong>解释：</strong> 先把原来的数值x转化成字符串，再分割成字符串数组，翻转之后进行对比，相等就返回true，否则返回false。</p>
+<p><strong>知识点回顾：</strong><br>1、split() 方法用于把一个字符串分割成字符串数组。<br>语法：stringObject.split(separator,howmany)<br>separator：必需。字符串或正则表达式，从该参数指定的地方分割 stringObject。<br>howmany：可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。<br>返回值：一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。<br>但是，如果 separator 是包含子表达式的正则表达式，那么返回的数组中包括与这些子表达式匹配的字串（但不包括与整个正则表达式匹配的文本）。<br>注释：如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>注释：String.split() 执行的操作与 Array.join 执行的操作是相反的。<br>2、join() 方法用于把数组中的所有元素放入一个字符串。元素是通过指定的分隔符进行分隔的。<br>语法： arrayObject.join(separator)<br>separator：可选。指定要使用的分隔符。如果省略该参数，则使用逗号作为分隔符。<br>返回值：返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。<br>3、reverse() 方法用于颠倒数组中元素的顺序。<br>语法：arrayObject.reverse()<br>注释：该方法会改变原来的数组，而不会创建新的数组。</p>
 
             </div>
             <hr/>
@@ -678,7 +691,7 @@
                   property="dct:title" rel="dct:type">
                     《leetcode刷题记录之1》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/24/leetcode-shua-ti-ji-lu-zhi-1/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/24/leetcode-shua-ti-ji-lu-zhi-9/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -977,10 +990,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2019/08/24/leetcode-shua-ti-ji-lu-zhi-1/">
                     <div class="card-image">
@@ -998,9 +1010,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1013,7 +1025,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1036,30 +1047,26 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/24/leetcode-shua-ti-ji-lu-zhi-9/">
+                <a href="/2019/08/23/leetcode-shua-ti-ji-lu-zhi-709/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="leetcode刷题记录之1">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之709">
                         
-                        <span class="card-title">leetcode刷题记录之1</span>
+                        <span class="card-title">leetcode刷题记录之709</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            9、回文数&emsp;&emsp;判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。示例 1：
-输入: 121
-输出: true
-示例 2：
-输入: -121
-输出: false
-解释: 从左向右读, 
+                            709、转换成小写字母&emsp;&emsp;实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。示例 1:
+输入: &quot;Hello&quot;
+输出:
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-24
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-23
                             </span>
                         <span class="publish-author">
                             
