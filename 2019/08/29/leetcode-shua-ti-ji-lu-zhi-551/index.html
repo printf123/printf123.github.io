@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="前端基础（一）, 锦瑟博客">
-    <meta name="description" content="一、HTML:• HTML（Hypertext Markup Language） 超文本标记语言。• 它负责网页的三个要素之中的结构。• HTML使用标签的的形式来标识网页中的不 同组成部分。• 所谓超文本指的是超链接，使用超链接可 以让我">
+    <meta name="keywords" content="leetcode刷题记录之551, 锦瑟博客">
+    <meta name="description" content="551、学生出勤记录 I给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：&amp;emsp;&amp;emsp;1、’A’ : Absent，缺勤&amp;emsp;&amp;emsp;2、’L’ : Late，迟到&amp;emsp;&amp;emsp;3、’P’ ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>前端基础（一） | 锦瑟博客</title>
+    <title>leetcode刷题记录之551 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -266,7 +266,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        前端基础（一）
+                        leetcode刷题记录之551
                     </div>
                 </div>
             </div>
@@ -377,12 +377,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/HTML/" target="_blank">
-                                <span class="chip bg-color">HTML</span>
+                            <a href="/tags/leetcode简单题/" target="_blank">
+                                <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/CSS/" target="_blank">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/tags/字符串/" target="_blank">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                     </div>
@@ -393,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/前端/" class="post-category" target="_blank">
-                                前端
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                算法
                             </a>
                         
                     </div>
@@ -405,21 +405,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-19
+                    2019-08-29
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        1.2k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        4 分
                     </div>
                     
                 
@@ -435,36 +435,66 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、HTML"><a href="#一、HTML" class="headerlink" title="一、HTML:"></a>一、HTML:</h2><p>• HTML（Hypertext Markup Language） 超文本标记语言。<br>• 它负责网页的三个要素之中的结构。<br>• HTML使用标签的的形式来标识网页中的不 同组成部分。<br>• 所谓超文本指的是超链接，使用超链接可 以让我们从一个页面跳转到另一个页面。</p>
-<hr>
-<p> <strong>先上一个最基本的HTML框架结构：</strong></p>
-<pre><code> &lt;!DOCTYPE html&gt;
- &lt;html&gt;
- &lt;head&gt;   
-      &lt;meta charset=&quot;UTF-8&quot;&gt;    
-      &lt;title&gt;网页标题&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;    
-      &lt;h1&gt;网页正文&lt;/h1&gt;
-  &lt;/body&gt;
-  &lt;/html&gt;
-</code></pre><p> <strong>做如下解释：</strong><br>&emsp;&emsp;1、html根标签，一个页面中有且只有一个根标签，网页中的所有内容都应该写在html根标签中。<br>&emsp;&emsp;2、head标签，该标签中的内容，不会在网页中直接显示，它用来帮助浏览器解析页面的。<br>&emsp;&emsp;3、title网页的标题标签，默认会显示在浏览器的标题栏中， 搜索引擎在检索页面时，会首先检索title标签中的内容，它是网页中对于搜索引擎来说最重要的内容，会影响到网页在搜索引擎中的排名。<br>&emsp;&emsp;4、body标签用来设置网页的主体内容，网页中所有可见的内容，都应该在body中编写。<br>注：更多标签说明参考<u><a href="https://www.w3cschool.cn/html/dict" target="_blank" rel="noopener">W3Cschool</a></u>。</p>
-<hr>
-<h2 id="二、CSS"><a href="#二、CSS" class="headerlink" title="二、CSS"></a>二、CSS</h2><p>&emsp;&emsp;HTML较为简单，主要就是标签的使用，在这里我不想做过多的描述，大家可以在W3Cschool中学习到，接下来描述CSS部分。<br>• 层叠样式表 (Cascading Style Sheets)<br>• css可以用来为网页创建样式表，通过样式 表可以对网页进行装饰。<br>• 所谓层叠，可以将整个网页想象成是一层 一层的结构，层次高的将会覆盖层次低的。 • 而css就可以分别为网页的各个层次设置样式。</p>
-<hr>
-<p><strong>HTML引用CSS的四种方式:</strong><br>1、行内样式</p>
-<pre><code>  &lt;p style=&quot;color: #FF0000;&quot;&gt;行内样式&lt;/p&gt;
-</code></pre><p>• 可以直接将样式写到标签内部的style属性中，这种样式不用填写选择器，直接编写声明即可。<br>• 这种方式编写简单，定位准确。但是由于直接将css代码写到了html标签的内部，导致结构与表现耦合，同时导致样式不能够复用，所以这种方式我们不使用。<br>2、内部样式表 </p>
-<pre><code>&lt;style&gt; p{color:red; font-size: 30px;} &lt;/style&gt;
-</code></pre><p>• 可以直接将样式写到&lt;style&gt;标签中。<br>• 这样使css独立于html代码，而且可以同时为多个元素设置样式，这是我们使用的比较多的一种方式。<br>• 但是这种方式，样式只能在一个页面中使用，不能在多个页面中重复使用。<br>3、外部样式表 </p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
-</code></pre><p>• 可以将所有的样式保存到一个外部的css文件中，然后通过&lt;link&gt;标签将样式表引入到文件中。<br>• 这种方式将样式表放入到了页面的外部，可以在多个页面中引入，同时浏览器加载文件时可以使用缓存，这是我们开发中使用的最多的方式。<br>4、导入样式表</p>
-<pre><code>&lt;style&gt;
-    @import url(a.css);
-&lt;/style&gt;
-</code></pre><p>• 导入样式和链接样式比较相似，采用@import样式导入CSS样式表，在HTML初始化时，会被导入到HTML或者CSS文件中，成为文件的一部分，类似第二种内嵌样式。</p>
-<hr>
-<p>最后提供几个学习前端知识优秀的网站。<br>1、<u><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a></u>：提供了编程的基础技术教程。<br>2、<u><a href="https://www.w3cschool.cn/dict/" target="_blank" rel="noopener">W3Cschool</a></u>：w3cschool是一个专业的web前端开发及编程入门学习平台。<br>3、<u><a href="http://mackxin.com/" target="_blank" rel="noopener">馨客栈</a></u>：内容超级丰富。<br>4、<u><a href="https://www.shiyanlou.com/" target="_blank" rel="noopener">实验楼</a></u>：可以自己动手操作。<br>5、<u><a href="https://code.ziqiangxuetang.com/" target="_blank" rel="noopener">自强学堂</a></u>：致力于提供优质的IT技术教程。</p>
+                <h3 id="551、学生出勤记录-I"><a href="#551、学生出勤记录-I" class="headerlink" title="551、学生出勤记录 I"></a>551、学生出勤记录 I</h3><p>给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：<br>&emsp;&emsp;1、’A’ : Absent，缺勤<br>&emsp;&emsp;2、’L’ : Late，迟到<br>&emsp;&emsp;3、’P’ : Present，到场<br>如果一个学生的出勤记录中不超过一个’A’(缺勤)并且不超过两个连续的’L’(迟到),那么这个学生会被奖赏。<br>你需要根据这个学生的出勤记录判断他是否会被奖赏。<br><strong>示例 1：</strong></p>
+<pre><code>输入: &quot;PPALLP&quot;
+输出: True
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入: &quot;PPALLL&quot;
+输出: False
+</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/student-attendance-record-i/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/student-attendance-record-i/</a></p>
+<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">checkRecord</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'A'</span><span class="token punctuation">)</span>
+            c<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>c <span class="token operator">>=</span> <span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 遍历字符串，如果有超过3个连续的’L’或者有超过2个’A’，则返回false，否则返回true。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">checkRecord</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token operator">==</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>s<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"LLL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 如果数组中没有超过2个’A’或者不存在”LLL”,则返回true，否则返回false。</p>
+<p><strong>知识点回顾：</strong><br>1、indexOf() 方法有以下四种形式：</p>
+<ul>
+<li>public int indexOf(int ch): 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+<li>public int indexOf(int ch, int fromIndex): 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+<li>int indexOf(String str): 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+<li>int indexOf(String str, int fromIndex): 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+</ul>
+<p>2、lastIndexOf() 方法有以下四种形式：</p>
+<ul>
+<li>public int lastIndexOf(int ch): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+<li>public int lastIndexOf(int ch, int fromIndex): 返返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+<li>public int lastIndexOf(String str): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+<li>public int lastIndexOf(String str, int fromIndex): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
+</ul>
+<p>3、contains()函数用于确定一个字符串是否包含指定的子串。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">checkRecord</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+       <span class="token keyword">return</span> s<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">1</span> <span class="token operator">and</span> <span class="token string">'LLL'</span> <span class="token operator">not</span> <span class="token keyword">in</span> s 
+</code></pre>
+<p><strong>解释：</strong> 类似于Java的求解思路。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
+ * @param {string} s
+ * @return {boolean}
+ */</span>
+<span class="token keyword">var</span> checkRecord <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">===</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'LLL'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>解释：</strong> 类似于Java的求解思路。</p>
+<p><strong>知识点回顾：</strong><br>1、lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回  -1 。<br>注意：lastIndexOf() 方法是区分大小写的！<br>语法：string.lastIndexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的最后一个字符处开始检索。<br>返回值：查找的字符串最后出现的位置，如果没有找到匹配字符串则返回  -1。<br>2、indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。<br>语法：string.indexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。<br>返回值：查找指定字符串第一次出现的位置，如果没找到匹配的字符串则返回  -1。</p>
 
             </div>
             <hr/>
@@ -623,9 +653,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《前端基础（一）》
+                    《leetcode刷题记录之551》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/19/qian-duan-ji-chu-yi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-551/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -924,29 +954,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/22/leetcode-shua-ti-ji-lu-zhi-771/">
+                <a href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-551/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="leetcode刷题记录之771">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="leetcode刷题记录之551">
                         
-                        <span class="card-title">leetcode刷题记录之771</span>
+                        <span class="card-title">leetcode刷题记录之551</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            771、宝石与石头 &emsp;&emsp;给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。 &emsp;&emsp;J 中的字母不重复，J
+                            551、学生出勤记录 I给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：&emsp;&emsp;1、’A’ : Absent，缺勤&emsp;&emsp;2、’L’ : Late，迟到&emsp;&emsp;3、’P’ 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -959,6 +990,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -981,31 +1013,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/16/shu-ji-tui-jian/">
+                <a href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-922/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="计算机专业书籍推荐">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode刷题记录之922">
                         
-                        <span class="card-title">计算机专业书籍推荐</span>
+                        <span class="card-title">leetcode刷题记录之922</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计算机专业书籍推荐Linux 编程：《鸟哥Linux私房菜》最权威的Linux书籍之一《Linux 系统编程》对常用 API 讲述最详细的一本书《UNIX 环境高级编程》经典《The Linux Programming Interface》
+                            922、按奇偶排序数组 II给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。你可以返回任何满足上述条件的数组作为答案。示例 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/学习之路/" class="post-category" target="_blank">
-                                    学习之路
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
                                 </a>
                             
                             
@@ -1015,12 +1047,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/导航/" target="_blank">
-                        <span class="chip bg-color">导航</span>
+                    <a href="/tags/leetcode简单题/" target="_blank">
+                        <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/分享/" target="_blank">
-                        <span class="chip bg-color">分享</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
