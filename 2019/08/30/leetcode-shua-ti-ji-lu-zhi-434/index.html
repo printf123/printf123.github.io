@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之509, 锦瑟博客">
-    <meta name="description" content="509、斐波那契数斐波那契数，通常用 F(n) 表示，形成的序列称为斐波那契数列。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：&amp;emsp;&amp;emsp;F(0) = 0,   F(1) = 1&amp;emsp;&amp;ems">
+    <meta name="keywords" content="leetcode刷题记录之434, 锦瑟博客">
+    <meta name="description" content="434、字符串中的单词数统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。请注意，你可以假定字符串里不包括任何不可打印的字符。示例 1：
+输入: &amp;quot;Hello, my name is John&amp;quot;
+输出: 5
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之509 | 锦瑟博客</title>
+    <title>leetcode刷题记录之434 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +263,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之509
+                        leetcode刷题记录之434
                     </div>
                 </div>
             </div>
@@ -381,12 +384,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/递归/" target="_blank">
-                                <span class="chip bg-color">递归</span>
-                            </a>
-                        
-                            <a href="/tags/动态规划/" target="_blank">
-                                <span class="chip bg-color">动态规划</span>
+                            <a href="/tags/字符串/" target="_blank">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                     </div>
@@ -409,14 +408,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-25
+                    2019-08-30
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        682
+                        790
                     </div>
                     
 
@@ -439,85 +438,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="509、斐波那契数"><a href="#509、斐波那契数" class="headerlink" title="509、斐波那契数"></a>509、斐波那契数</h3><p>斐波那契数，通常用 F(n) 表示，形成的序列称为斐波那契数列。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：<br>&emsp;&emsp;F(0) = 0,   F(1) = 1<br>&emsp;&emsp;F(N) = F(N - 1) + F(N - 2), 其中 N &gt; 1.<br>给定 N，计算 F(N)。<br><strong>示例 1:</strong></p>
-<pre><code>输入：2
-输出：1
-解释：F(2) = F(1) + F(0) = 1 + 0 = 1.
-</code></pre><p><strong>示例 2:</strong></p>
-<pre><code>输入：3
-输出：2
-解释：F(3) = F(2) + F(1) = 1 + 1 = 2.
-</code></pre><p><strong>示例 3:</strong></p>
-<pre><code>输入：4
-输出：3
-解释：F(4) = F(3) + F(2) = 2 + 1 = 3.
-</code></pre><p><strong>提示：</strong></p>
-<ul>
-<li>0 ≤ N ≤ 30</li>
-</ul>
-<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/fibonacci-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/fibonacci-number/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>N <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">||</span> N <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token function">fib</span><span class="token punctuation">(</span>N <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>N <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <h3 id="434、字符串中的单词数"><a href="#434、字符串中的单词数" class="headerlink" title="434、字符串中的单词数"></a>434、字符串中的单词数</h3><p>统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。<br>请注意，你可以假定字符串里不包括任何不可打印的字符。<br><strong>示例 1：</strong></p>
+<pre><code>输入: &quot;Hello, my name is John&quot;
+输出: 5
+</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/number-of-segments-in-a-string/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/number-of-segments-in-a-string/</a></p>
+<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">countSegments</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>i <span class="token operator">&lt;=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">' '</span> <span class="token operator">||</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'\0'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">' '</span><span class="token punctuation">)</span>
+            count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 递归求解。 </p>
-<p><strong>知识点回顾：</strong> 斐波那契数的递归解法。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//解法一</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">++</span> <span class="token operator">&lt;</span> N<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            sum <span class="token operator">+=</span> num<span class="token punctuation">;</span>
-                num <span class="token operator">=</span> sum <span class="token operator">-</span> num<span class="token punctuation">;</span>
-         <span class="token punctuation">}</span>
-      <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//解法二</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> N<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> curr <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> next <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>N<span class="token operator">--</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            next <span class="token operator">=</span> next <span class="token operator">+</span> curr<span class="token punctuation">;</span>
-            curr <span class="token operator">=</span> next <span class="token operator">-</span> curr<span class="token punctuation">;</span>
+<p><strong>解释：</strong> 这道题的题目描述，不是统计单词的数量，而是统计连续的不是空格的字符的数量。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">countSegments</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> segmentCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">' '</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">' '</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                segmentCount<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> curr<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> segmentCount<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 解法一：使用了动态规划。解法二：使用动态规划消除重复计算，可使时间复杂度优化至O(n)。可用数组保存计算结果，则空间复杂度为O(n)。此处进一步简化，只使用两个变量保存结果，因此空间复杂度为O(1)。</p>
-<p><strong>知识点回顾：</strong><br>1、-&gt;是lambda表达式,就是匿名函数。<br>2、动态规划的相关知识，，将在数据结构篇中单独描述。</p>
+<p><strong>解释：</strong> 计算单词的数量，就等同于计数单词开始的下标个数。因此，只需要定义好下标的条件，就可以遍历整个字符串，检测每个下标。定义如下：若该下标前为空格（或者为初始下标），且自身不为空格，则其为单词开始的下标。该条件可以以常数时间检测。最后，返回满足条件的下标个数。</p>
+<p><strong>知识点回顾：</strong><br>1、charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1。<br>语法：public char charAt(int index)<br>index：字符的索引。<br>返回值：返回指定索引处的字符。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> N<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        memo <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>N<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            memo<span class="token punctuation">.</span>append<span class="token punctuation">(</span>memo<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">+</span> memo<span class="token punctuation">[</span>i<span class="token number">-2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> memo<span class="token punctuation">[</span>N<span class="token punctuation">]</span>
+    <span class="token keyword">def</span> <span class="token function">countSegments</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> len<span class="token punctuation">(</span>s<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<p><strong>解释：</strong> 使用了动态规划。</p>
-<p><strong>知识点回顾：</strong><br>1、动态规划的相关知识，，将在数据结构篇中单独描述。<br>2、range() 函数可创建一个整数列表，一般用在 for 循环中。<br>语法：range(start, stop[, step])<br>start：计数从 start 开始。默认是从 0 开始。例如range（5）等价于range（0， 5）;<br>stop：计数到 stop 结束，但不包括 stop。例如：range（0， 5） 是[0, 1, 2, 3, 4]没有5<br>step：步长，默认为1。例如：range（0， 5） 等价于 range(0, 5, 1)3<br>3、append() 方法用于在列表末尾添加新的对象。<br>语法：list.append(obj)<br>obj：添加到列表末尾的对象。<br>返回值：该方法无返回值，但是会修改原来的列表。</p>
+<p><strong>解释：</strong> 使用语言内置函数。</p>
+<p><strong>知识点回顾：</strong><br>1、split() 通过指定分隔符对字符串进行切片，如果参数 num 有指定值，则分隔 num+1 个子字符串。<br>语法：str.split(str=””, num=string.count(str))<br>str：分隔符，默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等。<br>num：分割次数。默认为 -1, 即分隔所有。<br>返回值：返回分割后的字符串列表。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number} N
+ * @param {string} s
  * @return {number}
  */</span>
-<span class="token keyword">var</span> fib <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
-    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> N<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>b<span class="token punctuation">,</span> b <span class="token operator">+</span> a<span class="token punctuation">]</span>
-        i<span class="token operator">++</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> a
+<span class="token keyword">var</span> countSegments <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> str <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+      <span class="token keyword">let</span> r <span class="token operator">=</span> <span class="token number">0</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> str<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              r<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> r
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> JavaScript迭代。</p>
-<p><strong>知识点回顾：</strong> ES6数组的解构赋值的运用。</p>
+<p><strong>解释：</strong> 利用split()分割字符串，再遍历字符串数组。</p>
+<p><strong>知识点回顾：</strong><br>1、split() 方法用于把一个字符串分割成字符串数组。<br>提示： 如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>注意： split() 方法不改变原始字符串。<br>语法：string.split(separator,limit)<br>separator：可选。字符串或正则表达式，从该参数指定的地方分割 string Object。<br>limit：可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。<br>返回值：一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 string Object 分割成子串创建的。返回的数组中的字串不包括 separator 自身。</p>
 
             </div>
             <hr/>
@@ -676,9 +647,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之509》
+                    《leetcode刷题记录之434》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-509/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/30/leetcode-shua-ti-ji-lu-zhi-434/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -977,29 +948,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/26/leetcode-shua-ti-ji-lu-zhi-27/">
+                <a href="/2019/08/30/leetcode-shua-ti-ji-lu-zhi-434/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="leetcode刷题记录之27">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="leetcode刷题记录之434">
                         
-                        <span class="card-title">leetcode刷题记录之27</span>
+                        <span class="card-title">leetcode刷题记录之434</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            27、移除元素&emsp;&emsp;给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。&emsp;&emsp;不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 
+                            434、字符串中的单词数统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。请注意，你可以假定字符串里不包括任何不可打印的字符。示例 1：
+输入: &quot;Hello, my name is John&quot;
+输出: 5
+
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1012,6 +987,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1019,8 +995,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/字符串/" target="_blank">
+                        <span class="chip bg-color">字符串</span>
                     </a>
                     
                 </div>
@@ -1034,24 +1010,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-344/">
+                <a href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-520/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="leetcode刷题记录之344">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="leetcode刷题记录之520">
                         
-                        <span class="card-title">leetcode刷题记录之344</span>
+                        <span class="card-title">leetcode刷题记录之520</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            344、反转字符串&emsp;&emsp;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。&emsp;&emsp;不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空
+                            520、检测大写字母给定一个单词，你需要判断单词的大写使用是否正确。我们定义，在以下情况时，单词的大写用法是正确的：&emsp;&emsp;1、全部字母都是大写，比如”USA”。&emsp;&emsp;2、单词中所有字母都不是大写，比如”l
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
                             </span>
                         <span class="publish-author">
                             
