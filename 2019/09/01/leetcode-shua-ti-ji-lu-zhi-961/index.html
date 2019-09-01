@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之520, 锦瑟博客">
-    <meta name="description" content="520、检测大写字母给定一个单词，你需要判断单词的大写使用是否正确。我们定义，在以下情况时，单词的大写用法是正确的：&amp;emsp;&amp;emsp;1、全部字母都是大写，比如”USA”。&amp;emsp;&amp;emsp;2、单词中所有字母都不是大写，比如”l">
+    <meta name="keywords" content="leetcode刷题记录之961, 锦瑟博客">
+    <meta name="description" content="961、重复 N 次的元素&amp;emsp;&amp;emsp;在大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。&amp;emsp;&amp;emsp;返回重复了 N 次的那个元素。示例 1：
+输入：[1,2,3,3]
+输出：3
+示">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之520 | 锦瑟博客</title>
+    <title>leetcode刷题记录之961 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +263,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之520
+                        leetcode刷题记录之961
                     </div>
                 </div>
             </div>
@@ -381,8 +384,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/字符串/" target="_blank">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/数组/" target="_blank">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                     </div>
@@ -405,21 +408,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-29
+                    2019-09-01
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.1k
+                        817
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        3 分
                     </div>
                     
                 
@@ -435,83 +438,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="520、检测大写字母"><a href="#520、检测大写字母" class="headerlink" title="520、检测大写字母"></a>520、检测大写字母</h3><p>给定一个单词，你需要判断单词的大写使用是否正确。<br>我们定义，在以下情况时，单词的大写用法是正确的：<br>&emsp;&emsp;1、全部字母都是大写，比如”USA”。<br>&emsp;&emsp;2、单词中所有字母都不是大写，比如”leetcode”。<br>&emsp;&emsp;3、如果单词不只含有一个字母，只有首字母大写， 比如 “Google”。<br>否则，我们定义这个单词没有正确使用大写字母。<br><strong>示例 1：</strong></p>
-<pre><code>输入: &quot;USA&quot;
-输出: True
+                <h3 id="961、重复-N-次的元素"><a href="#961、重复-N-次的元素" class="headerlink" title="961、重复 N 次的元素"></a>961、重复 N 次的元素</h3><p>&emsp;&emsp;在大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。<br>&emsp;&emsp;返回重复了 N 次的那个元素。<br><strong>示例 1：</strong></p>
+<pre><code>输入：[1,2,3,3]
+输出：3
 </code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: &quot;FlaG&quot;
-输出: False
-</code></pre><p><strong>注意：</strong> 输入是由大写和小写拉丁字母组成的非空单词。<br>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/detect-capital/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/detect-capital/</a></p>
-<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">detectCapitalUse</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> word<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>d <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">>=</span> <span class="token string">'A'</span> <span class="token operator">&amp;&amp;</span> word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token string">'Z'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> <span class="token string">'a'</span> <span class="token operator">&amp;&amp;</span> word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token string">'z'</span><span class="token punctuation">)</span>
-                c<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span>
-                d<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>c <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> d <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-        <span class="token keyword">else</span>
-                <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">else</span><span class="token punctuation">{</span>
-           <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">if</span><span class="token punctuation">(</span>word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> <span class="token string">'A'</span> <span class="token operator">&amp;&amp;</span> word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span><span class="token string">'Z'</span><span class="token punctuation">)</span>
-                    <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 分情况讨论，当第一个字母是大写的时候，循环遍历剩下的字母，并且记录大小写字母的个数，如果只有大写字母或者只有小写字母则返回true，否则返回false。当第一个字母是小写的时候，循环遍历剩下的字母，只要存在大写的字母就返回false，否则返回true。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">detectCapitalUse</span><span class="token punctuation">(</span>String word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> word<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>word<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token string">'A'</span> <span class="token operator">&amp;&amp;</span> word<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token string">'Z'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                sum<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">&lt;</span> word<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> sum <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> word<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token string">'A'</span> <span class="token operator">&amp;&amp;</span> word<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token string">'Z'</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> </p>
+<pre><code>输入：[2,1,2,5,3,2]
+输出：2
+</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：[5,1,5,2,5,3,5,4]
+输出：5
+</code></pre><p><strong>提示：</strong></p>
 <ul>
-<li>统计大写的个数sum，根据个数判断：<br>① sum = 0, true<br>② sum =1, 只有第一个字母为大写时为true<br>③ 1 &lt; sum &lt; n,  false<br>④ sum等于数组长度，true</li>
+<li>4 &lt;= A.length &lt;= 10000</li>
+<li>0 &lt;= A[i] &lt; 10000</li>
+<li>A.length 为偶数</li>
 </ul>
-<p><strong>知识点回顾：</strong><br>1、charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1。<br>语法：public char charAt(int index)<br>index：字符的索引。<br>返回值：返回指定索引处的字符。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">detectCapitalUse</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> word<span class="token punctuation">.</span>isupper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">or</span> word<span class="token punctuation">.</span>islower<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">or</span> word<span class="token punctuation">.</span>istitle<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<p><strong>解释：</strong> 如果word全大写或者全小写或者只有首字母大写则返回true。否则返回false。</p>
-<p><strong>知识点回顾：</strong><br>1、isupper() 方法检测字符串中所有的字母是否都为大写。<br>语法：str.isupper()<br>返回值：如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True，否则返回 False。<br>2、islower() 方法检测字符串是否由小写字母组成。<br>语法：str.islower()<br>返回值：如果字符串中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True，否则返回 False。<br>3、istitle() 方法检测字符串中所有的单词拼写首字母是否为大写，且其他字母为小写。<br>语法：str.istitle()<br>返回值：如果字符串中所有的单词拼写首字母是否为大写，且其他字母为小写则返回 True，否则返回 False。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {string} word
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> detectCapitalUse <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>word<span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> word<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 全部大写</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> word<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// word[i].charCodeAt(0) >= 65 &amp;&amp; word[i].charCodeAt(0) &lt;= 90 这个是大写字母</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>word<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> <span class="token number">90</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 一个单词只有大小写字母 判断小于90就好了</span>
-            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">repeatedNTimes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> A<span class="token punctuation">,</span> <span class="token keyword">int</span> ASize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> ASize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> ASize<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 循环遍历数组，有元素重复出现的就一定是答案。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">repeatedNTimes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> k <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token operator">++</span>k<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> A<span class="token punctuation">.</span>length <span class="token operator">-</span> k<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> A<span class="token punctuation">[</span>i<span class="token operator">+</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                    <span class="token keyword">return</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">throw</span> null<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 一旦找到一个重复元素，那么一定就是答案。我们称这个答案为主要元素。考虑所有长度为 4 的子序列，在子序列中一定至少含有两个主要元素。这是因为：长度为 2 的子序列中都是主要元素，或者；每个长度为 2 的子序列都恰好含有 1 个主要元素，这意味着长度为 4 的子序列一定含有 2 个主要元素。因此，只需要比较所有距离为 1，2 或者 3 的邻居元素即可。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">repeatedNTimes</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> A<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> A<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> A<span class="token punctuation">.</span>count<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">2</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> i
+</code></pre>
+<p><strong>解释：</strong> 循环遍历数组，有元素出现超过2次的就一定是答案。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} A
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> repeatedNTimes <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> hash <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>num <span class="token keyword">of</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>hash<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> num
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            hash<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 先判断全部大写，从第二个字母开始循环，有大写字母就返回false，循环到最后返回true。</p>
-<p><strong>知识点回顾：</strong><br>1、toUpperCase() 方法用于把字符串转换为大写。<br>语法：string.toUpperCase()<br>2、charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。<br>字符串中第一个字符的位置为 0， 第二个字符位置为 1，以此类推。<br>语法：string.charCodeAt(index)<br>index：必需。表示字符串中某个位置的数字，即字符在字符串中的下标。<br>返回值：返回在指定的位置的字符的 Unicode 编码。</p>
+<p><strong>解释：</strong> 数组大小2N，一共 N+1 个元素，目标元素出现N次，说明其他元素只出现一次。创建一个空的哈希表，遍历数组，如果当前元素出现2次，该元素为目标元素。</p>
+<p><strong>知识点回顾：</strong><br>1、方法has() 返回一个bool值，用来表明map 中是否存在指定元素。<br>语法：myMap.has(key);<br>key：必填. 用来检测是否存在指定元素的键值。<br>返回值：如果指定元素存在于Map中，则返回true。其他情况返回false。<br>2、set() 方法为 Map 对象添加或更新一个指定了键（key）和值（value）的（新）键值对。<br>语法：myMap.set(key, value);<br>key：要添加至相应 Map 对象的元素的键。<br>value：要添加至相应 Map 对象的元素的值。<br>返回值：Map 对象。<br>3、for…of 语句创建一个循环来迭代可迭代的对象。在 ES6 中引入的 for…of 循环，以替代 for…in 和 forEach() ，并支持新的迭代协议。for…of 允许你遍历 Arrays（数组）, Strings（字符串）, Maps（映射）, Sets（集合）等可迭代的数据结构等。<br>语法</p>
+<pre><code>for (variable of iterable) {
+    statement
+}
+</code></pre><p>variable：每个迭代的属性值被分配给该变量。<br>iterable：一个具有可枚举属性并且可以迭代的对象。</p>
 
             </div>
             <hr/>
@@ -670,9 +665,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之520》
+                    《leetcode刷题记录之961》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-520/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/01/leetcode-shua-ti-ji-lu-zhi-961/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -971,32 +966,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/30/leetcode-shua-ti-ji-lu-zhi-434/">
+                <a href="/2019/09/01/leetcode-shua-ti-ji-lu-zhi-961/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="leetcode刷题记录之434">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之961">
                         
-                        <span class="card-title">leetcode刷题记录之434</span>
+                        <span class="card-title">leetcode刷题记录之961</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            434、字符串中的单词数统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。请注意，你可以假定字符串里不包括任何不可打印的字符。示例 1：
-输入: &quot;Hello, my name is John&quot;
-输出: 5
-
+                            961、重复 N 次的元素&emsp;&emsp;在大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。&emsp;&emsp;返回重复了 N 次的那个元素。示例 1：
+输入：[1,2,3,3]
+输出：3
+示
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1009,6 +1005,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1016,8 +1013,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
@@ -1031,24 +1028,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-551/">
+                <a href="/2019/08/31/leetcode-shua-ti-ji-lu-zhi-657/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="leetcode刷题记录之551">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode刷题记录之657">
                         
-                        <span class="card-title">leetcode刷题记录之551</span>
+                        <span class="card-title">leetcode刷题记录之657</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            551、学生出勤记录 I给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：&emsp;&emsp;1、’A’ : Absent，缺勤&emsp;&emsp;2、’L’ : Late，迟到&emsp;&emsp;3、’P’ 
+                            657、机器人能否返回原点&emsp;&emsp;在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。&emsp;&emsp;移动顺序由字符串表示。字符 move[
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-31
                             </span>
                         <span class="publish-author">
                             
