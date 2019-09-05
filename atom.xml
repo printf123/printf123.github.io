@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://printf123.github.io/"/>
-  <updated>2019-09-04T04:41:30.009Z</updated>
+  <updated>2019-09-05T13:56:53.529Z</updated>
   <id>http://printf123.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode刷题记录之1089</title>
+    <link href="http://printf123.github.io/2019/09/05/leetcode-shua-ti-ji-lu-zhi-1089/"/>
+    <id>http://printf123.github.io/2019/09/05/leetcode-shua-ti-ji-lu-zhi-1089/</id>
+    <published>2019-09-05T13:43:38.000Z</published>
+    <updated>2019-09-05T13:56:53.529Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1089、复写零&quot;&gt;&lt;a href=&quot;#1089、复写零&quot; class=&quot;headerlink&quot; title=&quot;1089、复写零&quot;&gt;&lt;/a&gt;1089、复写零&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给你一个长度固定的整数数组
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode刷题记录之69</title>
@@ -94,9 +122,9 @@
     
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     
-      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
       <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
   </entry>
   
@@ -363,7 +391,7 @@
     <link href="http://printf123.github.io/2019/08/26/leetcode-shua-ti-ji-lu-zhi-728/"/>
     <id>http://printf123.github.io/2019/08/26/leetcode-shua-ti-ji-lu-zhi-728/</id>
     <published>2019-08-26T09:48:38.000Z</published>
-    <updated>2019-08-26T10:11:19.004Z</updated>
+    <updated>2019-09-05T13:48:28.406Z</updated>
     
     <summary type="html">
     
@@ -553,34 +581,6 @@
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     
       <category term="字符串" scheme="http://printf123.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode刷题记录之1</title>
-    <link href="http://printf123.github.io/2019/08/24/leetcode-shua-ti-ji-lu-zhi-1/"/>
-    <id>http://printf123.github.io/2019/08/24/leetcode-shua-ti-ji-lu-zhi-1/</id>
-    <published>2019-08-24T13:30:38.000Z</published>
-    <updated>2019-08-25T13:05:44.823Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1、两数之和&quot;&gt;&lt;a href=&quot;#1、两数之和&quot; class=&quot;headerlink&quot; title=&quot;1、两数之和&quot;&gt;&lt;/a&gt;1、两数之和&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个整数数组 nums 和一个目标值
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    
-      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
   </entry>
   
