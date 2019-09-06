@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之905, 锦瑟博客">
-    <meta name="description" content="905、按奇偶排序数组&amp;emsp;&amp;emsp;给定一个非负整数数组 A，返回一个数组，在该数组中， A 的所有偶数元素之后跟着所有奇数元素。&amp;emsp;&amp;emsp;你可以返回满足此条件的任何数组作为答案。示例 1：
-输入：[3,1,2,4]">
+    <meta name="keywords" content="leetcode刷题记录之26, 锦瑟博客">
+    <meta name="description" content="26、删除排序数组中的重复项&amp;emsp;&amp;emsp;给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&amp;emsp;&amp;emsp;不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之905 | 锦瑟博客</title>
+    <title>leetcode刷题记录之26 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之905
+                        leetcode刷题记录之26
                     </div>
                 </div>
             </div>
@@ -386,10 +385,6 @@
                                 <span class="chip bg-color">数组</span>
                             </a>
                         
-                            <a href="/tags/排序/" target="_blank">
-                                <span class="chip bg-color">排序</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -410,14 +405,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-28
+                    2019-09-06
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        890
+                        910
                     </div>
                     
 
@@ -440,90 +435,80 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="905、按奇偶排序数组"><a href="#905、按奇偶排序数组" class="headerlink" title="905、按奇偶排序数组"></a>905、按奇偶排序数组</h3><p>&emsp;&emsp;给定一个非负整数数组 A，返回一个数组，在该数组中， A 的所有偶数元素之后跟着所有奇数元素。<br>&emsp;&emsp;你可以返回满足此条件的任何数组作为答案。<br><strong>示例 1：</strong></p>
-<pre><code>输入：[3,1,2,4]
-输出：[2,4,3,1]
-输出 [4,2,3,1]，[2,4,1,3] 和 [4,2,1,3] 也会被接受。
-</code></pre><p><strong>提示：</strong></p>
-<ul>
-<li>1 &lt;= A.length &lt;= 5000</li>
-<li>0 &lt;= A[i] &lt;= 5000</li>
-</ul>
-<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/sort-array-by-parity/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-array-by-parity/</a></p>
-<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
- * Note: The returned array must be malloced, assume caller calls free().
- */</span>
-<span class="token keyword">int</span><span class="token operator">*</span> <span class="token function">sortArrayByParity</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> A<span class="token punctuation">,</span> <span class="token keyword">int</span> ASize<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">*</span> returnSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span><span class="token operator">*</span> ans <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token operator">*</span>ASize<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> ASize<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-                ans<span class="token punctuation">[</span>t<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <h3 id="26、删除排序数组中的重复项"><a href="#26、删除排序数组中的重复项" class="headerlink" title="26、删除排序数组中的重复项"></a>26、删除排序数组中的重复项</h3><p>&emsp;&emsp;给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。<br>&emsp;&emsp;不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。<br><strong>示例 1：</strong></p>
+<pre><code>给定数组 nums = [1,1,2], 
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 
+你不需要考虑数组中超出新长度后面的元素。
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>给定 nums = [0,0,1,1,1,2,2,3,3,4],
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+</code></pre><p><strong>说明：</strong><br>为什么返回数值是整数，但输出的答案是数组呢?<br>请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。<br>你可以想象内部操作如下：</p>
+<pre><code>// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);
+// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i &lt; len; i++) {
+    print(nums[i]);
+}
+</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/</a></p>
+<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">removeDuplicates</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> numsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span>j <span class="token operator">&lt;</span> numsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            numsSize<span class="token operator">--</span><span class="token punctuation">;</span>
+            i<span class="token operator">--</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> ASize<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
-                ans<span class="token punctuation">[</span>t<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token operator">*</span>returnSize <span class="token operator">=</span> ASize<span class="token punctuation">;</span>
-        <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> numsSize<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 两遍扫描，第一遍输出偶数，第二遍输出奇数。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
+<p><strong>解释：</strong> 顺序循环数组，临近2个数字相同时，将后面一个数字往前移一位，numsSize减1，为了防止有3个以上的相同的数字的相邻，则需要i减1，但是这个方法的时间复杂度较高。</p>
+<p><strong>知识点回顾：</strong>无。</p>
 <h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">sortArrayByParity</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> A<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">></span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">int</span> tmp <span class="token operator">=</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">removeDuplicates</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                i<span class="token operator">++</span><span class="token punctuation">;</span>
+                nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> i<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> j<span class="token operator">--</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> A<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 原地算法，如果希望原地排序，可以使用快排，一个经典的算法。<br>&emsp;&emsp;维护两个指针 i 和 j，循环保证每刻小于 i 的变量都是偶数（也就是 A[k] % 2 == 0 当 k &lt; i），所有大于 j 的都是奇数。<br>所以， 4 种情况针对 (A[i] % 2, A[j] % 2)：</p>
-<ul>
-<li>如果是 (0, 1)，那么万事大吉 i++ 并且 j–。</li>
-<li>如果是 (1, 0)，那么交换两个元素，然后继续。</li>
-<li>如果是 (0, 0)，那么说明 i 位置是正确的，只能 i++。</li>
-<li>如果是 (1, 1)，那么说明 j 位置是正确的，只能 j–。</li>
-</ul>
-<p>&emsp;&emsp;通过这 4 种情况，循环不变量得以维护，并且 j-i 不断变小。最终就可以得到奇偶有序的数组。</p>
-<p><strong>知识点回顾：</strong> 快排的思想，将在数据结构篇中单独描述。</p>
+<p><strong>解释：</strong> 方法：双指针法，数组完成排序后，我们可以放置两个指针 i 和 j，其中 i 是慢指针，而 j 是快指针。只要 nums[i]=nums[j]，我们就增加 j 以跳过重复项。当我们遇到 nums[j]≠nums[i] 时，跳过重复项的运行已经结束，因此我们必须把它（nums[j]）的值复制到 nums[i+1]。然后递增 i，接着我们将再次重复相同的过程，直到 j 到达数组的末尾为止。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">sortArrayByParity</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> A<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
-        i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
-                A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                i <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> A
+    <span class="token keyword">def</span> <span class="token function">removeDuplicates</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        flag <span class="token operator">=</span> <span class="token number">0</span>                  <span class="token comment" spellcheck="true"># 定义一个指针变量</span>
+        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums<span class="token punctuation">:</span>          <span class="token comment" spellcheck="true"># 遍历数组</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>flag<span class="token punctuation">]</span> <span class="token operator">!=</span> num<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 若指针指向的元素与当前遍历数组的元素不同</span>
+                flag <span class="token operator">+=</span> <span class="token number">1</span>         <span class="token comment" spellcheck="true"># 指针后移一位</span>
+                nums<span class="token punctuation">[</span>flag<span class="token punctuation">]</span> <span class="token operator">=</span> num  <span class="token comment" spellcheck="true"># 修改数组，将不同的元素占用重复元素的位置</span>
+            <span class="token comment" spellcheck="true"># 若相同则指针不动，数组继续往后遍历</span>
+        <span class="token comment" spellcheck="true"># 注意考虑数组为空的情况（flag初始值为0，由于要求数组长度，故需要加1）</span>
+        <span class="token keyword">return</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">and</span> flag <span class="token operator">+</span> <span class="token number">1</span> 
 </code></pre>
-<p><strong>解释：</strong> 、双指针同向遍历，初始状态都指在数组左端，后面指针不断加一，遇到偶数就交换到前面去，再把前面指针加一，指导后面指针遍历完数组结束。</p>
+<p><strong>解释：</strong> 类似Java的求解思路。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} A
- * @return {number[]}
+ * @param {number[]} nums
+ * @return {number}
  */</span>
-<span class="token keyword">var</span> sortArrayByParity <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> B <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> A<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        B<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        B<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> B
+<span class="token keyword">var</span> removeDuplicates <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> len <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nums<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> nums<span class="token punctuation">[</span>len<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> len
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 一次循环，如果为偶数就添加到头部，如果为奇数就添加到尾部。</p>
-<p><strong>知识点回顾：</strong><br>1、unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度。<br>注意： 该方法将改变数组的数目。<br>提示: 将新项添加到数组末尾，请使用 push() 方法。<br>语法：array.unshift(item1,item2, …, itemX)<br>item1,item2, …, itemX：必需。向数组起始位置添加一个或者多个元素。<br>返回值：Number数组新长度。<br>2、push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。<br>注意： 新元素将添加在数组的末尾。<br>注意： 此方法改变数组的长度。<br>提示： 在数组起始位置添加元素请使用 unshift() 方法。<br>语法：array.push(item1, item2, …, itemX)<br>item1,item2, …, itemX：必需。要添加到数组的元素。<br>返回值：Number数组新长度。</p>
+<p><strong>解释：</strong> 类似于Java的求解思路。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -682,9 +667,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之905》
+                    《leetcode刷题记录之26》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-905/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/06/leetcode-shua-ti-ji-lu-zhi-26/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -983,29 +968,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-561/">
+                <a href="/2019/09/06/leetcode-shua-ti-ji-lu-zhi-26/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode刷题记录之561">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之26">
                         
-                        <span class="card-title">leetcode刷题记录之561</span>
+                        <span class="card-title">leetcode刷题记录之26</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            561、数组拆分 I&emsp;&emsp;给定长度为 2n 的数组, 你的任务是将这些数分成 n 对, 例如 (a1, b1), (a2, b2), …, (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。示例 
+                            26、删除排序数组中的重复项&emsp;&emsp;给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&emsp;&emsp;不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1018,6 +1004,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1027,10 +1014,6 @@
                     
                     <a href="/tags/数组/" target="_blank">
                         <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                    <a href="/tags/排序/" target="_blank">
-                        <span class="chip bg-color">排序</span>
                     </a>
                     
                 </div>
@@ -1044,28 +1027,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/27/leetcode-shua-ti-ji-lu-zhi-977/">
+                <a href="/2019/09/05/leetcode-shua-ti-ji-lu-zhi-1089/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="leetcode刷题记录之977">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之1089">
                         
-                        <span class="card-title">leetcode刷题记录之977</span>
+                        <span class="card-title">leetcode刷题记录之1089</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            977、有序数组的平方&emsp;&emsp;给定一个按非递减顺序排序的整数数组 A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。示例 1：
-输入：[-4,-1,0,3,10]
-输出：[0,1,9,16,100]
-示例 2：
-输
+                            1089、复写零&emsp;&emsp;给你一个长度固定的整数数组 arr，请你将该数组中出现的每个零都复写一遍，并将其余的元素向右平移。&emsp;&emsp;注意：请不要在超过该数组长度的位置写入元素。&emsp;&emsp;要求：请对
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-27
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
                             </span>
                         <span class="publish-author">
                             
@@ -1088,10 +1067,6 @@
                     
                     <a href="/tags/数组/" target="_blank">
                         <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                    <a href="/tags/排序/" target="_blank">
-                        <span class="chip bg-color">排序</span>
                     </a>
                     
                 </div>
