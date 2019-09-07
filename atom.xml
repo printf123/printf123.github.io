@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://printf123.github.io/"/>
-  <updated>2019-09-06T02:24:50.732Z</updated>
+  <updated>2019-09-07T02:43:12.230Z</updated>
   <id>http://printf123.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode刷题记录之268</title>
+    <link href="http://printf123.github.io/2019/09/07/leetcode-shua-ti-ji-lu-zhi-268/"/>
+    <id>http://printf123.github.io/2019/09/07/leetcode-shua-ti-ji-lu-zhi-268/</id>
+    <published>2019-09-07T02:18:38.000Z</published>
+    <updated>2019-09-07T02:43:12.230Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;268、缺失数字&quot;&gt;&lt;a href=&quot;#268、缺失数字&quot; class=&quot;headerlink&quot; title=&quot;268、缺失数字&quot;&gt;&lt;/a&gt;268、缺失数字&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个包含 0, 1, 2, …, n 中 n 个数的序列，找出
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode刷题记录之26</title>
     <link href="http://printf123.github.io/2019/09/06/leetcode-shua-ti-ji-lu-zhi-26/"/>
     <id>http://printf123.github.io/2019/09/06/leetcode-shua-ti-ji-lu-zhi-26/</id>
     <published>2019-09-06T02:10:38.000Z</published>
-    <updated>2019-09-06T02:24:50.732Z</updated>
+    <updated>2019-09-07T02:28:16.907Z</updated>
     
     <summary type="html">
     
@@ -150,9 +178,9 @@
     
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     
-      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
       <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
   </entry>
   
@@ -553,34 +581,6 @@
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     
       <category term="二分法" scheme="http://printf123.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode刷题记录之7</title>
-    <link href="http://printf123.github.io/2019/08/25/leetcode-shua-ti-ji-lu-zhi-7/"/>
-    <id>http://printf123.github.io/2019/08/25/leetcode-shua-ti-ji-lu-zhi-7/</id>
-    <published>2019-08-25T12:50:38.000Z</published>
-    <updated>2019-08-25T12:59:50.827Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;7、整数反转&quot;&gt;&lt;a href=&quot;#7、整数反转&quot; class=&quot;headerlink&quot; title=&quot;7、整数反转&quot;&gt;&lt;/a&gt;7、整数反转&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给出一个 32
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    
-      <category term="字符串" scheme="http://printf123.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
