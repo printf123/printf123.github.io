@@ -4,9 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之35, 锦瑟博客">
-    <meta name="description" content="35、搜索插入位置&amp;emsp;&amp;emsp;给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。&amp;emsp;&amp;emsp;你可以假设数组中无重复元素。示例 1:
-输入: [1,">
+    <meta name="keywords" content="leetcode刷题记录之367, 锦瑟博客">
+    <meta name="description" content="367、有效的完全平方数&amp;emsp;&amp;emsp;给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。&amp;emsp;&amp;emsp;说明：不要使用任何内置的库函数，如  sqrt。示例 1：">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之35 | 锦瑟博客</title>
+    <title>leetcode刷题记录之367 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之35
+                        leetcode刷题记录之367
                     </div>
                 </div>
             </div>
@@ -382,8 +381,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/二分法/" target="_blank">
-                                <span class="chip bg-color">二分法</span>
+                            <a href="/tags/数学/" target="_blank">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
                     </div>
@@ -406,21 +405,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-25
+                    2019-09-08
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.4k
+                        329
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        1 分
                     </div>
                     
                 
@@ -436,91 +435,70 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="35、搜索插入位置"><a href="#35、搜索插入位置" class="headerlink" title="35、搜索插入位置"></a>35、搜索插入位置</h3><p>&emsp;&emsp;给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。<br>&emsp;&emsp;你可以假设数组中无重复元素。<br><strong>示例 1:</strong></p>
-<pre><code>输入: [1,3,5,6], 5
-输出: 2
-</code></pre><p><strong>示例 2:</strong></p>
-<pre><code>输入: [1,3,5,6], 2
-输出: 1
-</code></pre><p><strong>示例 3:</strong></p>
-<pre><code>输入: [1,3,5,6], 7
-输出: 4
-</code></pre><p><strong>示例 4:</strong></p>
-<pre><code>输入: [1,3,5,6], 0
-输出: 0
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/search-insert-position/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/search-insert-position/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">searchInsert</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>numsSize<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> target<span class="token punctuation">)</span>
-            <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+                <h3 id="367、有效的完全平方数"><a href="#367、有效的完全平方数" class="headerlink" title="367、有效的完全平方数"></a>367、有效的完全平方数</h3><p>&emsp;&emsp;给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。<br>&emsp;&emsp;说明：不要使用任何内置的库函数，如  sqrt。<br><strong>示例 1：</strong></p>
+<pre><code>输入：16
+输出：True
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：14
+输出：False
+</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/valid-perfect-square/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/valid-perfect-square/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">isPerfectSquare</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;=</span> <span class="token number">46340</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">==</span> i <span class="token operator">*</span> i<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> true<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> numsSize<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> false<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 遍历有序数组，当第一个大于等于target的值出现时，返回当前的下标，否则，就代表target大于数组中全部数字，则返回numsSize。</p>
-<p><strong>知识点回顾：</strong> 无，最简单的暴力求法。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">searchInsert</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+<p><strong>解释：</strong> 暴力求解，这里也可以改成whlie。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPerfectSquare</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//解法：数学定理(1 + 3 + 5 + ... + (2n - 1) = n ^ 2)</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>num <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            num <span class="token operator">-=</span> i<span class="token punctuation">;</span>
+            i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> left<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> num <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> </p>
-<ul>
-<li>标签：二分查找。</li>
-<li>如果该题目暴力解决的话需要 O(n)的时间复杂度，但是如果二分的话则可以降低到 O(logn)的时间复杂度。</li>
-<li>整体思路和普通的二分查找几乎没有区别，先设定左侧下标 left 和右侧下标 right，再计算中间下标 mid。</li>
-<li>每次根据 nums[mid] 和 target 之间的大小进行判断，相等则直接返回下标，nums[mid] &lt; target 则 left 右移，nums[mid] &gt; target 则 right 左移。</li>
-<li>查找结束如果没有相等值则返回 left，该值为插入位置。</li>
-<li>时间复杂度：O(logn)</li>
-</ul>
-<p><strong>知识点回顾：</strong> 二分查找的相关知识，之后在数据结构篇中也会有更详细的描述。</p>
+<p><strong>解释：</strong> 运用数学知识求解。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">searchInsert</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        nums<span class="token punctuation">.</span>append<span class="token punctuation">(</span>target<span class="token punctuation">)</span>
-        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">return</span> nums<span class="token punctuation">.</span>index<span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">isPerfectSquare</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> num<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> num <span class="token operator">&lt;=</span> <span class="token number">4</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> num <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">or</span> num <span class="token operator">==</span> <span class="token number">4</span>
+        l<span class="token punctuation">,</span> r <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> num
+        <span class="token keyword">while</span> l <span class="token operator">&lt;</span> r<span class="token punctuation">:</span>
+            mid <span class="token operator">=</span> <span class="token punctuation">(</span>l<span class="token operator">+</span>r<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+            tmp <span class="token operator">=</span> mid <span class="token operator">*</span> mid
+            <span class="token keyword">if</span> tmp <span class="token operator">==</span> num<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">elif</span> tmp <span class="token operator">&lt;</span> num<span class="token punctuation">:</span>
+                l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                r <span class="token operator">=</span> mid
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
 </code></pre>
-<p><strong>解释：</strong><br>1、将 target 插入到数组中，同时，做一下排序。<br>2、这样，得到一个一定包含 target 的有序的新数组。<br>3、target 目前所在的位置，即是 target 对应元素的 原始位置 或者 插入位置。</p>
-<p><strong>知识点回顾：</strong><br>1、append() 方法用于在列表末尾添加新的对象。<br>语法：list.append(obj)<br>obj：添加到列表末尾的对象。<br>返回值：该方法无返回值，但是会修改原来的列表。<br>2、sort() 函数用于对原列表进行排序，如果指定参数，则使用比较函数指定的比较函数。<br>语法：list.sort( key=None, reverse=False)<br>key：主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。<br>reverse：排序规则，reverse = True 降序， reverse = False 升序（默认）。<br>返回值：该方法没有返回值，但是会对列表的对象进行排序。<br>3、index() 方法检测字符串中是否包含子字符串 str ，如果指定 beg（开始） 和 end（结束） 范围，则检查是否包含在指定范围内，该方法与 python find()方法一样，只不过如果str不在 string中会报一个异常。<br>语法：str.index(str, beg=0, end=len(string))<br>str：指定检索的字符串<br>beg：开始索引，默认为0。<br>end：结束索引，默认为字符串的长度。<br>返回值：如果包含子字符串返回开始的索引值，否则抛出异常。</p>
+<p><strong>解释：</strong> 二分法求解。</p>
+<p><strong>知识点回顾：</strong> 无</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
+ * @param {number} num
+ * @return {boolean}
  */</span>
-<span class="token keyword">var</span> searchInsert <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">></span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">></span><span class="token operator">></span><span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//取左中位数</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> left <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//中位数小于目标值，削去区间左侧</span>
-        <span class="token keyword">else</span> right <span class="token operator">=</span> index<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//中位数大于等于目标值，削去区间右侧</span>
+<span class="token keyword">var</span> isPerfectSquare <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> cur <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>num<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>cur<span class="token operator">*</span>cur<span class="token operator">&lt;=</span>num<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>cur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>cur<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">></span>num<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cur <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>cur<span class="token operator">-</span><span class="token punctuation">(</span>cur<span class="token operator">*</span>cur<span class="token operator">-</span>num<span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>cur<span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> left<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> cur<span class="token operator">*</span>cur <span class="token operator">==</span> num<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> </p>
-<ul>
-<li>初始区间的设置 left = 0 right = nums.length-1。</li>
-<li>当target大于nums中最大的元素时，返回的索引值在区间外，为nums.length，因此提前进行判断。</li>
-<li>while循环的条件为left &lt; right，当left = right时跳出循环。</li>
-<li>中位数选取左中位数使用无符号右移left + right &gt;&gt;&gt; 1防止溢出 （也可选取右中位数，但if-else也需要同时修改）</li>
-<li>在选取了左中位数的基础上，if-else需要保证左边界收缩，因此先写left = index+1，再根据+1填写if括号中的条件为nums[index]&lt;target，再补全else即可。</li>
-<li>由于只有在left = right时才能跳出循环，所以返回left<code></code>right均可。</li>
-</ul>
-<p><strong>知识点回顾：</strong><br>1、二分查找的相关知识，之后在数据结构篇中也会有更详细的描述。<br>2、parseInt() 函数可解析一个字符串，并返回一个整数。<br>语法：parseInt(string, radix)<br>string：必需。要被解析的字符串。<br>radix：可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。<br>返回值：返回解析后的数字。<br>说明：当参数 radix 的值为 0，或没有设置该参数时，parseInt() 会根据 string 来判断数字的基数。<br>3、&gt;&gt;&gt;无符号移位：该操作符会将第一个操作数向右移动指定的位数。向右被移出的位被丢弃，左侧用0填充。因为符号位变成了 0，所以结果总是非负的。（即便右移 0 个比特，结果也是非负的。）</p>
+<p><strong>解释：</strong> 牛顿迭代法求解。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -679,9 +657,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之35》
+                    《leetcode刷题记录之367》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-35/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/08/leetcode-shua-ti-ji-lu-zhi-367/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -980,29 +958,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-344/">
+                <a href="/2019/09/08/leetcode-shua-ti-ji-lu-zhi-367/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="leetcode刷题记录之344">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之367">
                         
-                        <span class="card-title">leetcode刷题记录之344</span>
+                        <span class="card-title">leetcode刷题记录之367</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            344、反转字符串&emsp;&emsp;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。&emsp;&emsp;不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空
+                            367、有效的完全平方数&emsp;&emsp;给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。&emsp;&emsp;说明：不要使用任何内置的库函数，如  sqrt。示例 1：
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1015,6 +994,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1022,8 +1002,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
@@ -1037,32 +1017,28 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-7/">
+                <a href="/2019/09/07/leetcode-shua-ti-ji-lu-zhi-268/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode刷题记录之7">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之268">
                         
-                        <span class="card-title">leetcode刷题记录之7</span>
+                        <span class="card-title">leetcode刷题记录之268</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            7、整数反转&emsp;&emsp;给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。示例 1：
-输入: 123
-输出: 321
+                            268、缺失数字&emsp;&emsp;给定一个包含 0, 1, 2, …, n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。示例 1：
+输入: [3,0,1]
+输出: 2
 示例 2：
-输入: -123
-输出: -321
-示例 3：
-输入: 120
-输出: 21
+输入: [9,6,4,2,3,
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-07
                             </span>
                         <span class="publish-author">
                             
@@ -1083,8 +1059,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
