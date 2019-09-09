@@ -4,8 +4,18 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之561, 锦瑟博客">
-    <meta name="description" content="561、数组拆分 I&amp;emsp;&amp;emsp;给定长度为 2n 的数组, 你的任务是将这些数分成 n 对, 例如 (a1, b1), (a2, b2), …, (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。示例 ">
+    <meta name="keywords" content="leetcode刷题记录之326, 锦瑟博客">
+    <meta name="description" content="326、3的幂&amp;emsp;&amp;emsp;给定一个整数，写一个函数来判断它是否是 3 的幂次方。示例 1：
+输入: 27
+输出: true
+示例 2：
+输入: 0
+输出: false
+示例 3：
+输入: 9
+输出: true
+示例 4：
+输入:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +23,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之561 | 锦瑟博客</title>
+    <title>leetcode刷题记录之326 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +270,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之561
+                        leetcode刷题记录之326
                     </div>
                 </div>
             </div>
@@ -381,12 +391,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/数组/" target="_blank">
-                                <span class="chip bg-color">数组</span>
-                            </a>
-                        
-                            <a href="/tags/排序/" target="_blank">
-                                <span class="chip bg-color">排序</span>
+                            <a href="/tags/数学/" target="_blank">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
                     </div>
@@ -409,21 +415,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-28
+                    2019-09-09
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        741
+                        605
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        2 分
                     </div>
                     
                 
@@ -439,73 +445,63 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="561、数组拆分-I"><a href="#561、数组拆分-I" class="headerlink" title="561、数组拆分 I"></a>561、数组拆分 I</h3><p>&emsp;&emsp;给定长度为 2n 的数组, 你的任务是将这些数分成 n 对, 例如 (a1, b1), (a2, b2), …, (an, bn) ，使得从1 到 n 的 min(ai, bi) 总和最大。<br><strong>示例 1：</strong></p>
-<pre><code>输入: [1,4,3,2]
-输出: 4
-解释: n 等于 2, 最大总和为 4 = min(1, 2) + min(3, 4).
-</code></pre><p><strong>提示:</strong></p>
+                <h3 id="326、3的幂"><a href="#326、3的幂" class="headerlink" title="326、3的幂"></a>326、3的幂</h3><p>&emsp;&emsp;给定一个整数，写一个函数来判断它是否是 3 的幂次方。<br><strong>示例 1：</strong></p>
+<pre><code>输入: 27
+输出: true
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入: 0
+输出: false
+</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入: 9
+输出: true
+</code></pre><p><strong>示例 4：</strong></p>
+<pre><code>输入: 45
+输出: false
+</code></pre><p><strong>进阶：</strong></p>
 <ul>
-<li>n 是正整数,范围在 [1, 10000].</li>
-<li>数组中的元素范围在 [-10000, 10000].</li>
+<li>你能不使用循环或者递归来完成本题吗？</li>
 </ul>
-<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/array-partition-i/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/array-partition-i/</a></p>
-<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">arrayPairSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-     <span class="token keyword">int</span> n<span class="token punctuation">[</span><span class="token number">20001</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> sum<span class="token punctuation">;</span>
-     <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//建立值、键哈希表，即基数排序</span>
-          n<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">10000</span><span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//保证下标为正数</span>
-     <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> j <span class="token operator">=</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20001</span><span class="token punctuation">;</span> <span class="token punctuation">)</span>    <span class="token comment" spellcheck="true">//将下标为 0、2、4 ... 的相加</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>         <span class="token comment" spellcheck="true">//判断是否存在该数，若存在则判断是否偶数下标</span>
-           <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> sum <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">10000</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//偶数下标，累加</span>
-               j<span class="token operator">++</span><span class="token punctuation">;</span>         <span class="token comment" spellcheck="true">//计数</span>
-           n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>         <span class="token comment" spellcheck="true">//该值减 1</span>
-      <span class="token punctuation">}</span>    
-          <span class="token keyword">else</span> i<span class="token operator">++</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//不存在，跳过该值</span>
-     <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/power-of-three/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/power-of-three/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">isPowerOfThree</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span> 
+            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+            n <span class="token operator">/</span><span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">;</span>  
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong></p>
-<ul>
-<li>排序，然后将下标为 0、2、4 … 个数相加即可。</li>
-<li>由于是纯数字，并且限定了数字范围，所以可使用基数排序达到 O(n) 复杂度。</li>
-<li>数字范围 [-10000, 10000]，所以可创建 n[20001]，对每个元素加 10000 使其变为正数。</li>
-</ul>
-<p><strong>知识点回顾：</strong> 本题若使用冒泡排序会超时，关于排序算法，将在数据结构篇中详细说明。</p>
+<p><strong>解释：</strong> 找出数字 n 是否是数字 b 的幂的一个简单方法是，n%3 只要余数为 0，就一直将 n 除以 b。因此，应该可以将 n 除以 b x 次，每次都有 0 的余数，最终结果是 1。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">arrayPairSum</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Arrays<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            sum <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPowerOfThree</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token keyword">return</span> n <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token number">1162261467</span> <span class="token operator">%</span> n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 为了理解这种方法，让我们从不同的角度来看待问题。我们需要形成数组元​​素的配对，使得这种配对中最小的总和最大。因此，我们可以查看选择配对中最小值的操作，比如 (a,b)(a,b)(a,b) 可能会产生的最大损失 a−ba-ba−b (如果 a&gt;ba &gt; ba&gt;b)。如果这类配对产生的总损失最小化，那么总金额现在将达到最大值。只有当为配对选择的数字比数组的其他元素更接近彼此时，才有可能将每个配对中的损失最小化。考虑到这一点，我们可以对给定数组的元素进行排序，并直接按排序顺序形成元素的配对。这将导致元素的配对，它们之间的差异最小，从而导致所需总和的最大化。</p>
+<p><strong>解释：</strong> 通过查看相关解析，发现了这个解法，用到了数论的知识，3的幂次的质因子只有3，而所给出的n如果也是3的幂次，故而题目中所给整数范围内最大的3的幂次的因子只能是3的幂次，1162261467是3的19次幂，是整数范围内最大的3的幂次。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">arrayPairSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> sum<span class="token punctuation">(</span>sorted<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">isPowerOfThree</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> n <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">and</span> <span class="token number">3</span> <span class="token operator">**</span> round<span class="token punctuation">(</span>math<span class="token punctuation">.</span>log<span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> n
 </code></pre>
-<p><strong>解释：</strong> 排序 + 切片，再求和。</p>
+<p><strong>解释：</strong> 用数学公式求解，math.log 函数得到的数据可能不够精确，可以使用 round 取整。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} nums
- * @return {number}
+ * @param {number} n
+ * @return {boolean}
  */</span>
-<span class="token keyword">var</span> arrayPairSum <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//nums升序，取偶数位之和</span>
-    nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>a<span class="token operator">-</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        res <span class="token operator">+</span><span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token keyword">var</span> isPowerOfThree <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token regex">/^10*$/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 先进行排序，再对数组中下标为偶数的元素求和。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
+<p><strong>解释：</strong> 对于10进制数来说，10的n次幂表达为10，100，100。对于2进制数来说，2的n次幂的二进制表达为 10,100,100。3进制同理。</p>
+<p><strong>知识点回顾：</strong><br>1、正则表达式的相关知识。<br>2、toString()：数字的字符串表示。例如，当 radix 为 2 时，NumberObject 会被转换为二进制值表示的字符串。<br>语法：number.toString(radix)<br>radix：可选。规定表示数字的基数，是 2 ~ 36 之间的整数。若省略该参数，则使用基数 10。但是要注意，如果该参数是 10 以外的其他值，则 ECMAScript 标准允许实现返回任意值。</p>
+<ul>
+<li>2 - 数字以二进制值显示</li>
+<li>8 - 数字以八进制值显示</li>
+<li>16 - 数字以十六进制值显示</li>
+</ul>
+<p>返回值：把数字转换为字符串。</p>
 
             </div>
             <hr/>
@@ -664,9 +660,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之561》
+                    《leetcode刷题记录之326》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-561/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/09/leetcode-shua-ti-ji-lu-zhi-326/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -965,29 +961,40 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-922/">
+                <a href="/2019/09/09/leetcode-shua-ti-ji-lu-zhi-326/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode刷题记录之922">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="leetcode刷题记录之326">
                         
-                        <span class="card-title">leetcode刷题记录之922</span>
+                        <span class="card-title">leetcode刷题记录之326</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            922、按奇偶排序数组 II给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。你可以返回任何满足上述条件的数组作为答案。示例 
+                            326、3的幂&emsp;&emsp;给定一个整数，写一个函数来判断它是否是 3 的幂次方。示例 1：
+输入: 27
+输出: true
+示例 2：
+输入: 0
+输出: false
+示例 3：
+输入: 9
+输出: true
+示例 4：
+输入:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1000,6 +1007,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1007,8 +1015,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
@@ -1022,25 +1030,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-905/">
+                <a href="/2019/09/08/leetcode-shua-ti-ji-lu-zhi-367/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="leetcode刷题记录之905">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之367">
                         
-                        <span class="card-title">leetcode刷题记录之905</span>
+                        <span class="card-title">leetcode刷题记录之367</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            905、按奇偶排序数组&emsp;&emsp;给定一个非负整数数组 A，返回一个数组，在该数组中， A 的所有偶数元素之后跟着所有奇数元素。&emsp;&emsp;你可以返回满足此条件的任何数组作为答案。示例 1：
-输入：[3,1,2,4]
+                            367、有效的完全平方数&emsp;&emsp;给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。&emsp;&emsp;说明：不要使用任何内置的库函数，如  sqrt。示例 1：
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-08
                             </span>
                         <span class="publish-author">
                             
@@ -1061,12 +1068,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                    <a href="/tags/排序/" target="_blank">
-                        <span class="chip bg-color">排序</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
