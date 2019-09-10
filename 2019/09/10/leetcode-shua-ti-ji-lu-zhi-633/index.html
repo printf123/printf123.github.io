@@ -4,8 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之657, 锦瑟博客">
-    <meta name="description" content="657、机器人能否返回原点&amp;emsp;&amp;emsp;在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。&amp;emsp;&amp;emsp;移动顺序由字符串表示。字符 move[">
+    <meta name="keywords" content="leetcode刷题记录之633, 锦瑟博客">
+    <meta name="description" content="633、平方数之和&amp;emsp;&amp;emsp;给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 a2 + b2 = c。示例 1：
+输入: 5
+输出: True
+解释: 1 * 1 + 2 * 2 = 5
+示例 2：
+输入: ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之657 | 锦瑟博客</title>
+    <title>leetcode刷题记录之633 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +265,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之657
+                        leetcode刷题记录之633
                     </div>
                 </div>
             </div>
@@ -381,8 +386,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/字符串/" target="_blank">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/数学/" target="_blank">
+                                <span class="chip bg-color">数学</span>
                             </a>
                         
                     </div>
@@ -405,21 +410,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-31
+                    2019-09-10
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        896
+                        587
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        2 分
                     </div>
                     
                 
@@ -435,65 +440,82 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="657、机器人能否返回原点"><a href="#657、机器人能否返回原点" class="headerlink" title="657、机器人能否返回原点"></a>657、机器人能否返回原点</h3><p>&emsp;&emsp;在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。<br>&emsp;&emsp;移动顺序由字符串表示。字符 move[i] 表示其第 i 次移动。机器人的有效动作有 R（右），L（左），U（上）和 D（下）。如果机器人在完成所有动作后返回原点，则返回 true。否则，返回 false。<br>&emsp;&emsp;注意：机器人“面朝”的方向无关紧要。 “R” 将始终使机器人向右移动一次，“L” 将始终向左移动等。此外，假设每次移动机器人的移动幅度相同。<br><strong>示例 1：</strong></p>
-<pre><code>输入: &quot;UD&quot;
-输出: true
-解释：机器人向上移动一次，然后向下移动一次。所有动作都具有相同的幅度，因此它最终回到它开始的原点。因此，我们返回 true。
+                <h3 id="633、平方数之和"><a href="#633、平方数之和" class="headerlink" title="633、平方数之和"></a>633、平方数之和</h3><p>&emsp;&emsp;给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 a2 + b2 = c。<br><strong>示例 1：</strong></p>
+<pre><code>输入: 5
+输出: True
+解释: 1 * 1 + 2 * 2 = 5
 </code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: &quot;LL&quot;
-输出: false
-解释：机器人向左移动两次。它最终位于原点的左侧，距原点有两次 “移动” 的距离。我们返回 false，因为它在移动结束时没有返回原点。
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/robot-return-to-origin/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/robot-return-to-origin/</a></p>
-<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">judgeCircle</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> moves<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> r <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>u <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> d <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span> <span class="token punctuation">;</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span><span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'R'</span><span class="token punctuation">)</span>
-            r<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
-            l<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'U'</span><span class="token punctuation">)</span>
-            u<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'D'</span><span class="token punctuation">)</span>
-            d<span class="token operator">++</span><span class="token punctuation">;</span>
+<pre><code>输入: 3
+输出: False
+</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/sum-of-square-numbers/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sum-of-square-numbers/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">judgeSquareSum</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">long</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">,</span> tmp<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp <span class="token operator">=</span> i <span class="token operator">*</span> i <span class="token operator">+</span> j <span class="token operator">*</span> j <span class="token operator">-</span> c<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>tmp <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> j <span class="token operator">=</span> j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>r<span class="token operator">==</span>l<span class="token operator">&amp;&amp;</span>u<span class="token operator">==</span>d<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> true<span class="token punctuation">;</span>
     <span class="token keyword">return</span> false<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 统计各个字符的数量，‘R’和‘L’对比，‘U’和‘D’对比。都相等返回true，否则返回false。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
+<p><strong>解释：</strong> 令a = 0，b = 根号c + 1，在a &lt;= b 前提下，如果a方+b方小于c，则将a++，大于则将b++，等于直接返回true，当不满足a &lt;= b时，则说明没有满足的组合，返回false。</p>
+<p><strong>知识点回顾：</strong> 双指针技巧的使用。</p>
 <h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">judgeCircle</span><span class="token punctuation">(</span>String moves<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> c <span class="token operator">:</span> moves<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'R'</span> <span class="token operator">==</span> c<span class="token punctuation">)</span> x<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'L'</span> <span class="token operator">==</span> c<span class="token punctuation">)</span> x<span class="token operator">--</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'U'</span> <span class="token operator">==</span> c<span class="token punctuation">)</span> y<span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span> y<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">judgeSquareSum</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token comment" spellcheck="true">//StrictMath.sqrt() 开平方</span>
+        <span class="token comment" spellcheck="true">//StrictMath.pow(left,2)速度还不如left*left</span>
+        <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> StrictMath<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> sum <span class="token operator">=</span> left <span class="token operator">*</span> left <span class="token operator">+</span> right <span class="token operator">*</span> right<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">&lt;</span> c<span class="token punctuation">)</span> left<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">></span> c<span class="token punctuation">)</span> right<span class="token operator">--</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> x <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> y <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 假设原点的笛卡尔坐标为(x,y)=(0,0)，”L””R”，则改变X轴数值，”U””D”，则改变Y轴数值，最后看所在的坐标是不是(0,0)就好了。</p>
-<p><strong>知识点回顾：</strong><br>1、toCharArray() 方法将字符串转换为字符数组。<br>语法：public char[] toCharArray()<br>返回值：字符数组。</p>
+<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
+<p><strong>知识点回顾：</strong> 双指针技巧的使用。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">judgeCircle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> moves<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token punctuation">(</span>moves<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'U'</span><span class="token punctuation">)</span> <span class="token operator">==</span> moves<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'D'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">and</span> <span class="token punctuation">(</span>moves<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'L'</span><span class="token punctuation">)</span><span class="token operator">==</span> moves<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'R'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">judgeSquareSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> c<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        j<span class="token operator">=</span>int<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        i<span class="token operator">=</span><span class="token number">0</span>
+        <span class="token keyword">while</span> i <span class="token operator">&lt;=</span>j<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> c<span class="token operator">==</span>i<span class="token operator">*</span>i<span class="token operator">+</span>j<span class="token operator">*</span>j<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">elif</span> i<span class="token operator">*</span>i<span class="token operator">+</span>j<span class="token operator">*</span>j<span class="token operator">></span>c<span class="token punctuation">:</span>
+                j<span class="token operator">=</span>j<span class="token number">-1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                i<span class="token operator">=</span>i<span class="token operator">+</span><span class="token number">1</span>
 </code></pre>
-<p><strong>解释：</strong> 判断左右移动的次数和上下移动的次数是否相等。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
+<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
+<p><strong>知识点回顾：</strong> 双指针技巧的使用。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {string} moves
+ * @param {number} c
  * @return {boolean}
  */</span>
-<span class="token keyword">var</span> judgeCircle <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>moves<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-     <span class="token keyword">return</span> moves<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'L'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">===</span> moves<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'R'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> moves<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'U'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">===</span> moves<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'D'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length  
+<span class="token keyword">var</span> judgeSquareSum <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> flag <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>a <span class="token operator">&lt;=</span> flag<span class="token punctuation">;</span> a<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> b <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>c <span class="token operator">-</span> a<span class="token operator">*</span>a<span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token operator">===</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 判断左右移动的次数和上下移动的次数是否相等（即 L.count === R.count &amp;&amp; U.count === D.count）</p>
-<p><strong>知识点回顾：</strong><br>1、split() 方法用于把一个字符串分割成字符串数组。<br>提示： 如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>注意： split() 方法不改变原始字符串。<br>语法：string.split(separator,limit)<br>separator：可选。字符串或正则表达式，从该参数指定的地方分割 string Object。limit：可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。<br>返回值：一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 string Object 分割成子串创建的。返回的数组中的字串不包括 separator 自身。</p>
+<p><strong>解释：</strong> </p>
+<ul>
+<li>首先这道题的题干可以分解为 x^2 + y^2 = r^2 (c = r^2, 因此缩小循环范围至[0,r])。</li>
+<li>这个方程明显是一个圆的方程，因为x&gt;=0,y&gt;=0 所以循环范围为第一象限的四分之一圆弧。</li>
+<li>由图可知（没有画图，自行脑补吧），该圆弧由y = x这个方程分为上下对称的两部分，因此，若上半部分存在整数解，下半部分定然存在，反之。</li>
+<li>最后循环范围可以缩小到八分之一圆弧，即[0, 0.5^-1]这个区间。</li>
+<li>剩下的就是遍历这八分之一圆弧上面是否有整数解析 。</li>
+</ul>
+<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -652,9 +674,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之657》
+                    《leetcode刷题记录之633》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/31/leetcode-shua-ti-ji-lu-zhi-657/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/10/leetcode-shua-ti-ji-lu-zhi-633/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -953,32 +975,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/01/leetcode-shua-ti-ji-lu-zhi-961/">
+                <a href="/2019/09/10/leetcode-shua-ti-ji-lu-zhi-633/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之961">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="leetcode刷题记录之633">
                         
-                        <span class="card-title">leetcode刷题记录之961</span>
+                        <span class="card-title">leetcode刷题记录之633</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            961、重复 N 次的元素&emsp;&emsp;在大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。&emsp;&emsp;返回重复了 N 次的那个元素。示例 1：
-输入：[1,2,3,3]
-输出：3
-示
+                            633、平方数之和&emsp;&emsp;给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 a2 + b2 = c。示例 1：
+输入: 5
+输出: True
+解释: 1 * 1 + 2 * 2 = 5
+示例 2：
+输入: 
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -991,6 +1016,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -998,8 +1024,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
@@ -1013,27 +1039,34 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/30/leetcode-shua-ti-ji-lu-zhi-434/">
+                <a href="/2019/09/09/leetcode-shua-ti-ji-lu-zhi-326/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="leetcode刷题记录之434">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="leetcode刷题记录之326">
                         
-                        <span class="card-title">leetcode刷题记录之434</span>
+                        <span class="card-title">leetcode刷题记录之326</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            434、字符串中的单词数统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。请注意，你可以假定字符串里不包括任何不可打印的字符。示例 1：
-输入: &quot;Hello, my name is John&quot;
-输出: 5
-
+                            326、3的幂&emsp;&emsp;给定一个整数，写一个函数来判断它是否是 3 的幂次方。示例 1：
+输入: 27
+输出: true
+示例 2：
+输入: 0
+输出: false
+示例 3：
+输入: 9
+输出: true
+示例 4：
+输入:
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-30
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-09
                             </span>
                         <span class="publish-author">
                             
@@ -1054,8 +1087,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
