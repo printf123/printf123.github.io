@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode刷题记录之231]]></title>
+    <url>%2F2019%2F09%2F11%2Fleetcode-shua-ti-ji-lu-zhi-231%2F</url>
+    <content type="text"><![CDATA[231、2的幂&emsp;&emsp;给定一个整数，编写一个函数来判断它是否是 2 的幂次方。示例 1： 输入: 1 输出: true 解释: 2^0 = 1 示例 2： 输入: 16 输出: true 解释: 2^4 = 16 示例 3： 输入: 218 输出: false 难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/power-of-two/ 1、C语言代码：bool isPowerOfTwo(int n){ return n > 0 &amp;&amp; (n &amp; (n - 1)) == 0; } 解释： 若 n=2x 且 x 为自然数（即 n 为 2 的幂），则一定满足以下条件：1、恒有 n &amp; (n - 1) == 0，这是因为：&emsp;&emsp;- n 二进制最高位为 1，其余所有位为 0；&emsp;&emsp;- n−1 二进制最高位为 0，其余所有位为 1；2、一定满足 n &gt; 0。 因此，通过 n &gt; 0 且 n &amp; (n - 1) == 0 即可判定是否满足 n=2x 。 知识点回顾： 位运算的使用。 2、Java代码:class Solution { public boolean isPowerOfTwo(int n) { return n > 0 &amp;&amp; (n &amp; (n - 1)) == 0; } } 解释： 类似于C语言的求解思路。 知识点回顾： 位运算的使用。 3、Python代码：class Solution: def isPowerOfTwo(self, n: int) -> bool: return n > 0 and n &amp; (n - 1) == 0 解释： 类似于C语言的求解思路。 知识点回顾： 位运算的使用。 4、JavaScript代码：/** * @param {number} n * @return {boolean} */ var isPowerOfTwo = function(n) { return n > 0 &amp;&amp; (n &amp; (n - 1)) == 0; }; 解释： 类似于C语言的求解思路。 知识点回顾： 位运算的使用。]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode简单题</tag>
+        <tag>位运算</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode刷题记录之633]]></title>
     <url>%2F2019%2F09%2F10%2Fleetcode-shua-ti-ji-lu-zhi-633%2F</url>
     <content type="text"><![CDATA[633、平方数之和&emsp;&emsp;给定一个非负整数 c ，你要判断是否存在两个整数 a 和 b，使得 a2 + b2 = c。示例 1： 输入: 5 输出: True 解释: 1 * 1 + 2 * 2 = 5 示例 2： 输入: 3 输出: False 难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/sum-of-square-numbers/ 1、C语言代码：bool judgeSquareSum(int c) { long i = 0, j = (int) sqrt(c), tmp; while (i &lt;= j) { tmp = i * i + j * j - c; if (tmp == 0) return true; if (tmp > 0) j = j - 1; else i = i + 1; } return false; } 解释： 令a = 0，b = 根号c + 1，在a &lt;= b 前提下，如果a方+b方小于c，则将a++，大于则将b++，等于直接返回true，当不满足a &lt;= b时，则说明没有满足的组合，返回false。 知识点回顾： 双指针技巧的使用。 2、Java代码:class Solution { public boolean judgeSquareSum(int c) { //StrictMath.sqrt() 开平方 //StrictMath.pow(left,2)速度还不如left*left int left = 0, right = (int) StrictMath.sqrt(c); while (left &lt;= right) { int sum = left * left + right * right; if (sum &lt; c) left++; else if (sum > c) right--; else return true; } return false; } } 解释： 类似于C语言的求解思路。 知识点回顾： 双指针技巧的使用。 3、Python代码：class Solution: def judgeSquareSum(self, c: int) -> bool: j=int(math.sqrt(c)) i=0 while i &lt;=j: if c==i*i+j*j: return True elif i*i+j*j>c: j=j-1 else: i=i+1 解释： 类似于C语言的求解思路。 知识点回顾： 双指针技巧的使用。 4、JavaScript代码：/** * @param {number} c * @return {boolean} */ var judgeSquareSum = function(c) { const flag = Math.sqrt(0.5) * Math.sqrt(c) for(let a = 0;a &lt;= flag; a++){ const b = Math.sqrt(c - a*a) if(parseInt(b) === b){ return true } } return false }; 解释： 首先这道题的题干可以分解为 x^2 + y^2 = r^2 (c = r^2, 因此缩小循环范围至[0,r])。 这个方程明显是一个圆的方程，因为x&gt;=0,y&gt;=0 所以循环范围为第一象限的四分之一圆弧。 由图可知（没有画图，自行脑补吧），该圆弧由y = x这个方程分为上下对称的两部分，因此，若上半部分存在整数解，下半部分定然存在，反之。 最后循环范围可以缩小到八分之一圆弧，即[0, 0.5^-1]这个区间。 剩下的就是遍历这八分之一圆弧上面是否有整数解析 。 知识点回顾： 无。]]></content>
@@ -104,8 +116,8 @@
       </categories>
       <tags>
         <tag>leetcode简单题</tag>
-        <tag>数组</tag>
         <tag>哈希表</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
