@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://printf123.github.io/"/>
-  <updated>2019-10-13T05:34:22.914Z</updated>
+  <updated>2019-10-14T02:09:41.720Z</updated>
   <id>http://printf123.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode刷题记录之389</title>
+    <link href="http://printf123.github.io/2019/10/14/leetcode-shua-ti-ji-lu-zhi-389/"/>
+    <id>http://printf123.github.io/2019/10/14/leetcode-shua-ti-ji-lu-zhi-389/</id>
+    <published>2019-10-14T01:28:38.000Z</published>
+    <updated>2019-10-14T02:09:41.720Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;389-找不同&quot;&gt;&lt;a href=&quot;#389-找不同&quot; class=&quot;headerlink&quot; title=&quot;389. 找不同&quot;&gt;&lt;/a&gt;389. 找不同&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定两个字符串 s 和
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="字符串" scheme="http://printf123.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode刷题记录之461</title>
@@ -318,9 +346,9 @@
     
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     
-      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
-    
       <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
     
   </entry>
   
@@ -536,36 +564,6 @@
         
         
           &lt;h3 id=&quot;905、按奇偶排序数组&quot;&gt;&lt;a href=&quot;#905、按奇偶排序数组&quot; class=&quot;headerlink&quot; title=&quot;905、按奇偶排序数组&quot;&gt;&lt;/a&gt;905、按奇偶排序数组&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个非负整数数组
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    
-      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="排序" scheme="http://printf123.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode刷题记录之977</title>
-    <link href="http://printf123.github.io/2019/08/27/leetcode-shua-ti-ji-lu-zhi-977/"/>
-    <id>http://printf123.github.io/2019/08/27/leetcode-shua-ti-ji-lu-zhi-977/</id>
-    <published>2019-08-27T05:43:38.000Z</published>
-    <updated>2019-08-27T06:14:23.822Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;977、有序数组的平方&quot;&gt;&lt;a href=&quot;#977、有序数组的平方&quot; class=&quot;headerlink&quot; title=&quot;977、有序数组的平方&quot;&gt;&lt;/a&gt;977、有序数组的平方&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个按非递减顺序排序的整数数组
         
       
     
