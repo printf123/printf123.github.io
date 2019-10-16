@@ -4,8 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之344, 锦瑟博客">
-    <meta name="description" content="344、反转字符串&amp;emsp;&amp;emsp;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。&amp;emsp;&amp;emsp;不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空">
+    <meta name="keywords" content="leetcode刷题记录之1046, 锦瑟博客">
+    <meta name="description" content="1046、最后一块石头的重量有一堆石头，每块石头的重量都是正整数。每一回合，从中选出两块最重的石头，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x &amp;lt;= y。那么粉碎的可能结果如下：
+
+如果 x == y，那么两块石头都">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之344 | 锦瑟博客</title>
+    <title>leetcode刷题记录之1046 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +262,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之344
+                        leetcode刷题记录之1046
                     </div>
                 </div>
             </div>
@@ -381,8 +383,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/字符串/" target="_blank">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/数组/" target="_blank">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                     </div>
@@ -405,14 +407,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-25
+                    2019-10-16
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        590
+                        488
                     </div>
                     
 
@@ -435,73 +437,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="344、反转字符串"><a href="#344、反转字符串" class="headerlink" title="344、反转字符串"></a>344、反转字符串</h3><p>&emsp;&emsp;编写一个函数，其作用是将输入的字符串反转过来。输入字符串以字符数组 char[] 的形式给出。<br>&emsp;&emsp;不要给另外的数组分配额外的空间，你必须原地修改输入数组、使用 O(1) 的额外空间解决这一问题。<br>&emsp;&emsp;你可以假设数组中的所有字符都是 ASCII 码表中的可打印字符。<br><strong>示例 1:</strong></p>
-<pre><code>输入：[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]
-输出：[&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]
-</code></pre><p><strong>示例 2:</strong></p>
-<pre><code>输入：[&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]
-输出：[&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/reverse-string/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-string/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">reverseString</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> s<span class="token punctuation">,</span> <span class="token keyword">int</span> sSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> from <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">,</span>to <span class="token operator">=</span> sSize <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">;</span>
-    <span class="token keyword">char</span> type<span class="token punctuation">;</span>    
-    <span class="token keyword">while</span><span class="token punctuation">(</span>from <span class="token operator">&lt;</span> to<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        type <span class="token operator">=</span> s<span class="token punctuation">[</span>from<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        s<span class="token punctuation">[</span>from<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>to<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        s<span class="token punctuation">[</span>to<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">=</span> type<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>    
+                <h3 id="1046、最后一块石头的重量"><a href="#1046、最后一块石头的重量" class="headerlink" title="1046、最后一块石头的重量"></a>1046、最后一块石头的重量</h3><p>有一堆石头，每块石头的重量都是正整数。<br>每一回合，从中选出两块最重的石头，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x &lt;= y。那么粉碎的可能结果如下：</p>
+<ul>
+<li>如果 x == y，那么两块石头都会被完全粉碎； </li>
+<li>如果 x != y，那么重量为 x 的石头将会完全粉碎，而重量为 y 的石头新重量为 y-x。</li>
+</ul>
+<p>最后，最多只会剩下一块石头。返回此石头的重量。如果没有石头剩下，就返回 0。<br><strong>提示：</strong></p>
+<pre><code>1 &lt;= stones.length &lt;= 30
+1 &lt;= stones[i] &lt;= 1000
+</code></pre><p>题目难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/last-stone-weight/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/last-stone-weight/</a></p>
+<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">comp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span><span class="token operator">*</span>a<span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">void</span><span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//用来做比较的函数。</span>
+    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>a<span class="token operator">-</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>b<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 头尾双指针，from由前向后，to由后向前，使用O(1)的额外空间使字符串头尾两个元素调换，从而实现字符串反转。</p>
-<p><strong>知识点回顾：</strong> 字符串反转的相关知识。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reverseString</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> j <span class="token operator">=</span> s<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>s<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">char</span> tmp <span class="token operator">=</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            s<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> tmp<span class="token punctuation">;</span>
-            j<span class="token operator">--</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">lastStoneWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> stones<span class="token punctuation">,</span> <span class="token keyword">int</span> stonesSize<span class="token punctuation">)</span><span class="token punctuation">{</span>    
+    <span class="token keyword">while</span><span class="token punctuation">(</span>stonesSize <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">qsort</span><span class="token punctuation">(</span>stones<span class="token punctuation">,</span>stonesSize<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">,</span>comp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用qsort排序</span>
+        stones<span class="token punctuation">[</span>stonesSize<span class="token number">-2</span><span class="token punctuation">]</span> <span class="token operator">=</span> stones<span class="token punctuation">[</span>stonesSize<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">-</span> stones<span class="token punctuation">[</span>stonesSize<span class="token number">-2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        stonesSize<span class="token operator">--</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> stones<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 循环数组，首尾交换。</p>
-<p><strong>知识点回顾：</strong> 字符串反转的相关知识。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#解法一</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        Do not return anything, modify s in-place instead.
-        """</span>
-        s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">=</span>s<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<p><strong>解释：</strong> 当石头的个数大于1时候，进入循环，先排序，再将最重的2颗相减，总个数减一。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lastStoneWeight</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> stones<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> c <span class="token operator">=</span> stones<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+      <span class="token keyword">while</span><span class="token punctuation">(</span>c <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           Arrays<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>stones<span class="token punctuation">)</span><span class="token punctuation">;</span>
+           stones<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> stones<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> stones<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+           c<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> stones<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#解法二</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span>str<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        Do not return anything, modify s in-place instead.
-        """</span>
-        s<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<p><strong>解释：</strong> 类似于C语言的思路。</p>
+<p><strong>知识点回顾：</strong> stones.length得到的是一个final类型的变量，所以不能自减。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lastStoneWeight</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> stones<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        <span class="token keyword">while</span> len<span class="token punctuation">(</span>stones<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">:</span>
+            y <span class="token operator">=</span> max<span class="token punctuation">(</span>stones<span class="token punctuation">)</span>
+            stones<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+            x <span class="token operator">=</span> max<span class="token punctuation">(</span>stones<span class="token punctuation">)</span>
+            stones<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+            stones<span class="token punctuation">.</span>append<span class="token punctuation">(</span>y <span class="token operator">-</span> x<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> stones<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 </code></pre>
-<p><strong>解释：</strong> 解法一：利用切片的知识之间反转。解法二：利用函数之间反转。 </p>
-<p><strong>知识点回顾：</strong> 字符串反转的相关知识。<br>1、reverse() 函数用于反向列表中元素。<br>语法：list.reverse()<br>返回值：该方法没有返回值，但是会对列表的元素进行反向排序。</p>
+<p><strong>解释：</strong> 移除2个最重的，加入他们2个的差，一直循环。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
+ * @param {number[]} stones
+ * @return {number}
  */</span>
-<span class="token keyword">var</span> reverseString <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">let</span> left <span class="token operator">=</span> s<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>right <span class="token operator">&lt;</span> left<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token punctuation">[</span>s<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>s<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">]</span>
-        right<span class="token operator">++</span>
-        left<span class="token operator">--</span>
-    <span class="token punctuation">}</span>
+<span class="token keyword">var</span> lastStoneWeight <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>stones<span class="token punctuation">)</span> <span class="token punctuation">{</span>    
+    <span class="token keyword">let</span> c <span class="token operator">=</span> stones<span class="token punctuation">.</span>length
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>c <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            stones<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span>
+            stones<span class="token punctuation">[</span>c<span class="token number">-2</span><span class="token punctuation">]</span> <span class="token operator">=</span> stones<span class="token punctuation">[</span>c<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">-</span> stones<span class="token punctuation">[</span>c<span class="token number">-2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+         c<span class="token operator">--</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> stones<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> js双指针，对撞指针。</p>
-<p><strong>知识点回顾：</strong> 字符串反转的相关知识，ES6数组的解构赋值的运用。</p>
+<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -660,9 +660,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之344》
+                    《leetcode刷题记录之1046》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-344/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/16/leetcode-shua-ti-ji-lu-zhi-1046/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -961,29 +961,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-509/">
+                <a href="/2019/10/16/leetcode-shua-ti-ji-lu-zhi-1046/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="leetcode刷题记录之509">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="leetcode刷题记录之1046">
                         
-                        <span class="card-title">leetcode刷题记录之509</span>
+                        <span class="card-title">leetcode刷题记录之1046</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            509、斐波那契数斐波那契数，通常用 F(n) 表示，形成的序列称为斐波那契数列。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：&emsp;&emsp;F(0) = 0,   F(1) = 1&emsp;&ems
+                            1046、最后一块石头的重量有一堆石头，每块石头的重量都是正整数。每一回合，从中选出两块最重的石头，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x &lt;= y。那么粉碎的可能结果如下：
+
+如果 x == y，那么两块石头都
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -996,6 +999,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1003,12 +1007,8 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/递归/" target="_blank">
-                        <span class="chip bg-color">递归</span>
-                    </a>
-                    
-                    <a href="/tags/动态规划/" target="_blank">
-                        <span class="chip bg-color">动态规划</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
@@ -1022,25 +1022,29 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/25/leetcode-shua-ti-ji-lu-zhi-35/">
+                <a href="/2019/10/15/leetcode-shua-ti-ji-lu-zhi-283/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="leetcode刷题记录之35">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="leetcode刷题记录之283">
                         
-                        <span class="card-title">leetcode刷题记录之35</span>
+                        <span class="card-title">leetcode刷题记录之283</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            35、搜索插入位置&emsp;&emsp;给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。&emsp;&emsp;你可以假设数组中无重复元素。示例 1:
-输入: [1,
+                            283. 移动零&emsp;&emsp;给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。示例 1：
+输入: [0,1,0,3,12]
+输出: [1,3,12,0,0]
+说明:
+
+1、必须在原数组
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-15
                             </span>
                         <span class="publish-author">
                             
@@ -1061,8 +1065,12 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/二分法/" target="_blank">
-                        <span class="chip bg-color">二分法</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/双指针/" target="_blank">
+                        <span class="chip bg-color">双指针</span>
                     </a>
                     
                 </div>
