@@ -8,10 +8,10 @@
     <meta name="description" content="0、目录
 定义
 存储表示
-基本操作实现 
-初始化 
-取值  
-查找  
+基本操作实现
+初始化
+取值
+查找 
 插入  
 删除
 创建
@@ -25,7 +25,7 @@
 反转
 
 
-完整代码1、定义&amp;emsp;&amp;emsp;线性表链式存储结构的特点是：用一组任意的存储单元">
+完整代码1、定义&amp;emsp;&amp;emsp;线性表链式存储结构的特点是：用一组任意的存储单元存储线性表">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -452,32 +452,32 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="0、目录"><a href="#0、目录" class="headerlink" title="0、目录"></a>0、目录</h2><ul>
-<li><a href="#1">定义</a></li>
-<li><a href="#2">存储表示</a></li>
-<li><a href="#3">基本操作实现</a> <ul>
-<li><a href="#4">初始化</a> </li>
-<li><a href="#5">取值</a>  </li>
-<li><a href="#6">查找</a>  </li>
-<li><a href="#7">插入</a>  </li>
-<li><a href="#8">删除</a></li>
-<li><a href="#9">创建</a><ul>
-<li><a href="#10">前插法创建</a></li>
-<li><a href="#11">后插法创建</a></li>
+<li>定义</li>
+<li>存储表示</li>
+<li>基本操作实现<ul>
+<li>初始化</li>
+<li>取值</li>
+<li>查找 </li>
+<li>插入  </li>
+<li>删除</li>
+<li>创建<ul>
+<li>前插法创建</li>
+<li>后插法创建</li>
 </ul>
 </li>
-<li><a href="#12">求表长</a></li>
-<li><a href="#13">遍历</a></li>
-<li><a href="#14">排序</a></li>
-<li><a href="#15">反转</a></li>
+<li>求表长</li>
+<li>遍历</li>
+<li>排序</li>
+<li>反转</li>
 </ul>
 </li>
-<li><a href="#16">完整代码</a><h3 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a><span id="1">1、定义</span></h3>&emsp;&emsp;线性表链式存储结构的特点是：用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的，也可以是不连续的）。因此，为了表示每个数据元素 a<sub>i</sub> 与其直接后继数据元素 a<sub>i+1</sub> 之间的逻辑关系，对数据元素 a<sub>i</sub> 来说，除了存储其本身的信息之外，还需存储一个指示其直接后继的信息（即直接后继的存储位置）。这两部分信息组成数据元素 a<sub>i</sub> 的存储映像，称为 <strong>结点</strong>，它包括两个域：其中存储数据元素信息的域称为 <strong>数据域</strong>；存储直接后继存储位置的域称为 <strong>指针域</strong>。指针域中存储的信息称作 <strong>指针</strong> 或 <strong>链</strong>。n 个结点（a<sub>i</sub> （1≤i≤n）的存储映像）链结成一个 _链表_，即为线性表的链式存储结构。又由于此链表的每个结点中只包含一个指针域，故又称 <em>线性链表</em> 或 <em>单链表</em>。<h3 id="2、存储表示"><a href="#2、存储表示" class="headerlink" title="2、存储表示"></a>2、<span id="2">存储表示</span></h3><img src="https://img-blog.csdnimg.cn/20191027113656567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//--------单链表的存储结构-------</span>
+<li>完整代码<h3 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h3>&emsp;&emsp;线性表链式存储结构的特点是：用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的，也可以是不连续的）。因此，为了表示每个数据元素 a<sub>i</sub> 与其直接后继数据元素 a<sub>i+1</sub> 之间的逻辑关系，对数据元素 a<sub>i</sub> 来说，除了存储其本身的信息之外，还需存储一个指示其直接后继的信息（即直接后继的存储位置）。这两部分信息组成数据元素 a<sub>i</sub> 的存储映像，称为 <strong>结点</strong>，它包括两个域：其中存储数据元素信息的域称为 <strong>数据域</strong>；存储直接后继存储位置的域称为 <strong>指针域</strong>。指针域中存储的信息称作 <strong>指针</strong> 或 <strong>链</strong>。n 个结点（a<sub>i</sub>（1≤i≤n）的存储映像）链结成一个 _链表_，即为线性表的链式存储结构。又由于此链表的每个结点中只包含一个指针域，故又称 <em>线性链表</em> 或 <em>单链表</em>。<h3 id="2、存储表示"><a href="#2、存储表示" class="headerlink" title="2、存储表示"></a>2、存储表示</h3><img src="https://img-blog.csdnimg.cn/20191027113656567.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//--------单链表的存储结构-------</span>
 <span class="token keyword">typedef</span> <span class="token keyword">struct</span> LNode<span class="token punctuation">{</span>
   ElemType data<span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">//结点的数据域</span>
   <span class="token keyword">struct</span> LNode <span class="token operator">*</span>next<span class="token punctuation">;</span>      <span class="token comment" spellcheck="true">//结点的指针域</span>
 <span class="token punctuation">}</span>LNode<span class="token punctuation">,</span><span class="token operator">*</span>LinkList<span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">//LinkList为指向结构体LNode的指针类型</span>
 </code></pre>
-<h3 id="3、基本操作实现"><a href="#3、基本操作实现" class="headerlink" title="3、基本操作实现"></a><span id="3">3、基本操作实现</span></h3><h4 id="3-1、初始化"><a href="#3-1、初始化" class="headerlink" title="3.1、初始化"></a><span id="4">3.1、初始化</span></h4><h6 id="3-1-1、初始化算法步骤"><a href="#3-1-1、初始化算法步骤" class="headerlink" title="3.1.1、初始化算法步骤"></a>3.1.1、初始化算法步骤</h6>①生成新结点作为头结点，用头指针L指向头结点。<br>②头结点的指针域置空。<h6 id="3-1-2、初始化算法描述"><a href="#3-1-2、初始化算法描述" class="headerlink" title="3.1.2、初始化算法描述"></a>3.1.2、初始化算法描述</h6></li>
+<h3 id="3、基本操作实现"><a href="#3、基本操作实现" class="headerlink" title="3、基本操作实现"></a>3、基本操作实现</h3><h4 id="3-1、初始化"><a href="#3-1、初始化" class="headerlink" title="3.1、初始化"></a>3.1、初始化</h4><h6 id="3-1-1、初始化算法步骤"><a href="#3-1-1、初始化算法步骤" class="headerlink" title="3.1.1、初始化算法步骤"></a>3.1.1、初始化算法步骤</h6>①生成新结点作为头结点，用头指针L指向头结点。<br>②头结点的指针域置空。<h6 id="3-1-2、初始化算法描述"><a href="#3-1-2、初始化算法描述" class="headerlink" title="3.1.2、初始化算法描述"></a>3.1.2、初始化算法描述</h6></li>
 </ul>
 <pre class=" language-cpp"><code class="language-cpp">Status <span class="token function">InitList</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//构造一个空的单链表L</span>
     L <span class="token operator">=</span> <span class="token keyword">new</span> LNode<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//生成新结点作为头结点，用头指针L指向头结点</span>
@@ -485,7 +485,7 @@
     <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-2、取值"><a href="#3-2、取值" class="headerlink" title="3.2、取值"></a><span id="5">3.2、取值</span></h4><h5 id="3-2-1-取值算法步骤"><a href="#3-2-1-取值算法步骤" class="headerlink" title="3.2.1 取值算法步骤"></a>3.2.1 取值算法步骤</h5><p>①用指针 p 指向首元结点，用 j 做计数器初值赋为1。<br>②从首元结点开始依次顺着链域 next 向下访问，只要指向当前结点的指针 p 不为空，并且没有到达序号为 i 的结点，则循环执行一下操作：</p>
+<h4 id="3-2、取值"><a href="#3-2、取值" class="headerlink" title="3.2、取值"></a>3.2、取值</h4><h5 id="3-2-1-取值算法步骤"><a href="#3-2-1-取值算法步骤" class="headerlink" title="3.2.1 取值算法步骤"></a>3.2.1 取值算法步骤</h5><p>①用指针 p 指向首元结点，用 j 做计数器初值赋为1。<br>②从首元结点开始依次顺着链域 next 向下访问，只要指向当前结点的指针 p 不为空，并且没有到达序号为 i 的结点，则循环执行一下操作：</p>
 <ul>
 <li>p 指向下一个结点；</li>
 <li>计数器 j 相应加1。</li>
@@ -502,7 +502,7 @@
     <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-3、查找"><a href="#3-3、查找" class="headerlink" title="3.3、查找"></a><span id="6">3.3、查找</span></h4><h5 id="3-3-1-查找算法步骤"><a href="#3-3-1-查找算法步骤" class="headerlink" title="3.3.1 查找算法步骤"></a>3.3.1 查找算法步骤</h5><p>①用指针 p 指向首元结点。<br>②从首元结点开始依次顺着链域 next 向下查找，只要指向当前结点的指针 p 不为空，并且 p 所指结点的数据域不等于给定值 e，则循环执行以下操作：p 指向下一个结点。<br>③返回 p，若查找成功，p 此时即为结点的地址值，若查找失败，p的值即为 NULL。</p>
+<h4 id="3-3、查找"><a href="#3-3、查找" class="headerlink" title="3.3、查找"></a>3.3、查找</h4><h5 id="3-3-1-查找算法步骤"><a href="#3-3-1-查找算法步骤" class="headerlink" title="3.3.1 查找算法步骤"></a>3.3.1 查找算法步骤</h5><p>①用指针 p 指向首元结点。<br>②从首元结点开始依次顺着链域 next 向下查找，只要指向当前结点的指针 p 不为空，并且 p 所指结点的数据域不等于给定值 e，则循环执行以下操作：p 指向下一个结点。<br>③返回 p，若查找成功，p 此时即为结点的地址值，若查找失败，p的值即为 NULL。</p>
 <h5 id="3-3-2-查找算法描述"><a href="#3-3-2-查找算法描述" class="headerlink" title="3.3.2 查找算法描述"></a>3.3.2 查找算法描述</h5><pre class=" language-cpp"><code class="language-cpp">LNode <span class="token operator">*</span><span class="token function">LocateElem</span><span class="token punctuation">(</span>LinkList L<span class="token punctuation">,</span>ElemType e<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//在带头结点的单链表L中查找值为e的元素</span>
     p <span class="token operator">=</span> L <span class="token operator">-</span><span class="token operator">></span> next<span class="token punctuation">;</span>                    <span class="token comment" spellcheck="true">//初始化，p指向首元结点</span>
     <span class="token keyword">while</span><span class="token punctuation">(</span>p <span class="token operator">&amp;&amp;</span> p <span class="token operator">-</span><span class="token operator">></span> data <span class="token operator">!=</span> e<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">//顺链域向后扫描，直到p为空或p所指结点的数据域等于e</span>
@@ -510,7 +510,7 @@
     <span class="token keyword">return</span> p<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-4、插入"><a href="#3-4、插入" class="headerlink" title="3.4、插入"></a><span id="7">3.4、插入</span></h4><h5 id="3-4-1-插入算法步骤"><a href="#3-4-1-插入算法步骤" class="headerlink" title="3.4.1 插入算法步骤"></a>3.4.1 插入算法步骤</h5><p>①查找结点 a<sub>i-1</sub> 并由指针 p 指向该结点。<br>②生成一个新结点 <em>s。<br>③将新结点 </em>s 的数据域置为e。<br>④将新结点 <em>s的指针域指向结点 a。<br>⑤将结点 </em>p 的指针域指向新结点 *s。</p>
+<h4 id="3-4、插入"><a href="#3-4、插入" class="headerlink" title="3.4、插入"></a>3.4、插入</h4><h5 id="3-4-1-插入算法步骤"><a href="#3-4-1-插入算法步骤" class="headerlink" title="3.4.1 插入算法步骤"></a>3.4.1 插入算法步骤</h5><p>①查找结点 a<sub>i-1</sub> 并由指针 p 指向该结点。<br>②生成一个新结点 <em>s。<br>③将新结点 </em>s 的数据域置为e。<br>④将新结点 <em>s的指针域指向结点 a。<br>⑤将结点 </em>p 的指针域指向新结点 *s。</p>
 <h5 id="3-4-2-插入算法描述"><a href="#3-4-2-插入算法描述" class="headerlink" title="3.4.2 插入算法描述"></a>3.4.2 插入算法描述</h5><pre class=" language-cpp"><code class="language-cpp">Status <span class="token function">ListInsert</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>ElemType e<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//在带头结点的单链表L中第i个位置插入值为e的新结点</span>
     p <span class="token operator">=</span> L<span class="token punctuation">;</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                     
     <span class="token keyword">while</span><span class="token punctuation">(</span>p <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>          <span class="token comment" spellcheck="true">//查找第i-1个结点，p指向该结点。</span>
@@ -525,7 +525,7 @@
     <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-5、删除"><a href="#3-5、删除" class="headerlink" title="3.5、删除"></a><span id="8">3.5、删除</span></h4><h5 id="3-5-1-删除算法步骤"><a href="#3-5-1-删除算法步骤" class="headerlink" title="3.5.1 删除算法步骤"></a>3.5.1 删除算法步骤</h5><p>①查找结点 a<sub>i-1</sub> 并由指针 p 指向该结点。<br>②临时保存待删结点 a<sub>i</sub> 的地址在 q 中，以备释放。<br>③将结点 *p 的指针域指向 a<sub>i</sub> 的直接后继结点。<br>④释放结点 a<sub>i</sub> 的空间。</p>
+<h4 id="3-5、删除"><a href="#3-5、删除" class="headerlink" title="3.5、删除"></a>3.5、删除</h4><h5 id="3-5-1-删除算法步骤"><a href="#3-5-1-删除算法步骤" class="headerlink" title="3.5.1 删除算法步骤"></a>3.5.1 删除算法步骤</h5><p>①查找结点 a<sub>i-1</sub> 并由指针 p 指向该结点。<br>②临时保存待删结点 a<sub>i</sub> 的地址在 q 中，以备释放。<br>③将结点 *p 的指针域指向 a<sub>i</sub> 的直接后继结点。<br>④释放结点 a<sub>i</sub> 的空间。</p>
 <h5 id="3-5-2-删除算法描述"><a href="#3-5-2-删除算法描述" class="headerlink" title="3.5.2 删除算法描述"></a>3.5.2 删除算法描述</h5><pre class=" language-cpp"><code class="language-cpp">Status <span class="token function">ListDelete</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//在带头结点的单链表L中，删除第i个元素</span>
     p <span class="token operator">=</span> L<span class="token punctuation">;</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                 
     <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token punctuation">(</span>p <span class="token operator">-</span><span class="token operator">></span> next<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token comment" spellcheck="true">//查找第i-1个结点，p指向该结点</span>
@@ -540,7 +540,7 @@
     <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-6、创建"><a href="#3-6、创建" class="headerlink" title="3.6、创建"></a><span id="9">3.6、创建</span></h4><h5 id="3-6-1-前插法创建"><a href="#3-6-1-前插法创建" class="headerlink" title="3.6.1 前插法创建"></a><span id="10">3.6.1 前插法创建</span></h5><h6 id="3-6-1-1-前插法创建算法步骤"><a href="#3-6-1-1-前插法创建算法步骤" class="headerlink" title="3.6.1.1 前插法创建算法步骤"></a>3.6.1.1 前插法创建算法步骤</h6><p>①创建一个只有头结点的空链表。<br>②根据待创建链表包括的元素 n，循环 n 次执行以下操作：</p>
+<h4 id="3-6、创建"><a href="#3-6、创建" class="headerlink" title="3.6、创建"></a>3.6、创建</h4><h5 id="3-6-1-前插法创建"><a href="#3-6-1-前插法创建" class="headerlink" title="3.6.1 前插法创建"></a>3.6.1 前插法创建</h5><h6 id="3-6-1-1-前插法创建算法步骤"><a href="#3-6-1-1-前插法创建算法步骤" class="headerlink" title="3.6.1.1 前插法创建算法步骤"></a>3.6.1.1 前插法创建算法步骤</h6><p>①创建一个只有头结点的空链表。<br>②根据待创建链表包括的元素 n，循环 n 次执行以下操作：</p>
 <ul>
 <li>生成一个新结点 *p；</li>
 <li>输入元素值赋给新结点 *p 的数据域；</li>
@@ -557,7 +557,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="3-6-2-后插法创建"><a href="#3-6-2-后插法创建" class="headerlink" title="3.6.2 后插法创建"></a><span id="11">3.6.2 后插法创建</span></h5><h6 id="3-6-2-1-后插法创建算法步骤"><a href="#3-6-2-1-后插法创建算法步骤" class="headerlink" title="3.6.2.1 后插法创建算法步骤"></a>3.6.2.1 后插法创建算法步骤</h6><p>①创建一个只有头结点的空链表。<br>②尾指针 r 初始化，指向头结点。<br>③根据创建链表包括的元素个数 n，循环 n 次执行以下操作：</p>
+<h5 id="3-6-2-后插法创建"><a href="#3-6-2-后插法创建" class="headerlink" title="3.6.2 后插法创建"></a>3.6.2 后插法创建</h5><h6 id="3-6-2-1-后插法创建算法步骤"><a href="#3-6-2-1-后插法创建算法步骤" class="headerlink" title="3.6.2.1 后插法创建算法步骤"></a>3.6.2.1 后插法创建算法步骤</h6><p>①创建一个只有头结点的空链表。<br>②尾指针 r 初始化，指向头结点。<br>③根据创建链表包括的元素个数 n，循环 n 次执行以下操作：</p>
 <ul>
 <li>生成一个新结点 *p；</li>
 <li>输入元素值赋给新结点 *p 的数据域；</li>
@@ -577,7 +577,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-7、求表长"><a href="#3-7、求表长" class="headerlink" title="3.7、求表长"></a>3.7、<span id="12">求表长</span></h4><h5 id="3-7-1-求表长算法步骤"><a href="#3-7-1-求表长算法步骤" class="headerlink" title="3.7.1 求表长算法步骤"></a>3.7.1 求表长算法步骤</h5><p>①用指针 p 指向首元结点。<br>②从首元结点开始依次顺着链域 next 向下查找，只要指向当前结点的指针 p 不为空，则循环执行以下操作：c加1。<br>③返回c。</p>
+<h4 id="3-7、求表长"><a href="#3-7、求表长" class="headerlink" title="3.7、求表长"></a>3.7、求表长</h4><h5 id="3-7-1-求表长算法步骤"><a href="#3-7-1-求表长算法步骤" class="headerlink" title="3.7.1 求表长算法步骤"></a>3.7.1 求表长算法步骤</h5><p>①用指针 p 指向首元结点。<br>②从首元结点开始依次顺着链域 next 向下查找，只要指向当前结点的指针 p 不为空，则循环执行以下操作：c加1。<br>③返回c。</p>
 <h5 id="3-7-2-求表长算法描述"><a href="#3-7-2-求表长算法描述" class="headerlink" title="3.7.2 求表长算法描述"></a>3.7.2 求表长算法描述</h5><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">ListLength</span><span class="token punctuation">(</span>LinkList L<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//求链表长度</span>
     <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
      LinkList p <span class="token operator">=</span> L <span class="token operator">-</span><span class="token operator">></span> next<span class="token punctuation">;</span>
@@ -588,7 +588,7 @@
      <span class="token keyword">return</span> c<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-8、遍历"><a href="#3-8、遍历" class="headerlink" title="3.8、遍历"></a>3.8、<span id="13">遍历</span></h4><h5 id="3-8-1-遍历算法步骤"><a href="#3-8-1-遍历算法步骤" class="headerlink" title="3.8.1 遍历算法步骤"></a>3.8.1 遍历算法步骤</h5><p>①用指针 p 指向首元结点。<br>②从首元结点开始依次顺着链域 next 向下查找，只要指向当前结点的指针 p 不为空，则循环执行以下操作：输出当前结点的数据域。</p>
+<h4 id="3-8、遍历"><a href="#3-8、遍历" class="headerlink" title="3.8、遍历"></a>3.8、遍历</h4><h5 id="3-8-1-遍历算法步骤"><a href="#3-8-1-遍历算法步骤" class="headerlink" title="3.8.1 遍历算法步骤"></a>3.8.1 遍历算法步骤</h5><p>①用指针 p 指向首元结点。<br>②从首元结点开始依次顺着链域 next 向下查找，只要指向当前结点的指针 p 不为空，则循环执行以下操作：输出当前结点的数据域。</p>
 <h5 id="3-8-2-遍历算法描述"><a href="#3-8-2-遍历算法描述" class="headerlink" title="3.8.2 遍历算法描述"></a>3.8.2 遍历算法描述</h5><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">TraverseList</span><span class="token punctuation">(</span>LinkList L<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//遍历单链表 </span>
     LinkList p <span class="token operator">=</span> L <span class="token operator">-</span><span class="token operator">></span> next<span class="token punctuation">;</span>
      <span class="token keyword">if</span><span class="token punctuation">(</span>p <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
@@ -603,7 +603,7 @@
      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-9、排序"><a href="#3-9、排序" class="headerlink" title="3.9、排序"></a>3.9、<span id="14">排序</span></h4><h5 id="3-9-1-排序算法步骤"><a href="#3-9-1-排序算法步骤" class="headerlink" title="3.9.1 排序算法步骤"></a>3.9.1 排序算法步骤</h5><p>① 节点值交换法，利用了冒泡排序的思想。</p>
+<h4 id="3-9、排序"><a href="#3-9、排序" class="headerlink" title="3.9、排序"></a>3.9、排序</h4><h5 id="3-9-1-排序算法步骤"><a href="#3-9-1-排序算法步骤" class="headerlink" title="3.9.1 排序算法步骤"></a>3.9.1 排序算法步骤</h5><p>① 节点值交换法，利用了冒泡排序的思想。</p>
 <h5 id="3-9-2-排序算法描述"><a href="#3-9-2-排序算法描述" class="headerlink" title="3.9.2 排序算法描述"></a>3.9.2 排序算法描述</h5><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">ListSort</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment" spellcheck="true">//冒泡排序 </span>
     LinkList p<span class="token punctuation">,</span> q<span class="token punctuation">;</span>
           <span class="token keyword">for</span> <span class="token punctuation">(</span>p <span class="token operator">=</span> L<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span> p <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span> p <span class="token operator">=</span> p<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">)</span>
@@ -615,7 +615,7 @@
                   <span class="token punctuation">}</span>    
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="3-10、反转"><a href="#3-10、反转" class="headerlink" title="3.10、反转"></a>3.10、<span id="15">反转</span></h4><h5 id="3-10-1-反转算法步骤"><a href="#3-10-1-反转算法步骤" class="headerlink" title="3.10.1 反转算法步骤"></a>3.10.1 反转算法步骤</h5><p>① 首先让头节点与第一个元素节点断开，但是要注意在断开之前需要用p指针指向第一个元素节点来保存第一个元素节点的位置，然后再断开。在这里有一个指针q指向一个指针域为空的节点，这个节点用来做为链表反转后的最后一个节点。<br>②让第二个元素节点的指针从指向第三个元素节点变为指向第一个元素节点，以此类推，直至指针p指向原链表最后一个元素。<br>③p指针指向NULL时，让原头节点的指针域指向原来最后一个元素节点。此时链表倒置已完成。</p>
+<h4 id="3-10、反转"><a href="#3-10、反转" class="headerlink" title="3.10、反转"></a>3.10、反转</h4><h5 id="3-10-1-反转算法步骤"><a href="#3-10-1-反转算法步骤" class="headerlink" title="3.10.1 反转算法步骤"></a>3.10.1 反转算法步骤</h5><p>① 首先让头节点与第一个元素节点断开，但是要注意在断开之前需要用p指针指向第一个元素节点来保存第一个元素节点的位置，然后再断开。在这里有一个指针q指向一个指针域为空的节点，这个节点用来做为链表反转后的最后一个节点。<br>②让第二个元素节点的指针从指向第三个元素节点变为指向第一个元素节点，以此类推，直至指针p指向原链表最后一个元素。<br>③p指针指向NULL时，让原头节点的指针域指向原来最后一个元素节点。此时链表倒置已完成。</p>
 <h5 id="3-10-2-反转算法描述"><a href="#3-10-2-反转算法描述" class="headerlink" title="3.10.2 反转算法描述"></a>3.10.2 反转算法描述</h5><pre class=" language-cpp"><code class="language-cpp">Status <span class="token function">ListReverse</span><span class="token punctuation">(</span>LinkList <span class="token operator">&amp;</span>L<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//反转链表  </span>
     LinkList p<span class="token punctuation">,</span>q<span class="token punctuation">,</span>pr<span class="token punctuation">;</span>     
      p <span class="token operator">=</span> L <span class="token operator">-</span><span class="token operator">></span> next<span class="token punctuation">;</span>     
@@ -631,7 +631,7 @@
      <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="4、完整代码"><a href="#4、完整代码" class="headerlink" title="4、完整代码"></a>4、<span id="16">完整代码</span></h3><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<h3 id="4、完整代码"><a href="#4、完整代码" class="headerlink" title="4、完整代码"></a>4、完整代码</h3><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 <span class="token macro property">#<span class="token directive keyword">define</span> ERROR 0</span>
 <span class="token macro property">#<span class="token directive keyword">define</span> OK 1</span>
@@ -1287,10 +1287,10 @@ Status <span class="token function">ListReverse</span><span class="token punctua
                             0、目录
 定义
 存储表示
-基本操作实现 
-初始化 
-取值  
-查找  
+基本操作实现
+初始化
+取值
+查找 
 插入  
 删除
 创建
@@ -1304,7 +1304,7 @@ Status <span class="token function">ListReverse</span><span class="token punctua
 反转
 
 
-完整代码1、定义&emsp;&emsp;线性表链式存储结构的特点是：用一组任意的存储单元
+完整代码1、定义&emsp;&emsp;线性表链式存储结构的特点是：用一组任意的存储单元存储线性表
                         
                     </div>
                     <div class="publish-info">
