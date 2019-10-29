@@ -4,8 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之69, 锦瑟博客">
-    <meta name="description" content="69、X的平方根&amp;emsp;&amp;emsp;实现 int sqrt(int x) 函数。&amp;emsp;&amp;emsp;计算并返回 x 的平方根，其中 x 是非负整数。&amp;emsp;&amp;emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。">
+    <meta name="keywords" content="学习版链表通用模板代码, 锦瑟博客">
+    <meta name="description" content="#include &amp;lt;stdbool.h&gt;
+#include &amp;lt;stdio.h&gt;
+#include &amp;lt;stdlib.h&gt;
+#include &amp;lt;string.h&gt;
+
+typedef struct {
+  // TODO:">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之69 | 锦瑟博客</title>
+    <title>学习版链表通用模板代码 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +266,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之69
+                        学习版链表通用模板代码
                     </div>
                 </div>
             </div>
@@ -377,8 +383,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode简单题/" target="_blank">
-                                <span class="chip bg-color">leetcode简单题</span>
+                            <a href="/tags/链表/" target="_blank">
+                                <span class="chip bg-color">链表</span>
                             </a>
                         
                     </div>
@@ -389,8 +395,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                算法
+                            <a href="/categories/数据结构/" class="post-category" target="_blank">
+                                数据结构
                             </a>
                         
                     </div>
@@ -401,14 +407,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-04
+                    2019-10-29
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        258
+                        313
                     </div>
                     
 
@@ -431,45 +437,135 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="69、X的平方根"><a href="#69、X的平方根" class="headerlink" title="69、X的平方根"></a>69、X的平方根</h3><p>&emsp;&emsp;实现 int sqrt(int x) 函数。<br>&emsp;&emsp;计算并返回 x 的平方根，其中 x 是非负整数。<br>&emsp;&emsp;由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。<br><strong>示例 1：</strong></p>
-<pre><code>输入: 4
-输出: 2
-</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: 8
-输出: 2
-说明: 8 的平方根是 2.82842..., 
-     由于返回类型是整数，小数部分将被舍去。
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/sqrtx/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sqrtx/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">mySqrt</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdbool.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// TODO: fill-in real data</span>
+
+<span class="token punctuation">}</span> data_t<span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> list_node <span class="token punctuation">{</span>
+  data_t data<span class="token punctuation">;</span>
+  <span class="token keyword">struct</span> list_node <span class="token operator">*</span>next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> list_node_t<span class="token punctuation">;</span>
+
+list_node_t <span class="token operator">*</span>glob_list <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+<span class="token keyword">bool</span> <span class="token function">data_compare</span><span class="token punctuation">(</span>data_t d1<span class="token punctuation">,</span> data_t d2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// TODO: compare d1 with d2, return true if d1 &lt; d2, false otherwise</span>
+  <span class="token comment" spellcheck="true">// TODO: if not care about ordering, simply return true</span>
+
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 直接使用内置函数求解。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">mySqrt</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">list_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">list_insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  data_t data<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// TODO: insert codes that produce data here!</span>
+
+  list_node_t <span class="token operator">*</span>new_node <span class="token operator">=</span> <span class="token punctuation">(</span>list_node_t<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>list_node_t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  new_node<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>glob_list <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    glob_list <span class="token operator">=</span> new_node<span class="token punctuation">;</span>
+    glob_list<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">data_compare</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> glob_list<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    new_node<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> glob_list<span class="token punctuation">;</span>
+    glob_list <span class="token operator">=</span> new_node<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    list_node_t <span class="token operator">*</span>cur<span class="token punctuation">,</span> <span class="token operator">*</span>prev<span class="token punctuation">;</span>
+    cur <span class="token operator">=</span> glob_list<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+    prev <span class="token operator">=</span> glob_list<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">data_compare</span><span class="token punctuation">(</span>prev<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">data_compare</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> cur<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      cur <span class="token operator">=</span> cur<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+      prev <span class="token operator">=</span> prev<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+
+    prev<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> new_node<span class="token punctuation">;</span>
+    new_node<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> cur<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">list_find</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// TODO input some data for finding</span>
+
+  list_node_t <span class="token operator">*</span>cur <span class="token operator">=</span> glob_list<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO replace `true` with a real condition</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// TODO dump value inside cur->data</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cur <span class="token operator">=</span> cur<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">// TODO replace this if necessary</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Not found\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">list_delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>glob_list <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO replace this if necessary</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The list is empty\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO input some data for finding</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>glob_list<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// TODO replace `true` with a real condition</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO destroy glob_list->data if necessary</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>glob_list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    glob_list <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      list_node_t <span class="token operator">*</span>cur<span class="token punctuation">,</span> <span class="token operator">*</span>prev<span class="token punctuation">;</span>
+      prev <span class="token operator">=</span> glob_list<span class="token punctuation">;</span>
+      cur <span class="token operator">=</span> glob_list<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO replace `true` with a real condition</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      prev<span class="token operator">-</span><span class="token operator">></span>next <span class="token operator">=</span> cur<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// TODO destroy cur->data if necessary</span>
+      <span class="token function">free</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cur <span class="token operator">=</span> cur<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+    prev <span class="token operator">=</span> prev<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment" spellcheck="true">// TODO replace this if necessary</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Not found.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">list_destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  list_node_t <span class="token operator">*</span>cur <span class="token operator">=</span> glob_list<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    list_node_t <span class="token operator">*</span>t <span class="token operator">=</span> cur<span class="token operator">-</span><span class="token operator">></span>next<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// TODO destroy cur->data if necessary</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cur <span class="token operator">=</span> t<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  glob_list <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// TODO add your transactions here</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 直接使用内置函数求解。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">mySqrt</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-       <span class="token keyword">return</span> int<span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">0.5</span><span class="token punctuation">)</span> 
-</code></pre>
-<p><strong>解释：</strong> 直接开方。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number} x
- * @return {number}
- */</span>
-<span class="token keyword">var</span> mySqrt <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>解释：</strong> 直接使用内置函数求解。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -628,9 +724,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之69》
+                    《学习版链表通用模板代码》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/04/leetcode-shua-ti-ji-lu-zhi-69/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/29/xue-xi-ban-lian-biao-tong-yong-mo-ban-dai-ma/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -929,50 +1025,54 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/05/leetcode-shua-ti-ji-lu-zhi-1089/">
+                <a href="/2019/10/29/xue-xi-ban-lian-biao-tong-yong-mo-ban-dai-ma/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之1089">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="学习版链表通用模板代码">
                         
-                        <span class="card-title">leetcode刷题记录之1089</span>
+                        <span class="card-title">学习版链表通用模板代码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1089、复写零&emsp;&emsp;给你一个长度固定的整数数组 arr，请你将该数组中出现的每个零都复写一遍，并将其余的元素向右平移。&emsp;&emsp;注意：请不要在超过该数组长度的位置写入元素。&emsp;&emsp;要求：请对
+                            #include &lt;stdbool.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+
+typedef struct {
+  // TODO:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <a href="/categories/数据结构/" class="post-category" target="_blank">
+                                    数据结构
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
-                    </a>
-                    
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/链表/" target="_blank">
+                        <span class="chip bg-color">链表</span>
                     </a>
                     
                 </div>
@@ -986,30 +1086,28 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/03/leetcode-shua-ti-ji-lu-zhi-485/">
+                <a href="/2019/10/29/leetcode-shua-ti-ji-lu-zhi-349/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="leetcode刷题记录之485">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之349">
                         
-                        <span class="card-title">leetcode刷题记录之485</span>
+                        <span class="card-title">leetcode刷题记录之349</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            485、最大连续1的个数&emsp;&emsp;给定一个二进制数组， 计算其中最大连续1的个数。示例 1：
-输入: [1,1,0,1,1,1]
-输出: 3
-解释: 开头的两位和最后的三位都是连续1，所以最大连续1的个数是 3.
-注意：
-
-输
+                            349、两个数组的交集给定两个数组，编写一个函数来计算它们的交集。示例 1：
+输入: nums1 = [1,2,2,1], nums2 = [2,2]
+输出: [2]
+示例 2：
+输入: nums1 = [4,9,5], nums2 = [
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-29
                             </span>
                         <span class="publish-author">
                             
