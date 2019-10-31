@@ -4,12 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之268, 锦瑟博客">
-    <meta name="description" content="268、缺失数字&amp;emsp;&amp;emsp;给定一个包含 0, 1, 2, …, n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。示例 1：
-输入: [3,0,1]
-输出: 2
-示例 2：
-输入: [9,6,4,2,3,">
+    <meta name="keywords" content="leetcode刷题记录之242, 锦瑟博客">
+    <meta name="description" content="242、有效的字母异位词&amp;emsp;&amp;emsp;给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。示例 1：
+输入: s = &amp;quot;anagram&amp;quot;, t = &amp;quot;nagaram&amp;quo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之268 | 锦瑟博客</title>
+    <title>leetcode刷题记录之242 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -264,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之268
+                        leetcode刷题记录之242
                     </div>
                 </div>
             </div>
@@ -385,8 +382,12 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/数组/" target="_blank">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/哈希表/" target="_blank">
+                                <span class="chip bg-color">哈希表</span>
+                            </a>
+                        
+                            <a href="/tags/排序/" target="_blank">
+                                <span class="chip bg-color">排序</span>
                             </a>
                         
                     </div>
@@ -409,21 +410,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-07
+                    2019-10-31
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        684
+                        730
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -439,63 +440,100 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="268、缺失数字"><a href="#268、缺失数字" class="headerlink" title="268、缺失数字"></a>268、缺失数字</h3><p>&emsp;&emsp;给定一个包含 0, 1, 2, …, n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。<br><strong>示例 1：</strong></p>
-<pre><code>输入: [3,0,1]
-输出: 2
+                <h3 id="242、有效的字母异位词"><a href="#242、有效的字母异位词" class="headerlink" title="242、有效的字母异位词"></a>242、有效的字母异位词</h3><p>&emsp;&emsp;给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。<br><strong>示例 1：</strong></p>
+<pre><code>输入: s = &quot;anagram&quot;, t = &quot;nagaram&quot;
+输出: true
 </code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: [9,6,4,2,3,5,7,0,1]
-输出: 8
-</code></pre><p><strong>说明：</strong></p>
-<ul>
-<li>你的算法应具有线性时间复杂度。你能否仅使用额外常数空间来实现?</li>
-</ul>
-<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/missing-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/missing-number/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">cmp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>a<span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span>a<span class="token operator">-</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span>b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//这是从小到大排序，若是从大到小改成： return *(int *)b-*(int *)a;</span>
+<pre><code>输入: s = &quot;rat&quot;, t = &quot;car&quot;
+输出: false
+</code></pre><p><strong>说明：</strong><br>你可以假设字符串只包含小写字母。<br><strong>进阶：</strong><br>如果输入字符串包含 unicode 字符怎么办？你能否调整你的解法来应对这种情况？</p>
+<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/valid-anagram/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/valid-anagram/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法一</span>
+<span class="token keyword">int</span> <span class="token function">inc</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span> a<span class="token punctuation">,</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> <span class="token punctuation">)</span>a<span class="token operator">-</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span>b<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">missingNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">qsort</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span>numsSize<span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>cmp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//(数组，需要排序的数字个数，单个数字所占内存大小，比较函数）</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> i<span class="token punctuation">)</span>
-            <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+bool <span class="token function">isAnagram</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> s<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span> t<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> c1<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>c2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        c1<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        c2<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">qsort</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span>c1<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span><span class="token punctuation">,</span> inc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">qsort</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>c2<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span><span class="token punctuation">,</span> inc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>c1<span class="token operator">!=</span>c2<span class="token punctuation">)</span>
+        <span class="token keyword">return</span>  false<span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>c1<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 首先我们对数组进行排序，我们可以在线性时间内扫描这个数组，第一个不等于下标的数字，为缺失的数字。</p>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法二</span>
+bool <span class="token function">isAnagram</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> s<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span> t<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token operator">=</span><span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">,</span>m<span class="token operator">=</span><span class="token function">strlen</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">!=</span>m<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        a<span class="token punctuation">[</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+        a<span class="token punctuation">[</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">26</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 解法一：排序。通过将 s 的字母重新排列成 t 来生成变位词。因此，如果 T 是 S 的变位词，对两个字符串进行排序将产生两个相同的字符串。此外，如果 s 和 t 的长度不同，t 不能是 s 的变位词，我们可以提前返回。<br>解法二：先判断两字符串长度是否相等，若不相等则false，若相等则将两字符串中每种字母的个数做差,若结果为0则true，不为0则false。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">missingNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            result <span class="token operator">+=</span> i <span class="token operator">-</span> nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>String s<span class="token punctuation">,</span> String t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> t<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> counter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> s<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            counter<span class="token punctuation">[</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+            counter<span class="token punctuation">[</span>t<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> count <span class="token operator">:</span> counter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 解法：这个题可以这么来理解，求0…n的序列的集合中缺失的某个数字，按照计算运算的方法，求0…n的序列的和，减去数组中所有的元素，得到，的解答就是缺失的数字。用一个for循环从1…n，循环里的第一步是求和，第二步是取出数组中i-1的元素自减，最后的结果就是缺失的元素。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
+<p><strong>解释：</strong> </p>
+<ul>
+<li>为了检查 t 是否是 s 的重新排列，我们可以计算两个字符串中每个字母的出现次数并进行比较。因为 S 和 T 都只包含 A−Z 的字母，所以一个简单的 26 位计数器表就足够了。</li>
+<li>我们需要两个计数器数表进行比较吗？实际上不是，因为我们可以用一个计数器表计算 s 字母的频率，用 t 减少计数器表中的每个字母的计数器，然后检查计数器是否回到零。</li>
+</ul>
+<p><strong>知识点回顾：</strong> 哈希表的相关知识。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">missingNumber</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span> <span class="token operator">-</span> sum<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">,</span> t<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> sorted<span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">==</span> sorted<span class="token punctuation">(</span>t<span class="token punctuation">)</span>
+
 </code></pre>
-<p><strong>解释：</strong> 类似于Java的求解思路。</p>
+<p><strong>解释：</strong> 类似于C语言的解法一。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} nums
- * @return {number}
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
  */</span>
-<span class="token keyword">var</span> missingNumber <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> res <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        res <span class="token operator">=</span> res <span class="token operator">^</span> i <span class="token operator">^</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token keyword">var</span> isAnagram <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">!==</span> t<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">===</span> t<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 由于异或运算（XOR）满足结合律，并且对一个数进行两次完全相同的异或运算会得到原来的数，因此我们可以通过异或运算找到缺失的数字。我们知道数组中有 n 个数，并且缺失的数在 [0..n] 中。因此我们可以先得到 [0..n] 的异或值，再将结果对数组中的每一个数进行一次异或运算。未缺失的数在 [0..n] 和数组中各出现一次，因此异或后得到 0。而缺失的数字只在 [0..n] 中出现了一次，在数组中没有出现，因此最终的异或结果即为这个缺失的数字。</p>
-<p><strong>知识点回顾：</strong> 位运算的相关知识。</p>
+<p><strong>解释：</strong> 类似于C语言的解法一。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -654,9 +692,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之268》
+                    《leetcode刷题记录之242》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/07/leetcode-shua-ti-ji-lu-zhi-268/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/31/leetcode-shua-ti-ji-lu-zhi-242/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -955,81 +993,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/08/leetcode-shua-ti-ji-lu-zhi-367/">
+                <a href="/2019/10/31/leetcode-shua-ti-ji-lu-zhi-242/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之367">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="leetcode刷题记录之242">
                         
-                        <span class="card-title">leetcode刷题记录之367</span>
+                        <span class="card-title">leetcode刷题记录之242</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            367、有效的完全平方数&emsp;&emsp;给定一个正整数 num，编写一个函数，如果 num 是一个完全平方数，则返回 True，否则返回 False。&emsp;&emsp;说明：不要使用任何内置的库函数，如  sqrt。示例 1：
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
-                    </a>
-                    
-                    <a href="/tags/数学/" target="_blank">
-                        <span class="chip bg-color">数学</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/06/leetcode-shua-ti-ji-lu-zhi-26/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="leetcode刷题记录之26">
-                        
-                        <span class="card-title">leetcode刷题记录之26</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            26、删除排序数组中的重复项&emsp;&emsp;给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&emsp;&emsp;不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1)
+                            242、有效的字母异位词&emsp;&emsp;给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。示例 1：
+输入: s = &quot;anagram&quot;, t = &quot;nagaram&quo
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-06
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-31
                             </span>
                         <span class="publish-author">
                             
@@ -1043,6 +1030,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1050,8 +1038,67 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/哈希表/" target="_blank">
+                        <span class="chip bg-color">哈希表</span>
+                    </a>
+                    
+                    <a href="/tags/排序/" target="_blank">
+                        <span class="chip bg-color">排序</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/10/29/xue-xi-ban-lian-biao-tong-yong-mo-ban-dai-ma/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="学习版链表通用模板代码">
+                        
+                        <span class="card-title">学习版链表通用模板代码</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            #include &lt;stdbool.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+#include &lt;string.h>
+
+typedef struct {
+  // TODO:
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/数据结构/" class="post-category" target="_blank">
+                                    数据结构
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/链表/" target="_blank">
+                        <span class="chip bg-color">链表</span>
                     </a>
                     
                 </div>
