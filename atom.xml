@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://printf123.github.io/"/>
-  <updated>2019-11-01T02:38:54.953Z</updated>
+  <updated>2019-11-02T10:50:46.416Z</updated>
   <id>http://printf123.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode刷题记录之976</title>
+    <link href="http://printf123.github.io/2019/11/02/leetcode-shua-ti-ji-lu-zhi-976/"/>
+    <id>http://printf123.github.io/2019/11/02/leetcode-shua-ti-ji-lu-zhi-976/</id>
+    <published>2019-11-02T09:43:38.000Z</published>
+    <updated>2019-11-02T10:50:46.416Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;976、三角形的最大周长&quot;&gt;&lt;a href=&quot;#976、三角形的最大周长&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="排序" scheme="http://printf123.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode刷题记录之350</title>
@@ -541,34 +569,6 @@
     
     
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode刷题记录之485</title>
-    <link href="http://printf123.github.io/2019/09/03/leetcode-shua-ti-ji-lu-zhi-485/"/>
-    <id>http://printf123.github.io/2019/09/03/leetcode-shua-ti-ji-lu-zhi-485/</id>
-    <published>2019-09-03T06:00:38.000Z</published>
-    <updated>2019-09-03T06:29:13.255Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;485、最大连续1的个数&quot;&gt;&lt;a href=&quot;#485、最大连续1的个数&quot; class=&quot;headerlink&quot; title=&quot;485、最大连续1的个数&quot;&gt;&lt;/a&gt;485、最大连续1的个数&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个二进制数组，
-        
-      
-    
-    </summary>
-    
-      <category term="算法" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    
-      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
