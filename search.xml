@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode刷题记录之169]]></title>
+    <url>%2F2019%2F11%2F07%2Fleetcode-shua-ti-ji-lu-zhi-169%2F</url>
+    <content type="text"><![CDATA[169、求众数给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。你可以假设数组是非空的，并且给定的数组总是存在众数。示例 1: 输入: [3,2,3] 输出: 3 示例 2： 输入: [2,2,1,1,1,2,2] 输出: 2 难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/majority-element/ 1、C语言代码：int cmp(const void *a, const void *b){ return *(int*)a - *(int*)b; } int majorityElement(int* nums, int numsSize){ qsort(nums, numsSize, sizeof(nums[0]), cmp); return nums[numsSize/2]; } 解释： 因为题目说众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素，所以排序后中间的数就是众数。 知识点回顾： 无。 2、Java代码：class Solution { public int majorityElement(int[] nums) { Arrays.sort(nums); return nums[nums.length/2]; } } 解释： 类似于C语言的求解思路。 知识点回顾： 无。 3、Python代码：class Solution: def majorityElement(self, nums: List[int]) -> int: return sorted(nums)[len(nums) // 2] 解释： 类似于C语言的求解思路。 知识点回顾： 无。 4、JavaScript代码：/** * @param {number[]} nums * @return {number} */ var majorityElement = function(nums) { return nums.sort()[parseInt(nums.length/2)]; }; 解释： 类似于C语言的求解思路。 知识点回顾：1、parseInt() 函数可解析一个字符串，并返回一个整数。语法：parseInt(string, radix)string：必需。要被解析的字符串。radix：可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。 如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。 如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。返回值：返回解析后的数字。]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode简单题</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode刷题记录之387]]></title>
     <url>%2F2019%2F11%2F06%2Fleetcode-shua-ti-ji-lu-zhi-387%2F</url>
     <content type="text"><![CDATA[387、字符串中的第一个唯一字符给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。案例： s = &quot;leetcode&quot; 返回 0. s = &quot;loveleetcode&quot;, 返回 2. 注意事项： 您可以假定该字符串只包含小写字母。难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/first-unique-character-in-a-string/ 1、C语言代码：int firstUniqChar(char * s) { int table[26] = {0}; int i, len = strlen(s); for (i = 0; i &lt; len; ++i) table[s[i] - 'a']++; for (i = 0; i &lt; len; ++i) if (1 == table[s[i] - 'a']) return i; return -1; } 解释： 设一标记数组，初始化为0，用来存储字符串中各个字符出现的次数 之后按照字符串的顺序对 table 数组进行遍历，table 中出现的第一个元素为1的所对应的字母就是第一个唯一字符 最后输出其对应的字符串中的下标即可 知识点回顾： 无。 2、Java代码:class Solution { public int firstUniqChar(String s) { HashMap&lt;Character, Integer> count = new HashMap&lt;Character, Integer>(); int n = s.length(); // build hash map : character and how often it appears for (int i = 0; i &lt; n; i++) { char c = s.charAt(i); count.put(c, count.getOrDefault(c, 0) + 1); } // find the index for (int i = 0; i &lt; n; i++) { if (count.get(s.charAt(i)) == 1) return i; } return -1; } } 解释： 类似于C语言的求解思路。 知识点回顾：1、charAt() 方法用于返回指定索引处的字符。索引范围为从 0 到 length() - 1。语法：public char charAt(int index)index – 字符的索引。返回值：返回指定索引处的字符。 3、Python代码：class Solution: def firstUniqChar(self, s: str) -> int: for i in range(len(s)): if s.find(s[i]) == s.rfind(s[i]): return i return -1 解释： find是从左往右搜索，rfind是从右往左搜索，都是返回第一个匹配的下标。如果两者一致，证明这个就是唯一值。 知识点回顾： 无。 4、JavaScript代码：/** * @param {string} s * @return {number} */ var firstUniqChar = function(s) { for(let i in s){ if(s.indexOf(s[i]) === s.lastIndexOf(s[i])){ return i } } return -1; }; 解释： 类似于Python的求解思路。 知识点回顾： 无。]]></content>
@@ -295,8 +307,8 @@
       </categories>
       <tags>
         <tag>leetcode简单题</tag>
-        <tag>数组</tag>
         <tag>哈希表</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
