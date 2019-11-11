@@ -4,9 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之58, 锦瑟博客">
-    <meta name="description" content="58、最后一个单词的长度给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回其最后一个单词的长度。如果不存在最后一个单词，请返回 0 。说明： 一个单词是指由字母组成，但不包含任何空格的字符串。示例：
-输入: &amp;quot;Hello Wo">
+    <meta name="keywords" content="leetcode刷题记录之88, 锦瑟博客">
+    <meta name="description" content="88、合并两个有序数组给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。说明：
+
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+你可以假设 nu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之58 | 锦瑟博客</title>
+    <title>leetcode刷题记录之88 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -261,13 +263,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之58
+                        leetcode刷题记录之88
                     </div>
                 </div>
             </div>
@@ -382,8 +384,8 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/字符串/" target="_blank">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/数组/" target="_blank">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
                     </div>
@@ -406,14 +408,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-05
+                    2019-11-11
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        1k
                     </div>
                     
 
@@ -436,72 +438,73 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="58、最后一个单词的长度"><a href="#58、最后一个单词的长度" class="headerlink" title="58、最后一个单词的长度"></a>58、最后一个单词的长度</h3><p>给定一个仅包含大小写字母和空格 ‘ ‘ 的字符串，返回其最后一个单词的长度。<br>如果不存在最后一个单词，请返回 0 。<br><strong>说明：</strong> 一个单词是指由字母组成，但不包含任何空格的字符串。<br><strong>示例：</strong></p>
-<pre><code>输入: &quot;Hello World&quot;
-输出: 5
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/length-of-last-word/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/length-of-last-word/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">lengthOfLastWord</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">' '</span><span class="token punctuation">)</span>
-            c<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">else</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
-                <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+                <h3 id="88、合并两个有序数组"><a href="#88、合并两个有序数组" class="headerlink" title="88、合并两个有序数组"></a>88、合并两个有序数组</h3><p>给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。<br><strong>说明：</strong></p>
+<ul>
+<li>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。</li>
+<li>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<pre><code>输入:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+输出: [1,2,2,3,5,6]
+</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/merge-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-sorted-array/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">cmpfunc</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span> a<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token keyword">return</span> <span class="token punctuation">(</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>a <span class="token operator">-</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>b <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums1<span class="token punctuation">,</span> <span class="token keyword">int</span> nums1Size<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">*</span> nums2<span class="token punctuation">,</span> <span class="token keyword">int</span> nums2Size<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> m<span class="token punctuation">;</span>i <span class="token operator">&lt;</span> nums1Size<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        nums1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums2<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> c<span class="token punctuation">;</span>
+    <span class="token function">qsort</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token operator">+</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmpfunc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> nums1<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 先求字符串的长度，如果是0直接返回，否则从后向前遍历字符串，如果不是’ ‘则计数加1，如果是’ ‘，为了防止字符串最后有空格的情况，需要再加一次判断。计数不为0的时候跳出循环，返回计数。</p>
+<p><strong>解释：</strong> 最朴素的解法就是将两个数组合并之后再排序。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">lengthOfLastWord</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> s<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums1<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums2<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// two get pointers for nums1 and nums2</span>
+    <span class="token keyword">int</span> p1 <span class="token operator">=</span> m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> p2 <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// set pointer for nums1</span>
+    <span class="token keyword">int</span> p <span class="token operator">=</span> m <span class="token operator">+</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// while there are still elements to compare</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>p1 <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>p2 <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token comment" spellcheck="true">// compare two elements from nums1 and nums2 </span>
+      <span class="token comment" spellcheck="true">// and add the largest one in nums1 </span>
+      nums1<span class="token punctuation">[</span>p<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>p1<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums2<span class="token punctuation">[</span>p2<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> nums2<span class="token punctuation">[</span>p2<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">:</span> nums1<span class="token punctuation">[</span>p1<span class="token operator">--</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// add missing elements from nums2</span>
+    System<span class="token punctuation">.</span><span class="token function">arraycopy</span><span class="token punctuation">(</span>nums2<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> nums1<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> p2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 重复利用Java的方法。</p>
-<p><strong>知识点回顾：</strong><br>1、trim() 方法用于删除字符串的头尾空白符。<br>2、lastIndexOf() 方法有以下四种形式：</p>
-<ul>
-<li>public int lastIndexOf(int ch): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(int ch, int fromIndex): 返返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(String str): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(String str, int fromIndex): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-</ul>
-<p>语法：</p>
-<ul>
-<li>public int lastIndexOf(int ch)</li>
-<li>public int lastIndexOf(int ch, int fromIndex)</li>
-<li>public int lastIndexOf(String str)</li>
-<li>public int lastIndexOf(String str, int fromIndex)</li>
-</ul>
-<p>ch – 字符。<br>fromIndex – 开始搜索的索引位置。<br>str – 要搜索的子字符串。<br>返回值：指定子字符串在字符串中第一次出现处的索引值。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">lengthOfLastWord</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> len<span class="token punctuation">(</span>s<span class="token punctuation">.</span>rstrip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<p><strong>解释：</strong> 双指针 / 从后往前。</p>
+<p><strong>知识点回顾：</strong><br>1、System中提供了一个native静态方法arraycopy(),可以使用这个方法来实现数组之间的复制。对于一维数组来说，这种复制属性值传递，修改副本不会影响原来的值。对于二维或者一维数组中存放的是对象时，复制结果是一维的引用变量传递给副本的一维数组，修改副本时，会影响原来的数组。</p>
+<h3 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">merge</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums1<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> m<span class="token punctuation">:</span> int<span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        Do not return anything, modify nums1 in-place instead.
+        """</span>
+        nums1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> sorted<span class="token punctuation">(</span>nums1<span class="token punctuation">[</span><span class="token punctuation">:</span>m<span class="token punctuation">]</span><span class="token operator">+</span>nums2<span class="token punctuation">)</span>
 </code></pre>
-<p><strong>解释：</strong></p>
-<ul>
-<li>先去掉字符串的最后空格</li>
-<li>将字符串按照空格分组</li>
-<li>取分组后的最后一项</li>
-<li>计算它的长度</li>
-</ul>
-<p><strong>知识点回顾：</strong><br>1、Python rstrip() 删除 string 字符串末尾的指定字符（默认为空格）<br>语法：str.rstrip([chars])<br>chars – 指定删除的字符（默认为空格）<br>返回值：返回删除 string 字符串末尾的指定字符后生成的新字符串。<br>2、split() 通过指定分隔符对字符串进行切片，如果第二个参数 num 有指定值，则分割为 num+1 个子字符串。<br>语法：str.split(str=””, num=string.count(str))<br>str – 分隔符，默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等。<br>num – 分割次数。默认为 -1, 即分隔所有。<br>返回值：返回分割后的字符串列表。</p>
+<p><strong>解释：</strong> 类似于C语言的求解方式。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {number}
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
  */</span>
-<span class="token keyword">var</span> lengthOfLastWord <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    s <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(\s*$)/g</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span>
-    <span class="token keyword">let</span> arr <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> arr<span class="token punctuation">[</span>arr<span class="token punctuation">.</span>length <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length
+<span class="token keyword">var</span> merge <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    nums1<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> nums1<span class="token punctuation">.</span>length <span class="token operator">-</span> m<span class="token punctuation">,</span> <span class="token operator">...</span>nums2<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    nums1 <span class="token operator">=</span> nums1<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 正则表达式的使用。</p>
-<p><strong>知识点回顾：</strong><br>1、replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。<br>该方法不会改变原始字符串。<br>语法：string.replace(searchvalue,newvalue)<br>searchvalue：必须。规定子字符串或要替换的模式的 RegExp 对象。请注意，如果该值是一个字符串，则将它作为要检索的直接量文本模式，而不是首先被转换为 RegExp 对象。<br>newvalue：必需。一个字符串值。规定了替换文本或生成替换文本的函数。<br>返回值：一个新的字符串，是用 replacement 替换了 regexp 的第一次匹配或所有匹配之后得到的。<br>2、split() 方法用于把一个字符串分割成字符串数组。<br>提示： 如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。<br>注意： split() 方法不改变原始字符串。<br>语法：string.split(separator,limit)<br>separator：可选。字符串或正则表达式，从该参数指定的地方分割 string Object。<br>limit：可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。<br>返回值：一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 string Object 分割成子串创建的。返回的数组中的字串不包括 separator 自身。</p>
+<p><strong>解释：</strong> 类似于C语言的求解方式。</p>
+<p><strong>知识点回顾：</strong><br>1、splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。<br><strong>注释：</strong> 该方法会改变原始数组。<br>语法：arrayObject.splice(index,howmany,item1,…..,itemX)<br>index：必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。<br>howmany：必需。要删除的项目数量。如果设置为 0，则不会删除项目。<br>item1, …, itemX：可选。向数组添加的新项目。<br>返回值：包含被删除项目的新数组，如果有的话。<br><strong>说明：</strong> splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。<br>如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。<br>2、slice() 方法可从已有的数组中返回选定的元素。<br>语法：arrayObject.slice(start,end)<br>start：必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。<br>end：可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。<br>返回值：返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。<br><strong>说明：</strong> 请注意，该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</p>
 
             </div>
             <hr/>
@@ -660,9 +663,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之58》
+                    《leetcode刷题记录之88》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/05/leetcode-shua-ti-ji-lu-zhi-58/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/11/leetcode-shua-ti-ji-lu-zhi-88/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -961,88 +964,32 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/06/leetcode-shua-ti-ji-lu-zhi-387/">
+                <a href="/2019/11/11/leetcode-shua-ti-ji-lu-zhi-88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="leetcode刷题记录之387">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="leetcode刷题记录之88">
                         
-                        <span class="card-title">leetcode刷题记录之387</span>
+                        <span class="card-title">leetcode刷题记录之88</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            387、字符串中的第一个唯一字符给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。案例：
-s = &quot;leetcode&quot;
-返回 0.
+                            88、合并两个有序数组给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。说明：
 
-s = &quot;loveleetcode&qu
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
-                    </a>
-                    
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/11/04/leetcode-shua-ti-ji-lu-zhi-1207/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode刷题记录之1207">
-                        
-                        <span class="card-title">leetcode刷题记录之1207</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1207、独一无二的出现次数给你一个整数数组 arr，请你帮忙统计数组中每个数的出现次数。如果每个数的出现次数都是独一无二的，就返回 true；否则返回 false。示例 1：
-输入：arr = [1,2,2,1,1,3]
-输出：true
-
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
+你可以假设 nu
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-04
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-11
                             </span>
                         <span class="publish-author">
                             
@@ -1056,6 +1003,7 @@ s = &quot;loveleetcode&qu
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1063,8 +1011,61 @@ s = &quot;loveleetcode&qu
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="解决eclipse导入工程后出现的乱码问题">
+                        
+                        <span class="card-title">解决eclipse导入工程后出现的乱码问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &emsp;&emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                    程序人生
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/eclipse/" target="_blank">
+                        <span class="chip bg-color">eclipse</span>
+                    </a>
+                    
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
