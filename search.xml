@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[解决eclipse导入工程后出现的乱码问题]]></title>
+    <url>%2F2019%2F11%2F11%2Fjie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的乱码问题，这其中还有几种情况。（1）如果导入的整个工程的编码方式与eclipse的编码方式有冲突，那么这个工程里所有的中文都是乱码;（2）如果所有工程的编码方式与eclipse工作空间的编码方式有冲突，那么所有的工程里的中文都有可能是乱码。对于eclipse工作空间 ，eclipse会把你改的设置保存在工作空间的设置文件中，对于单个工程的编码方式进行修改，那么eclipse会把编码方式保存在该工程 的.setting文件包里。所以，要避免中文乱码问题有两个原则：（1）避免频繁更换工作空间，最好项目从一开始就在一个工作空间中进行，并且最好设置工作空间的编码方式为你平时最经常使用的或者是公司规定的项目编码方式，这样工程就会使用工作空间的编码方式，避免出现编码不一致的情形；（2）相同类型的文件尽量使用相同的编码方式，可以保证相同类型的文件都能使用一致的编码设置；==解决中文乱码问题可以有以下方案：==（1）修改工作空间的编码方式：&emsp;&emsp;Window-&gt;Preferences-&gt;General-&gt;Workspace-&gt;Text file Encoding&emsp;&emsp;在Others里选择需要的编码方式(如没有则直接输入)，然后保存。（2）修改单个工程的编码方式：&emsp;&emsp;右击工程，在弹出的菜单中选择最后一项“Properties”&emsp;&emsp;在打开的新窗口左边的菜单树中选择 Info（即第一个），然后在右面找到 Text file encoding ，选择 “other”，在下拉框中选择需要的编码方式(如没有则直接输入)。（3）修改一类文件的编码方式：&emsp;&emsp;假设要将js文件编码方式设为UTF-8，则应该&emsp;&emsp;Window-&gt;Preferences-&gt;General-&gt;Content Types&emsp;&emsp;在Content Types中选择JavaScript Source File，在File associations栏中选中*.js,然后在Default Encoding栏中输入UTF-8，单击Update，保存即可。（4）修改单个文件的编码方式：&emsp;&emsp;右击要修改的文件，在弹出的菜单中选择最后一项 “Properties”，在打开的新窗口左边的菜单树中选择 Info（即第一个），然后在右面找到 Text file encoding ，选择 “other”，在下拉框中选择需要的编码方式(如没有则直接输入)。与修改工程编码方式的方法类似。ps：在项目过程中遇到的另外一个乱码问题是因为操作系统的字体文件问题，在某些情况下，eclipse所使用的系统中文字体如果被破坏的话，也会导致中文无法显示的问题。所以，如果在上述设置都无法解决问题的时候，应该要考虑一下系统字体文件的问题。]]></content>
+      <categories>
+        <category>程序人生</category>
+      </categories>
+      <tags>
+        <tag>eclipse</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode刷题记录之896]]></title>
     <url>%2F2019%2F11%2F08%2Fleetcode-shua-ti-ji-lu-zhi-896%2F</url>
     <content type="text"><![CDATA[896、单调数列如果数组是单调递增或单调递减的，那么它是单调的。如果对于所有 i &lt;= j，A[i] &lt;= A[j]，那么数组 A 是单调递增的。 如果对于所有 i &lt;= j，A[i]&gt; = A[j]，那么数组 A 是单调递减的。当给定的数组 A 是单调数组时返回 true，否则返回 false。示例 1： 输入：[1,2,2,3] 输出：true 示例 2： 输入：[6,5,4,4] 输出：true 示例 3： 输入：[1,3,2] 输出：false 示例 4： 输入：[1,2,4,5] 输出：true 示例 5： 输入：[1,1,1] 输出：true 提示： 1 &lt;= A.length &lt;= 5000 -100000 &lt;= A[i] &lt;= 100000 难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/monotonic-array/ 1、C语言代码：bool increasing(int* A,int ASize){ for (int i = 0; i &lt; ASize - 1; ++i) if (A[i] > A[i+1]) return false; return true; } bool decreasing(int* A,int ASize){ for (int i = 0; i &lt; ASize - 1; ++i) if (A[i] &lt; A[i+1]) return false; return true; } bool isMonotonic(int* A, int ASize){ return increasing(A,ASize) || decreasing(A,ASize); } 解释： 如果数组单调递增或单调递减，那么该数组是单调的。由于 a &lt;= b 和 b &lt;= c 暗示着 a &lt;= c，我们只需要检查相邻元素以确定数组是单调递增（或是递减）。我们可以在一次遍历中检查每个属性。要检查数组 A 是否单调递增，我们将检查每个 i 是否对应有 A[i] &lt;= A[i+1]。对单调检查是类似的。 知识点回顾： 无。 2、Java代码：class Solution { public boolean isMonotonic(int[] A) { int store = 0; for (int i = 0; i &lt; A.length - 1; ++i) { int c = Integer.compare(A[i], A[i+1]); if (c != 0) { if (c != store &amp;&amp; store != 0) return false; store = c; } } return true; } } 解释： 要在一次遍历中执行该检查，我们将会处理由 {−1,0,1} 组成的比较流，分别对应 &lt;，==，或 &gt;。例如，对于数组 [1, 2, 2, 3, 0]，我们将会看到数据流 (-1, 0, -1, 1)。跟踪 store，它的值等于所看到的第一个非零比较值（如果存在）。一旦我们看到与之相反的比较值，那么答案就变成了 False。否则，每次比较值都必定在集合 {−1,0} 中或是在 {0,1} 中，此时数组是单调的。 知识点回顾： 无。 3、Python代码：class Solution: def isMonotonic(self, A: List[int]) -> bool: return A == sorted(A) or A==sorted(A)[::-1] 解释： 两次排序比较。 知识点回顾： 无。 4、JavaScript代码：/** * @param {number[]} A * @return {boolean} */ var isMonotonic = function(A) { let up = true, down = true for(let i = 1; i&lt; A.length; i++){ if(A[i]>A[i-1]) down = false if(A[i]&lt;A[i-1]) up = false if(!down &amp;&amp; !up) return false } return true }; 解释： up 单调递增 down单调递减 如果既不是单调递增也不是单调递减(!up &amp;&amp; !down) 返回false。 知识点回顾： 无。]]></content>
@@ -319,8 +331,8 @@
       </categories>
       <tags>
         <tag>leetcode简单题</tag>
-        <tag>数组</tag>
         <tag>哈希表</tag>
+        <tag>数组</tag>
       </tags>
   </entry>
   <entry>

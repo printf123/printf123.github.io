@@ -4,12 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之169, 锦瑟博客">
-    <meta name="description" content="169、求众数给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。你可以假设数组是非空的，并且给定的数组总是存在众数。示例 1:
-输入: [3,2,3]
-输出: 3
-示例 2：
-输入: [2,2">
+    <meta name="keywords" content="解决eclipse导入工程后出现的乱码问题, 锦瑟博客">
+    <meta name="description" content="&amp;emsp;&amp;emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之169 | 锦瑟博客</title>
+    <title>解决eclipse导入工程后出现的乱码问题 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -264,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之169
+                        解决eclipse导入工程后出现的乱码问题
                     </div>
                 </div>
             </div>
@@ -381,12 +377,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode简单题/" target="_blank">
-                                <span class="chip bg-color">leetcode简单题</span>
+                            <a href="/tags/eclipse/" target="_blank">
+                                <span class="chip bg-color">eclipse</span>
                             </a>
                         
-                            <a href="/tags/数组/" target="_blank">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/Java/" target="_blank">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -397,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                算法
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                程序人生
                             </a>
                         
                     </div>
@@ -409,21 +405,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-07
+                    2019-11-11
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        441
+                        840
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        3 分
                     </div>
                     
                 
@@ -439,49 +435,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="169、求众数"><a href="#169、求众数" class="headerlink" title="169、求众数"></a>169、求众数</h3><p>给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。<br>你可以假设数组是非空的，并且给定的数组总是存在众数。<br><strong>示例 1:</strong></p>
-<pre><code>输入: [3,2,3]
-输出: 3
-</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: [2,2,1,1,1,2,2]
-输出: 2
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/majority-element/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/majority-element/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">cmp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>a<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>a <span class="token operator">-</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>b<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">majorityElement</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">qsort</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> nums<span class="token punctuation">[</span>numsSize<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 因为题目说众数是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素，所以排序后中间的数就是众数。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">majorityElement</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Arrays<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>       
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">majorityElement</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        <span class="token keyword">return</span> sorted<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">[</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">]</span>
-</code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} nums
- * @return {number}
- */</span>
-<span class="token keyword">var</span> majorityElement <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span>  nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token function">parseInt</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
-<p><strong>知识点回顾：</strong><br>1、parseInt() 函数可解析一个字符串，并返回一个整数。<br>语法：parseInt(string, radix)<br>string：必需。要被解析的字符串。<br>radix：可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。<br>    如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。<br>    如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。<br>返回值：返回解析后的数字。</p>
-<p><strong>更多解法：</strong> 参考<a href="https://leetcode-cn.com/problems/majority-element/solution/qiu-zhong-shu-by-leetcode-2/" target="_blank" rel="noopener">官方题解</a>。</p>
+                <p>&emsp;&emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的乱码问题，这其中还有几种情况。<br>（1）如果导入的整个工程的编码方式与eclipse的编码方式有冲突，那么这个工程里所有的中文都是乱码;<br>（2）如果所有工程的编码方式与eclipse工作空间的编码方式有冲突，那么所有的工程里的中文都有可能是乱码。<br>对于eclipse工作空间 ，eclipse会把你改的设置保存在工作空间的设置文件中，对于单个工程的编码方式进行修改，那么eclipse会把编码方式保存在该工程 的.setting文件包里。<br>所以，要避免中文乱码问题有两个原则：<br>（1）避免频繁更换工作空间，最好项目从一开始就在一个工作空间中进行，并且最好设置工作空间的编码方式为你平时最经常使用的或者是公司规定的项目编码方式，这样工程就会使用工作空间的编码方式，避免出现编码不一致的情形；<br>（2）相同类型的文件尽量使用相同的编码方式，可以保证相同类型的文件都能使用一致的编码设置；<br>==解决中文乱码问题可以有以下方案：==<br><strong>（1）修改工作空间的编码方式：</strong><br>&emsp;&emsp;Window-&gt;Preferences-&gt;General-&gt;Workspace-&gt;Text file Encoding<br>&emsp;&emsp;在Others里选择需要的编码方式(如没有则直接输入)，然后保存。<img src="https://img-blog.csdnimg.cn/20191111102903730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>（2）修改单个工程的编码方式：</strong><br>&emsp;&emsp;右击工程，在弹出的菜单中选择最后一项“Properties”<br>&emsp;&emsp;在打开的新窗口左边的菜单树中选择 Info（即第一个），然后在右面找到 Text file encoding ，选择 “other”，在下拉框中选择需要的编码方式(如没有则直接输入)。<img src="https://img-blog.csdnimg.cn/20191111103307404.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191111103534929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>（3）修改一类文件的编码方式：</strong><br>&emsp;&emsp;假设要将js文件编码方式设为UTF-8，则应该<br>&emsp;&emsp;Window-&gt;Preferences-&gt;General-&gt;Content Types<br>&emsp;&emsp;在Content Types中选择JavaScript Source File，在File associations栏中选中*.js,然后在Default Encoding栏中输入UTF-8，单击Update，保存即可。<br><img src="https://img-blog.csdnimg.cn/20191111104124156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>（4）修改单个文件的编码方式：</strong><br>&emsp;&emsp;右击要修改的文件，在弹出的菜单中选择最后一项 “Properties”，在打开的新窗口左边的菜单树中选择 Info（即第一个），然后在右面找到 Text file encoding ，选择 “other”，在下拉框中选择需要的编码方式(如没有则直接输入)。与修改工程编码方式的方法类似。<br><img src="https://img-blog.csdnimg.cn/20191111104443485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019111110461463.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><em>ps：在项目过程中遇到的另外一个乱码问题是因为操作系统的字体文件问题，在某些情况下，eclipse所使用的系统中文字体如果被破坏的话，也会导致中文无法显示的问题。所以，如果在上述设置都无法解决问题的时候，应该要考虑一下系统字体文件的问题。</em></p>
 
             </div>
             <hr/>
@@ -640,9 +594,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之169》
+                    《解决eclipse导入工程后出现的乱码问题》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/07/leetcode-shua-ti-ji-lu-zhi-169/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -941,9 +895,64 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="解决eclipse导入工程后出现的乱码问题">
+                        
+                        <span class="card-title">解决eclipse导入工程后出现的乱码问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            &emsp;&emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                    程序人生
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/eclipse/" target="_blank">
+                        <span class="chip bg-color">eclipse</span>
+                    </a>
+                    
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2019/11/08/leetcode-shua-ti-ji-lu-zhi-896/">
                     <div class="card-image">
@@ -961,9 +970,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -985,63 +994,6 @@
                     
                     <a href="/tags/数组/" target="_blank">
                         <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/11/06/leetcode-shua-ti-ji-lu-zhi-387/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="leetcode刷题记录之387">
-                        
-                        <span class="card-title">leetcode刷题记录之387</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            387、字符串中的第一个唯一字符给定一个字符串，找到它的第一个不重复的字符，并返回它的索引。如果不存在，则返回 -1。案例：
-s = &quot;leetcode&quot;
-返回 0.
-
-s = &quot;loveleetcode&qu
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-06
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
-                    </a>
-                    
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
                     </a>
                     
                 </div>
