@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[数据结构之双向链表与循环链表]]></title>
-    <url>%2F2019%2F11%2F23%2Fshu-ju-jie-gou-zhi-shuang-xiang-lian-biao-yu-xun-huan-lian-biao%2F</url>
-    <content type="text"><![CDATA[0、目录 循环链表 双向链表 双向链表的存储结构 双向链表的插入 双向链表的删除 1、循环链表&emsp;&emsp;循环链表 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任一结点出发均可找到表中其他结点，下图为单链的循环链表。类似地，还可以有多重链的循环链表。&emsp;&emsp;循环链表的操作和单链表基本一致，差别仅在于：当链表遍历的时候，判别当前指针 p 是否指向表尾结点的终止条件不同。在单链表中，判别条件为 p != NULL 或 p -&gt; next != NULL，而循环单链表的判别条件为 p != L 或 p -&gt; next != L。&emsp;&emsp;在某些情况下，若在循环链表中设立尾指针而不设头指针，可使一些操作简化。例如，将两个线性表合并成一个表时，仅需将第一个表的尾指针指向第二个表的第一个结点，第二个表的尾指针指向第一个表的头结点，然后释放第二个表的头结点。当线性表以图（a）的循环链表作存储结构时，这个操作仅需改变两个指针值即可，主要代码段如下，操作的时间复杂度为O(1)，合并后的表如图(b)所示。 p = B->next->next; B->next = A->next; A->next = p; 2、双向链表&emsp;&emsp;双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。 2.1 双向链表的存储结构顾名思义，在双向链表的结点中有两个指针域，一个指向直接的后继，另一个指向直接的前驱。 //-----双向链表的存储结构----- typedef struct DuLNode{ ElemType data; //数据域 struct DuLNode *prior;//直接前驱 struct DuLNode *next; //直接后继 }DuLNode,*DuLinkList; 2.2 双向链表的插入算法描述： Status ListInsert_DuL(DuLinkList &amp;L,int i,ElemType e){ //在带头结点的双向链表L中第i个位置之前插入元素e if(!(p = GetElem_DuL(L,i))) //在L中确定第i个元素的位置指针p return ERROR; //p为NULL时，第i个元素不存在 s = new DuLNode; //生成新结点*s s -> data = e; //将结点*s数据域置为e s -> prior = p -> prior; //将结点*s插入L中，对应图(b)① p -> prior -> next = e; //对于图(b)② s -> next = p; //对于图(b)③ p -> prior = s; //对应图(b)④ return OK; } 2.3 双向链表的删除算法描述： Status ListDelete_DuL(DuLinkList &amp;L,int i){ //删除带头结点的双向链表L中的第i个元素 if(!(p = GetElem_DuL(L,i))) //在L中确定第i个元素的位置指针p return ERROR; //p为NULL时，第i个元素不存在 p -> prior -> next = p -> next; //修改被删结点的前驱结点的后继指针，对于图(a)① p -> next -> prior = p -> prior;//修改被删结点的后继结点的前驱指针，对于图(a)② delete p; //释放被删结点的空间 return OK; }]]></content>
+    <title><![CDATA[数据结构之循环链表与双向链表]]></title>
+    <url>%2F2019%2F11%2F23%2Fshu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao%2F</url>
+    <content type="text"><![CDATA[0、目录 循环链表 双向链表 双向链表的存储结构 双向链表的插入 双向链表的删除 1、循环链表&emsp;&emsp;循环链表 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任一结点出发均可找到表中其他结点，下图为单链的循环链表。类似地，还可以有多重链的循环链表。&emsp;&emsp;循环链表的操作和单链表基本一致，差别仅在于：当链表遍历的时候，判别当前指针 p 是否指向表尾结点的终止条件不同。在单链表中，判别条件为 p != NULL 或 p -&gt; next != NULL，而循环单链表的判别条件为 p != L 或 p -&gt; next != L。&emsp;&emsp;在某些情况下，若在循环链表中设立尾指针而不设头指针，可使一些操作简化。例如，将两个线性表合并成一个表时，仅需将第一个表的尾指针指向第二个表的第一个结点，第二个表的尾指针指向第一个表的头结点，然后释放第二个表的头结点。当线性表以图（a）的循环链表作存储结构时，这个操作仅需改变两个指针值即可，主要代码段如下，操作的时间复杂度为O(1)，合并后的表如图(b)所示。 p = B->next->next; B->next = A->next; A->next = p; 2、双向链表&emsp;&emsp;双向链表 也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。 2.1 双向链表的存储结构&emsp;&emsp;顾名思义，在双向链表的结点中有两个指针域，一个指向直接的后继，另一个指向直接的前驱。 //-----双向链表的存储结构----- typedef struct DuLNode{ ElemType data; //数据域 struct DuLNode *prior;//直接前驱 struct DuLNode *next; //直接后继 }DuLNode,*DuLinkList; 2.2 双向链表的插入算法描述： Status ListInsert_DuL(DuLinkList &amp;L,int i,ElemType e){ //在带头结点的双向链表L中第i个位置之前插入元素e if(!(p = GetElem_DuL(L,i))) //在L中确定第i个元素的位置指针p return ERROR; //p为NULL时，第i个元素不存在 s = new DuLNode; //生成新结点*s s -> data = e; //将结点*s数据域置为e s -> prior = p -> prior; //将结点*s插入L中，对应图(b)① p -> prior -> next = e; //对于图(b)② s -> next = p; //对于图(b)③ p -> prior = s; //对应图(b)④ return OK; } 2.3 双向链表的删除算法描述： Status ListDelete_DuL(DuLinkList &amp;L,int i){ //删除带头结点的双向链表L中的第i个元素 if(!(p = GetElem_DuL(L,i))) //在L中确定第i个元素的位置指针p return ERROR; //p为NULL时，第i个元素不存在 p -> prior -> next = p -> next; //修改被删结点的前驱结点的后继指针，对于图(a)① p -> next -> prior = p -> prior;//修改被删结点的后继结点的前驱指针，对于图(a)② delete p; //释放被删结点的空间 return OK; }]]></content>
       <categories>
         <category>数据结构与算法分析</category>
       </categories>
@@ -67,8 +67,8 @@
         <category>程序人生</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>eclipse</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -390,8 +390,8 @@
       </categories>
       <tags>
         <tag>leetcode简单题</tag>
-        <tag>哈希表</tag>
         <tag>数组</tag>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>

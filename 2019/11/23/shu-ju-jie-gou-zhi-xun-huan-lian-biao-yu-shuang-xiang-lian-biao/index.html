@@ -4,11 +4,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之88, 锦瑟博客">
-    <meta name="description" content="88、合并两个有序数组给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。说明：
+    <meta name="keywords" content="数据结构之循环链表与双向链表, 锦瑟博客">
+    <meta name="description" content="0、目录
+循环链表
+双向链表
+双向链表的存储结构
+双向链表的插入
+双向链表的删除
 
-初始化 nums1 和 nums2 的元素数量分别为 m 和 n。
-你可以假设 nu">
+
+
+1、循环链表&amp;emsp;&amp;emsp;循环链表 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +22,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之88 | 锦瑟博客</title>
+    <title>数据结构之循环链表与双向链表 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +269,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之88
+                        数据结构之循环链表与双向链表
                     </div>
                 </div>
             </div>
@@ -380,12 +386,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode简单题/" target="_blank">
-                                <span class="chip bg-color">leetcode简单题</span>
+                            <a href="/tags/循环链表/" target="_blank">
+                                <span class="chip bg-color">循环链表</span>
                             </a>
                         
-                            <a href="/tags/数组/" target="_blank">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/双向链表/" target="_blank">
+                                <span class="chip bg-color">双向链表</span>
                             </a>
                         
                     </div>
@@ -396,8 +402,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                算法刷题
+                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
+                                数据结构与算法分析
                             </a>
                         
                     </div>
@@ -408,21 +414,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-11
+                    2019-11-23
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        849
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        3 分
                     </div>
                     
                 
@@ -438,73 +444,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="88、合并两个有序数组"><a href="#88、合并两个有序数组" class="headerlink" title="88、合并两个有序数组"></a>88、合并两个有序数组</h3><p>给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。<br><strong>说明：</strong></p>
-<ul>
-<li>初始化 nums1 和 nums2 的元素数量分别为 m 和 n。</li>
-<li>你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。</li>
+                <h2 id="0、目录"><a href="#0、目录" class="headerlink" title="0、目录"></a>0、目录</h2><ul>
+<li>循环链表</li>
+<li>双向链表<ul>
+<li>双向链表的存储结构</li>
+<li>双向链表的插入</li>
+<li>双向链表的删除</li>
 </ul>
-<p><strong>示例：</strong></p>
-<pre><code>输入:
-nums1 = [1,2,3,0,0,0], m = 3
-nums2 = [2,5,6],       n = 3
-输出: [1,2,2,3,5,6]
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/merge-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/merge-sorted-array/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">cmpfunc</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span> a<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-   <span class="token keyword">return</span> <span class="token punctuation">(</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>a <span class="token operator">-</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span>b <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums1<span class="token punctuation">,</span> <span class="token keyword">int</span> nums1Size<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">*</span> nums2<span class="token punctuation">,</span> <span class="token keyword">int</span> nums2Size<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> m<span class="token punctuation">;</span>i <span class="token operator">&lt;</span> nums1Size<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        nums1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> nums2<span class="token punctuation">[</span>j<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">qsort</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token operator">+</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmpfunc<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> nums1<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+</li>
+</ul>
+<h3 id="1、循环链表"><a href="#1、循环链表" class="headerlink" title="1、循环链表"></a>1、循环链表</h3><p>&emsp;&emsp;<strong>循环链表</strong> 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任一结点出发均可找到表中其他结点，下图为单链的循环链表。类似地，还可以有多重链的循环链表。<br><img src="https://img-blog.csdnimg.cn/20191123170143730.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><br>&emsp;&emsp;循环链表的操作和单链表基本一致，差别仅在于：当链表遍历的时候，判别当前指针 p 是否指向表尾结点的终止条件不同。在单链表中，判别条件为 p != NULL 或 p -&gt; next != NULL，而循环单链表的判别条件为 p != L 或 p -&gt; next != L。<br>&emsp;&emsp;在某些情况下，若在循环链表中设立尾指针而不设头指针，可使一些操作简化。例如，将两个线性表合并成一个表时，仅需将第一个表的尾指针指向第二个表的第一个结点，第二个表的尾指针指向第一个表的头结点，然后释放第二个表的头结点。当线性表以图（a）的循环链表作存储结构时，这个操作仅需改变两个指针值即可，主要代码段如下，操作的时间复杂度为O(1)，合并后的表如图(b)所示。</p>
+<pre class=" language-c"><code class="language-c">p <span class="token operator">=</span> B<span class="token operator">-></span>next<span class="token operator">-></span>next<span class="token punctuation">;</span>
+B<span class="token operator">-></span>next <span class="token operator">=</span> A<span class="token operator">-></span>next<span class="token punctuation">;</span>
+A<span class="token operator">-></span>next <span class="token operator">=</span> p<span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 最朴素的解法就是将两个数组合并之后再排序。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums1<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums2<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// two get pointers for nums1 and nums2</span>
-    <span class="token keyword">int</span> p1 <span class="token operator">=</span> m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> p2 <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// set pointer for nums1</span>
-    <span class="token keyword">int</span> p <span class="token operator">=</span> m <span class="token operator">+</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// while there are still elements to compare</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>p1 <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>p2 <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-      <span class="token comment" spellcheck="true">// compare two elements from nums1 and nums2 </span>
-      <span class="token comment" spellcheck="true">// and add the largest one in nums1 </span>
-      nums1<span class="token punctuation">[</span>p<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>nums1<span class="token punctuation">[</span>p1<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums2<span class="token punctuation">[</span>p2<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">?</span> nums2<span class="token punctuation">[</span>p2<span class="token operator">--</span><span class="token punctuation">]</span> <span class="token operator">:</span> nums1<span class="token punctuation">[</span>p1<span class="token operator">--</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// add missing elements from nums2</span>
-    System<span class="token punctuation">.</span><span class="token function">arraycopy</span><span class="token punctuation">(</span>nums2<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> nums1<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> p2 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+<p><img src="https://img-blog.csdnimg.cn/20191123172431315.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt></p>
+<h3 id="2、双向链表"><a href="#2、双向链表" class="headerlink" title="2、双向链表"></a>2、双向链表</h3><p>&emsp;&emsp;<strong>双向链表</strong> 也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。</p>
+<h4 id="2-1-双向链表的存储结构"><a href="#2-1-双向链表的存储结构" class="headerlink" title="2.1 双向链表的存储结构"></a>2.1 双向链表的存储结构</h4><p>&emsp;&emsp;顾名思义，在双向链表的结点中有两个指针域，一个指向直接的后继，另一个指向直接的前驱。</p>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//-----双向链表的存储结构----- </span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> DuLNode<span class="token punctuation">{</span>
+    ElemType data<span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">//数据域</span>
+    <span class="token keyword">struct</span> DuLNode <span class="token operator">*</span>prior<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//直接前驱</span>
+    <span class="token keyword">struct</span> DuLNode <span class="token operator">*</span>next<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//直接后继</span>
+<span class="token punctuation">}</span>DuLNode<span class="token punctuation">,</span><span class="token operator">*</span>DuLinkList<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20191123174307498.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2-2-双向链表的插入"><a href="#2-2-双向链表的插入" class="headerlink" title="2.2 双向链表的插入"></a>2.2 双向链表的插入</h4><p><strong>算法描述：</strong></p>
+<pre class=" language-cpp"><code class="language-cpp">Status <span class="token function">ListInsert_DuL</span><span class="token punctuation">(</span>DuLinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">,</span>ElemType e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">//在带头结点的双向链表L中第i个位置之前插入元素e</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>p <span class="token operator">=</span> <span class="token function">GetElem_DuL</span><span class="token punctuation">(</span>L<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment" spellcheck="true">//在L中确定第i个元素的位置指针p</span>
+        <span class="token keyword">return</span> ERROR<span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">//p为NULL时，第i个元素不存在</span>
+    s <span class="token operator">=</span> <span class="token keyword">new</span> DuLNode<span class="token punctuation">;</span>                 <span class="token comment" spellcheck="true">//生成新结点*s</span>
+    s <span class="token operator">-</span><span class="token operator">></span> data <span class="token operator">=</span> e<span class="token punctuation">;</span>                   <span class="token comment" spellcheck="true">//将结点*s数据域置为e</span>
+    s <span class="token operator">-</span><span class="token operator">></span> prior <span class="token operator">=</span> p <span class="token operator">-</span><span class="token operator">></span> prior<span class="token punctuation">;</span>         <span class="token comment" spellcheck="true">//将结点*s插入L中，对应图(b)①</span>
+    p <span class="token operator">-</span><span class="token operator">></span> prior <span class="token operator">-</span><span class="token operator">></span> next <span class="token operator">=</span> e<span class="token punctuation">;</span>          <span class="token comment" spellcheck="true">//对于图(b)②      </span>
+    s <span class="token operator">-</span><span class="token operator">></span> next <span class="token operator">=</span> p<span class="token punctuation">;</span>                   <span class="token comment" spellcheck="true">//对于图(b)③</span>
+    p <span class="token operator">-</span><span class="token operator">></span> prior <span class="token operator">=</span> s<span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true">//对应图(b)④</span>
+    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 双指针 / 从后往前。</p>
-<p><strong>知识点回顾：</strong><br>1、System中提供了一个native静态方法arraycopy(),可以使用这个方法来实现数组之间的复制。对于一维数组来说，这种复制属性值传递，修改副本不会影响原来的值。对于二维或者一维数组中存放的是对象时，复制结果是一维的引用变量传递给副本的一维数组，修改副本时，会影响原来的数组。</p>
-<h3 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">merge</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums1<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> m<span class="token punctuation">:</span> int<span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> None<span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        Do not return anything, modify nums1 in-place instead.
-        """</span>
-        nums1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">=</span> sorted<span class="token punctuation">(</span>nums1<span class="token punctuation">[</span><span class="token punctuation">:</span>m<span class="token punctuation">]</span><span class="token operator">+</span>nums2<span class="token punctuation">)</span>
+<h4 id="2-3-双向链表的删除"><a href="#2-3-双向链表的删除" class="headerlink" title="2.3 双向链表的删除"></a>2.3 双向链表的删除</h4><p><strong>算法描述：</strong></p>
+<pre class=" language-cpp"><code class="language-cpp">Status <span class="token function">ListDelete_DuL</span><span class="token punctuation">(</span>DuLinkList <span class="token operator">&amp;</span>L<span class="token punctuation">,</span><span class="token keyword">int</span> i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">//删除带头结点的双向链表L中的第i个元素</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>p <span class="token operator">=</span> <span class="token function">GetElem_DuL</span><span class="token punctuation">(</span>L<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">//在L中确定第i个元素的位置指针p</span>
+        <span class="token keyword">return</span> ERROR<span class="token punctuation">;</span>               <span class="token comment" spellcheck="true">//p为NULL时，第i个元素不存在</span>
+    p <span class="token operator">-</span><span class="token operator">></span> prior <span class="token operator">-</span><span class="token operator">></span> next <span class="token operator">=</span> p <span class="token operator">-</span><span class="token operator">></span> next<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//修改被删结点的前驱结点的后继指针，对于图(a)①      </span>
+    p <span class="token operator">-</span><span class="token operator">></span> next <span class="token operator">-</span><span class="token operator">></span> prior <span class="token operator">=</span> p <span class="token operator">-</span><span class="token operator">></span> prior<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//修改被删结点的后继结点的前驱指针，对于图(a)②         </span>
+    <span class="token keyword">delete</span> p<span class="token punctuation">;</span>                       <span class="token comment" spellcheck="true">//释放被删结点的空间</span>
+    <span class="token keyword">return</span> OK<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解方式。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */</span>
-<span class="token keyword">var</span> merge <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums1<span class="token punctuation">,</span> m<span class="token punctuation">,</span> nums2<span class="token punctuation">,</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    nums1<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span> nums1<span class="token punctuation">.</span>length <span class="token operator">-</span> m<span class="token punctuation">,</span> <span class="token operator">...</span>nums2<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    nums1 <span class="token operator">=</span> nums1<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解方式。</p>
-<p><strong>知识点回顾：</strong><br>1、splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。<br><strong>注释：</strong> 该方法会改变原始数组。<br>语法：arrayObject.splice(index,howmany,item1,…..,itemX)<br>index：必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。<br>howmany：必需。要删除的项目数量。如果设置为 0，则不会删除项目。<br>item1, …, itemX：可选。向数组添加的新项目。<br>返回值：包含被删除项目的新数组，如果有的话。<br><strong>说明：</strong> splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。<br>如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。<br>2、slice() 方法可从已有的数组中返回选定的元素。<br>语法：arrayObject.slice(start,end)<br>start：必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。<br>end：可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。<br>返回值：返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。<br><strong>说明：</strong> 请注意，该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191123180729174.jpg" alt></p>
 
             </div>
             <hr/>
@@ -663,9 +653,9 @@ nums2 = [2,5,6],       n = 3
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之88》
+                    《数据结构之循环链表与双向链表》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/11/leetcode-shua-ti-ji-lu-zhi-88/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/23/shu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -964,62 +954,61 @@ nums2 = [2,5,6],       n = 3
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/18/1-1-java-hou-duan-kai-fa-xi-lie-bo-ke-zhi-ji-chu-yu-fa-ji-chu-pian/">
+                <a href="/2019/11/23/shu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Java后端开发系列博客之基础语法（基础篇）">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数据结构之循环链表与双向链表">
                         
-                        <span class="card-title">Java后端开发系列博客之基础语法（基础篇）</span>
+                        <span class="card-title">数据结构之循环链表与双向链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java的基础语法
-Java简单介绍
-基本设计结构
-注释
-数据类型
-标识符和关键字
-变量
-修饰符
-运算符
+                            0、目录
+循环链表
+双向链表
+双向链表的存储结构
+双向链表的插入
+双向链表的删除
 
 
 
-1、Java的简单介绍&emsp;&emsp;Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难
+1、循环链表&emsp;&emsp;循环链表 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java后端开发/" class="post-category" target="_blank">
-                                    Java后端开发
+                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
+                                    数据结构与算法分析
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/循环链表/" target="_blank">
+                        <span class="chip bg-color">循环链表</span>
                     </a>
                     
-                    <a href="/tags/基础语法/" target="_blank">
-                        <span class="chip bg-color">基础语法</span>
+                    <a href="/tags/双向链表/" target="_blank">
+                        <span class="chip bg-color">双向链表</span>
                     </a>
                     
                 </div>
@@ -1033,31 +1022,42 @@ Java简单介绍
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/">
+                <a href="/2019/11/23/suan-fa-zhi-di-gui-yu-fen-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="解决eclipse导入工程后出现的乱码问题">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="算法之递归与分治">
                         
-                        <span class="card-title">解决eclipse导入工程后出现的乱码问题</span>
+                        <span class="card-title">算法之递归与分治</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            &emsp;&emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的
+                            0、目录
+算法概念与设计分析
+例题
+阶乘
+Hanoi塔]
+整数划分
+
+
+
+1、算法概念与设计分析算法总体思想-大事化小小事化了
+
+&emsp;&emsp;对这k个子问题分别求解。如果子问题的规模仍然不够小，则再划分为k个子问题，如此递归的进
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/程序人生/" class="post-category" target="_blank">
-                                    程序人生
+                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
+                                    数据结构与算法分析
                                 </a>
                             
                             
@@ -1067,12 +1067,8 @@ Java简单介绍
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/eclipse/" target="_blank">
-                        <span class="chip bg-color">eclipse</span>
-                    </a>
-                    
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/递归与分治/" target="_blank">
+                        <span class="chip bg-color">递归与分治</span>
                     </a>
                     
                 </div>
