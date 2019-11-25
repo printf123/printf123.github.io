@@ -4,11 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之961, 锦瑟博客">
-    <meta name="description" content="961、重复 N 次的元素&amp;emsp;&amp;emsp;在大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。&amp;emsp;&amp;emsp;返回重复了 N 次的那个元素。示例 1：
-输入：[1,2,3,3]
-输出：3
-示">
+    <meta name="keywords" content="计算机专业书籍推荐, 锦瑟博客">
+    <meta name="description" content="前言&amp;emsp;&amp;emsp;我的第一篇博客写的是对于计算机专业的相关书籍推荐，时隔3个月，今天我想写一篇关于计算机专业培养方案的博客，我也参考了从普通院校到211/985等院校的相关培养方案。希望对非计算机专业但是想从事IT行业的小伙伴了解">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之961 | 锦瑟博客</title>
+    <title>计算机专业书籍推荐 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之961
+                        计算机专业书籍推荐
                     </div>
                 </div>
             </div>
@@ -380,12 +377,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode简单题/" target="_blank">
-                                <span class="chip bg-color">leetcode简单题</span>
+                            <a href="/tags/导航/" target="_blank">
+                                <span class="chip bg-color">导航</span>
                             </a>
                         
-                            <a href="/tags/数组/" target="_blank">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/分享/" target="_blank">
+                                <span class="chip bg-color">分享</span>
                             </a>
                         
                     </div>
@@ -396,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                算法刷题
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                程序人生
                             </a>
                         
                     </div>
@@ -408,21 +405,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-01
+                    2019-11-25
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        817
+                        841
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        2 分
                     </div>
                     
                 
@@ -438,75 +435,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="961、重复-N-次的元素"><a href="#961、重复-N-次的元素" class="headerlink" title="961、重复 N 次的元素"></a>961、重复 N 次的元素</h3><p>&emsp;&emsp;在大小为 2N 的数组 A 中有 N+1 个不同的元素，其中有一个元素重复了 N 次。<br>&emsp;&emsp;返回重复了 N 次的那个元素。<br><strong>示例 1：</strong></p>
-<pre><code>输入：[1,2,3,3]
-输出：3
-</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：[2,1,2,5,3,2]
-输出：2
-</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：[5,1,5,2,5,3,5,4]
-输出：5
-</code></pre><p><strong>提示：</strong></p>
-<ul>
-<li>4 &lt;= A.length &lt;= 10000</li>
-<li>0 &lt;= A[i] &lt; 10000</li>
-<li>A.length 为偶数</li>
-</ul>
-<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">repeatedNTimes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> A<span class="token punctuation">,</span> <span class="token keyword">int</span> ASize<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> ASize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> ASize<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> A<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                <span class="token keyword">return</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 循环遍历数组，有元素重复出现的就一定是答案。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">repeatedNTimes</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> k <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token operator">++</span>k<span class="token punctuation">)</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> A<span class="token punctuation">.</span>length <span class="token operator">-</span> k<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>A<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> A<span class="token punctuation">[</span>i<span class="token operator">+</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                    <span class="token keyword">return</span> A<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">throw</span> null<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 一旦找到一个重复元素，那么一定就是答案。我们称这个答案为主要元素。考虑所有长度为 4 的子序列，在子序列中一定至少含有两个主要元素。这是因为：长度为 2 的子序列中都是主要元素，或者；每个长度为 2 的子序列都恰好含有 1 个主要元素，这意味着长度为 4 的子序列一定含有 2 个主要元素。因此，只需要比较所有距离为 1，2 或者 3 的邻居元素即可。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">repeatedNTimes</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> A<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> A<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> A<span class="token punctuation">.</span>count<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">2</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> i
-</code></pre>
-<p><strong>解释：</strong> 循环遍历数组，有元素出现超过2次的就一定是答案。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {number[]} A
- * @return {number}
- */</span>
-<span class="token keyword">var</span> repeatedNTimes <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> hash <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span>num <span class="token keyword">of</span> A<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>hash<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> num
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            hash<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>num<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>解释：</strong> 数组大小2N，一共 N+1 个元素，目标元素出现N次，说明其他元素只出现一次。创建一个空的哈希表，遍历数组，如果当前元素出现2次，该元素为目标元素。</p>
-<p><strong>知识点回顾：</strong><br>1、方法has() 返回一个bool值，用来表明map 中是否存在指定元素。<br>语法：myMap.has(key);<br>key：必填. 用来检测是否存在指定元素的键值。<br>返回值：如果指定元素存在于Map中，则返回true。其他情况返回false。<br>2、set() 方法为 Map 对象添加或更新一个指定了键（key）和值（value）的（新）键值对。<br>语法：myMap.set(key, value);<br>key：要添加至相应 Map 对象的元素的键。<br>value：要添加至相应 Map 对象的元素的值。<br>返回值：Map 对象。<br>3、for…of 语句创建一个循环来迭代可迭代的对象。在 ES6 中引入的 for…of 循环，以替代 for…in 和 forEach() ，并支持新的迭代协议。for…of 允许你遍历 Arrays（数组）, Strings（字符串）, Maps（映射）, Sets（集合）等可迭代的数据结构等。<br>语法：</p>
-<pre><code>for (variable of iterable) {
-    statement
-}
-</code></pre><p>variable：每个迭代的属性值被分配给该变量。<br>iterable：一个具有可枚举属性并且可以迭代的对象。</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;我的第一篇博客写的是对于计算机专业的相关书籍推荐，时隔3个月，今天我想写一篇关于计算机专业培养方案的博客，我也参考了从普通院校到211/985等院校的相关培养方案。希望对非计算机专业但是想从事IT行业的小伙伴了解计算机专业的培养方案有所帮助。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>&emsp;&emsp;关于培养方案上面的一些培养目标、毕业要求之类的东西，我在此不多赘述，直接上干货（课程）。<br>1、作为本科教育，一些思政课和公共课是必不可少的。<br>|课程名称|可能修读学期  |<br>|–|–|<br>|思想道德修养与法律基础  |1或2  |<br>|中国近代史纲要|1或2|<br>|马克思主义基本原理|3或4|<br>|毛泽东思想和中国特色社会主义理论体系概论|3或4|<br>|军训与军事理论|1|<br>|形势与政策|贯穿整个本科教育|<br>|体育|1、2、3、4|<br>|大学英语|1、2、3、4|</p>
+<p>2、数学物理作为理工科的基础学科，当然也占了很大的比例。<br>|  课程名称|可能修读学期  |<br>|–|–|<br>| 高等数学(上) | 1 |<br>|高等数学(下)|2|<br>|大学物理|1、2|<br>|线性代数|2或3|<br>|概率论与数理统计|3或4|<br>|离散数学|2或3|</p>
+<p>上述的是大部分学校的课程安排，部分985院校可能会设下列课程：<br>|  课程名称|可能修读学期  |<br>|–|–|<br>| 代数与几何 |- |<br>|抽象代数|-|<br>|数值分析|-|<br>|集合论与图论|-|<br>|数理逻辑|-|<br>|计算方法|-|<br>|近世代数|-|<br>|具体数学|-|<br>|博弈论|-|<br>|运筹学|-|</p>
+<p>3、专业基础课<br>|课程名称|可能修读学期  |<br>|–|–|<br>|计算机导论|1|<br>|<strong>高级语言程序设计</strong>|1或2|<br>|<strong>数据库原理</strong>|2或3|<br>|数字电路|2|<br>| <strong>数据结构</strong> | 2或3 |<br>|汇编语言|3或4|<br>|<strong>计算机组成原理</strong>|4或5|<br>|<strong>操作系统</strong>|4或5|<br>|<strong>计算机网络</strong>|5或6|<br>|形式语言与自动机|3或4|<br>|编译原理|5或6|<br>|计算机体系结构|4或5|<br>|<strong>算法分析与设计</strong>|3或4|</p>
+<p>==注：== 不同学校对上述课程会有自己的调整，加粗的是我个人认为比较重要的。<br>4、专业选修课，这部分不同学校不同的方向选择会比较多，以下仅供参考：<br>|课程名称|可能修读学期  |<br>|–|–|<br>| 单片机技术 |-  |<br>嵌入式开发|-|<br>|数学建模|-|<br>|数据挖掘|-|<br>|机器学习|-|<br>|深度学习|-|<br>|人工智能|-|<br>|网页设计与制作|-|<br>|Javaweb开发|-|<br>|Python语言程序技术|-|<br>|自然语言处理|-|<br>|Windows 程序设计|-|<br>|计算机图像学|-|<br>|数字图像处理|-|<br>|网络安全|-|<br>|密码学原理与实践|-|<br>|并行与分布系统|-|<br>|云计算|-|<br>|信息检索|-|<br>|大数据分析|-|<br>|Android 软件开发|-|<br>|iOS 移动应用开发 |-|<br>|微机系统与接口|-|<br>|人机交互技术|-|<br>|机器人设计与应用|-|<br>|Linux系统基础|-|</p>
+<h2 id="后序"><a href="#后序" class="headerlink" title="后序"></a>后序</h2><p>&emsp;&emsp;计算机专业是一个十分繁杂的专业，它所涉及到的知识与领域，任何一块都值得我们终其一生学习，所以本科开设的这些课程大多也只是带大家了解计算机的这些领域而已，真正想成为大牛，还任重道远。</p>
 
             </div>
             <hr/>
@@ -665,9 +600,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之961》
+                    《计算机专业书籍推荐》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/01/leetcode-shua-ti-ji-lu-zhi-961/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/25/ben-ke-jiao-yu-xia-de-ji-suan-ji-xiang-guan-zhuan-ye-pei-yang-fang-an/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -966,55 +901,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/02/leetcode-shua-ti-ji-lu-zhi-217/">
+                <a href="/2019/11/25/ben-ke-jiao-yu-xia-de-ji-suan-ji-xiang-guan-zhuan-ye-pei-yang-fang-an/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之217">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="计算机专业书籍推荐">
                         
-                        <span class="card-title">leetcode刷题记录之217</span>
+                        <span class="card-title">计算机专业书籍推荐</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            217、存在重复元素&emsp;&emsp;给定一个整数数组，判断是否存在重复元素。&emsp;&emsp;如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false。示例 1：
-输入: [1,2,3
+                            前言&emsp;&emsp;我的第一篇博客写的是对于计算机专业的相关书籍推荐，时隔3个月，今天我想写一篇关于计算机专业培养方案的博客，我也参考了从普通院校到211/985等院校的相关培养方案。希望对非计算机专业但是想从事IT行业的小伙伴了解
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                    算法刷题
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                    程序人生
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
+                    <a href="/tags/导航/" target="_blank">
+                        <span class="chip bg-color">导航</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
-                    </a>
-                    
-                    <a href="/tags/哈希表/" target="_blank">
-                        <span class="chip bg-color">哈希表</span>
+                    <a href="/tags/分享/" target="_blank">
+                        <span class="chip bg-color">分享</span>
                     </a>
                     
                 </div>
@@ -1028,31 +960,40 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/31/leetcode-shua-ti-ji-lu-zhi-657/">
+                <a href="/2019/11/23/shu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="leetcode刷题记录之657">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数据结构之循环链表与双向链表">
                         
-                        <span class="card-title">leetcode刷题记录之657</span>
+                        <span class="card-title">数据结构之循环链表与双向链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            657、机器人能否返回原点&emsp;&emsp;在二维平面上，有一个机器人从原点 (0, 0) 开始。给出它的移动顺序，判断这个机器人在完成移动后是否在 (0, 0) 处结束。&emsp;&emsp;移动顺序由字符串表示。字符 move[
+                            0、目录
+循环链表
+双向链表
+双向链表的存储结构
+双向链表的插入
+双向链表的删除
+
+
+
+1、循环链表&emsp;&emsp;循环链表 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-31
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                    算法刷题
+                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
+                                    数据结构与算法分析
                                 </a>
                             
                             
@@ -1062,12 +1003,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
+                    <a href="/tags/循环链表/" target="_blank">
+                        <span class="chip bg-color">循环链表</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/双向链表/" target="_blank">
+                        <span class="chip bg-color">双向链表</span>
                     </a>
                     
                 </div>
