@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之551, 锦瑟博客">
-    <meta name="description" content="551、学生出勤记录 I给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：&amp;emsp;&amp;emsp;1、’A’ : Absent，缺勤&amp;emsp;&amp;emsp;2、’L’ : Late，迟到&amp;emsp;&amp;emsp;3、’P’ ">
+    <meta name="keywords" content="以梦为马，不负韶华, 锦瑟博客">
+    <meta name="description" content="以梦为马，不负韶华&amp;emsp;&amp;emsp;昨天是2019年的11月27日，在日常的刷公众号过程中，我看到了一篇文章，标题是《优秀学生专栏：XX：发表学术期刊论文三篇，手握数项大奖》，这并不是我第一次看见这类文章，每次看到这类文章，总会感叹优">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之551 | 锦瑟博客</title>
+    <title>以梦为马，不负韶华 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之551
+                        以梦为马，不负韶华
                     </div>
                 </div>
             </div>
@@ -377,12 +377,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode简单题/" target="_blank">
-                                <span class="chip bg-color">leetcode简单题</span>
+                            <a href="/tags/导航/" target="_blank">
+                                <span class="chip bg-color">导航</span>
                             </a>
                         
-                            <a href="/tags/字符串/" target="_blank">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/分享/" target="_blank">
+                                <span class="chip bg-color">分享</span>
                             </a>
                         
                     </div>
@@ -393,8 +393,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                算法刷题
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                程序人生
                             </a>
                         
                     </div>
@@ -405,21 +405,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-29
+                    2019-11-28
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        781
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        2 分
                     </div>
                     
                 
@@ -435,66 +435,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="551、学生出勤记录-I"><a href="#551、学生出勤记录-I" class="headerlink" title="551、学生出勤记录 I"></a>551、学生出勤记录 I</h3><p>给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：<br>&emsp;&emsp;1、’A’ : Absent，缺勤<br>&emsp;&emsp;2、’L’ : Late，迟到<br>&emsp;&emsp;3、’P’ : Present，到场<br>如果一个学生的出勤记录中不超过一个’A’(缺勤)并且不超过两个连续的’L’(迟到),那么这个学生会被奖赏。<br>你需要根据这个学生的出勤记录判断他是否会被奖赏。<br><strong>示例 1：</strong></p>
-<pre><code>输入: &quot;PPALLP&quot;
-输出: True
-</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: &quot;PPALLL&quot;
-输出: False
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/student-attendance-record-i/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/student-attendance-record-i/</a></p>
-<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">checkRecord</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'A'</span><span class="token punctuation">)</span>
-            c<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>c <span class="token operator">>=</span> <span class="token number">2</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 遍历字符串，如果有超过3个连续的’L’或者有超过2个’A’，则返回false，否则返回true。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">checkRecord</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token operator">==</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>s<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"LLL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 如果数组中没有超过2个’A’或者不存在”LLL”,则返回true，否则返回false。</p>
-<p><strong>知识点回顾：</strong><br>1、indexOf() 方法有以下四种形式：</p>
-<ul>
-<li>public int indexOf(int ch): 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int indexOf(int ch, int fromIndex): 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>int indexOf(String str): 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>int indexOf(String str, int fromIndex): 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-</ul>
-<p>2、lastIndexOf() 方法有以下四种形式：</p>
-<ul>
-<li>public int lastIndexOf(int ch): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(int ch, int fromIndex): 返返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(String str): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(String str, int fromIndex): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-</ul>
-<p>3、contains()函数用于确定一个字符串是否包含指定的子串。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">checkRecord</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
-       <span class="token keyword">return</span> s<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">1</span> <span class="token operator">and</span> <span class="token string">'LLL'</span> <span class="token operator">not</span> <span class="token keyword">in</span> s 
-</code></pre>
-<p><strong>解释：</strong> 类似于Java的求解思路。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> checkRecord <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">===</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'LLL'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre>
-<p><strong>解释：</strong> 类似于Java的求解思路。</p>
-<p><strong>知识点回顾：</strong><br>1、lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回  -1 。<br>注意：lastIndexOf() 方法是区分大小写的！<br>语法：string.lastIndexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的最后一个字符处开始检索。<br>返回值：查找的字符串最后出现的位置，如果没有找到匹配字符串则返回  -1。<br>2、indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。<br>语法：string.indexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。<br>返回值：查找指定字符串第一次出现的位置，如果没找到匹配的字符串则返回  -1。</p>
+                <h2 id="以梦为马，不负韶华"><a href="#以梦为马，不负韶华" class="headerlink" title="以梦为马，不负韶华"></a>以梦为马，不负韶华</h2><p>&emsp;&emsp;昨天是2019年的11月27日，在日常的刷公众号过程中，我看到了一篇文章，标题是《优秀学生专栏：XX：发表学术期刊论文三篇，手握数项大奖》，这并不是我第一次看见这类文章，每次看到这类文章，总会感叹优秀的人太多，可昨天不知怎么了，这种感觉越发强盛，之后无意中发现了学校吴老师的公众号，里面有很多关于生活、人生思考的文章，还有一些优秀的学长学姐的自传，一时间我开始对这个曾经只有几面之缘的老师有了不一样的感觉。<br>&emsp;&emsp;那篇文章的主角是一位专升本的同学，他大一担任学生会主席，丰富的校园经历令我惊讶不已，他积极参加各类竞赛，发表学术期刊，在文字中体现出的绝不仅仅是那几个冷冰冰的奖项，与此同时，他三年参加了约300个小时的志愿服务，更是让我感叹。其实类似这种文章很多，每一位能受邀被采访的同学，要不是在学科竞赛出取得优异的成绩，就是在各种组织社团志愿活动中与人争先。<br>&emsp;&emsp;2017年的时候，我看了清华大学特等奖学金的答辩视频，他们每一个人都是中国最优秀的学生之一。也许在很多人看来，这些离我们太过遥远，所以我也更喜欢看身边的人和事，以同一种身份进入校园，可是很快，就有了区别，有些人成为了老师、学弟学妹的口中的优秀学长学姐，而有些人却开始浑浑噩噩。<br>&emsp;&emsp;在大学有很多人抱怨学校这个不好那个不好，老师上课水，课程水，好像他们混日子的原因就是因为学校，殊不知在他们抱怨的时候，早已有人成为了更优秀的自己。成功最根本的因素还是靠自己。除了上面那个同学之外，去年专升本的同学之中，还有一个技术大佬，在专科的三年，他天天睡在实验室，无数的项目经历让他成功专升本之后就获得了阿里巴巴集团的面试邀请。在我认识的人之中，在他们学校，老师给同学特权，不用上2个月的课，专心竞赛，只要获奖，老师就承诺他这门课给他优秀。学习永远是自己的事情，外界不会改变你内心的坚定。<br>&emsp;&emsp;我的高中校长曾说在中学阶段能在上千人面前做激情澎湃讲演的人，将来一定是有用之人。<br>&emsp;&emsp;以上只是我看了那篇文章之后，一点感想，不成文章。只愿以梦为马，不负韶华。我们都能成为更好的自己。</p>
 
             </div>
             <hr/>
@@ -653,9 +594,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之551》
+                    《以梦为马，不负韶华》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-551/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/28/yi-meng-wei-ma-bu-fu-shao-hua/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -954,50 +895,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-520/">
+                <a href="/2019/11/28/yi-meng-wei-ma-bu-fu-shao-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="leetcode刷题记录之520">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="以梦为马，不负韶华">
                         
-                        <span class="card-title">leetcode刷题记录之520</span>
+                        <span class="card-title">以梦为马，不负韶华</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            520、检测大写字母给定一个单词，你需要判断单词的大写使用是否正确。我们定义，在以下情况时，单词的大写用法是正确的：&emsp;&emsp;1、全部字母都是大写，比如”USA”。&emsp;&emsp;2、单词中所有字母都不是大写，比如”l
+                            以梦为马，不负韶华&emsp;&emsp;昨天是2019年的11月27日，在日常的刷公众号过程中，我看到了一篇文章，标题是《优秀学生专栏：XX：发表学术期刊论文三篇，手握数项大奖》，这并不是我第一次看见这类文章，每次看到这类文章，总会感叹优
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                    算法刷题
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                    程序人生
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
+                    <a href="/tags/导航/" target="_blank">
+                        <span class="chip bg-color">导航</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/分享/" target="_blank">
+                        <span class="chip bg-color">分享</span>
                     </a>
                     
                 </div>
@@ -1011,31 +954,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-922/">
+                <a href="/2019/11/25/ben-ke-jiao-yu-xia-de-ji-suan-ji-xiang-guan-zhuan-ye-pei-yang-fang-an/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode刷题记录之922">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="本科教育下的计算机相关专业培养方案">
                         
-                        <span class="card-title">leetcode刷题记录之922</span>
+                        <span class="card-title">本科教育下的计算机相关专业培养方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            922、按奇偶排序数组 II给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。你可以返回任何满足上述条件的数组作为答案。示例 
+                            前言&emsp;&emsp;我的第一篇博客写的是对于计算机专业的相关书籍推荐，时隔3个月，今天我想写一篇关于计算机专业培养方案的博客，我也参考了从普通院校到211/985等院校的相关培养方案。希望对非计算机专业但是想从事IT行业的小伙伴了解
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
-                                    算法刷题
+                            <a href="/categories/程序人生/" class="post-category" target="_blank">
+                                    程序人生
                                 </a>
                             
                             
@@ -1045,12 +988,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode简单题/" target="_blank">
-                        <span class="chip bg-color">leetcode简单题</span>
+                    <a href="/tags/导航/" target="_blank">
+                        <span class="chip bg-color">导航</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/分享/" target="_blank">
+                        <span class="chip bg-color">分享</span>
                     </a>
                     
                 </div>
