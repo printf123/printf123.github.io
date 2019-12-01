@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之551, 锦瑟博客">
-    <meta name="description" content="551、学生出勤记录 I给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：&amp;emsp;&amp;emsp;1、’A’ : Absent，缺勤&amp;emsp;&amp;emsp;2、’L’ : Late，迟到&amp;emsp;&amp;emsp;3、’P’ ">
+    <meta name="keywords" content="leetcode刷题记录之34, 锦瑟博客">
+    <meta name="description" content="34、在排序数组中查找元素的第一个和最后一个位置&amp;emsp;&amp;emsp;给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。&amp;emsp;&amp;emsp;你的算法时间复杂度必须是 O(">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之551 | 锦瑟博客</title>
+    <title>leetcode刷题记录之34 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之551
+                        leetcode刷题记录之34
                     </div>
                 </div>
             </div>
@@ -381,8 +381,12 @@
                                 <span class="chip bg-color">leetcode简单题</span>
                             </a>
                         
-                            <a href="/tags/字符串/" target="_blank">
-                                <span class="chip bg-color">字符串</span>
+                            <a href="/tags/双指针/" target="_blank">
+                                <span class="chip bg-color">双指针</span>
+                            </a>
+                        
+                            <a href="/tags/二分法/" target="_blank">
+                                <span class="chip bg-color">二分法</span>
                             </a>
                         
                     </div>
@@ -405,21 +409,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-29
+                    2019-12-01
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.2k
+                        1.7k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
+                        7 分
                     </div>
                     
                 
@@ -435,66 +439,130 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="551、学生出勤记录-I"><a href="#551、学生出勤记录-I" class="headerlink" title="551、学生出勤记录 I"></a>551、学生出勤记录 I</h3><p>给定一个字符串来代表一个学生的出勤记录，这个记录仅包含以下三个字符：<br>&emsp;&emsp;1、’A’ : Absent，缺勤<br>&emsp;&emsp;2、’L’ : Late，迟到<br>&emsp;&emsp;3、’P’ : Present，到场<br>如果一个学生的出勤记录中不超过一个’A’(缺勤)并且不超过两个连续的’L’(迟到),那么这个学生会被奖赏。<br>你需要根据这个学生的出勤记录判断他是否会被奖赏。<br><strong>示例 1：</strong></p>
-<pre><code>输入: &quot;PPALLP&quot;
-输出: True
+                <h3 id="34、在排序数组中查找元素的第一个和最后一个位置"><a href="#34、在排序数组中查找元素的第一个和最后一个位置" class="headerlink" title="34、在排序数组中查找元素的第一个和最后一个位置"></a>34、在排序数组中查找元素的第一个和最后一个位置</h3><p>&emsp;&emsp;给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。<br>&emsp;&emsp;你的算法时间复杂度必须是 O(log n) 级别。<br>&emsp;&emsp;如果数组中不存在目标值，返回 [-1, -1]。<br><strong>示例 1：</strong></p>
+<pre><code>输入: nums = [5,7,7,8,8,10], target = 8
+输出: [3,4]
 </code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入: &quot;PPALLL&quot;
-输出: False
-</code></pre><p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/student-attendance-record-i/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/student-attendance-record-i/</a></p>
-<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c">bool <span class="token function">checkRecord</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'A'</span><span class="token punctuation">)</span>
-            c<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>c <span class="token operator">>=</span> <span class="token number">2</span><span class="token punctuation">)</span>
-            <span class="token keyword">return</span> false<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> true<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 遍历字符串，如果有超过3个连续的’L’或者有超过2个’A’，则返回false，否则返回true。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">checkRecord</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token operator">==</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>s<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"LLL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p><strong>解释：</strong> 如果数组中没有超过2个’A’或者不存在”LLL”,则返回true，否则返回false。</p>
-<p><strong>知识点回顾：</strong><br>1、indexOf() 方法有以下四种形式：</p>
-<ul>
-<li>public int indexOf(int ch): 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int indexOf(int ch, int fromIndex): 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>int indexOf(String str): 返回指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>int indexOf(String str, int fromIndex): 返回从 fromIndex 位置开始查找指定字符在字符串中第一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-</ul>
-<p>2、lastIndexOf() 方法有以下四种形式：</p>
-<ul>
-<li>public int lastIndexOf(int ch): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(int ch, int fromIndex): 返返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(String str): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-<li>public int lastIndexOf(String str, int fromIndex): 返回指定字符在此字符串中最后一次出现处的索引，如果此字符串中没有这样的字符，则返回 -1。</li>
-</ul>
-<p>3、contains()函数用于确定一个字符串是否包含指定的子串。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">checkRecord</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> str<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> bool<span class="token punctuation">:</span>
-       <span class="token keyword">return</span> s<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token operator">&lt;=</span><span class="token number">1</span> <span class="token operator">and</span> <span class="token string">'LLL'</span> <span class="token operator">not</span> <span class="token keyword">in</span> s 
-</code></pre>
-<p><strong>解释：</strong> 类似于Java的求解思路。</p>
-<p><strong>知识点回顾：</strong> 无。</p>
-<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * @param {string} s
- * @return {boolean}
+<pre><code>输入: nums = [5,7,7,8,8,10], target = 6
+输出: [-1,-1]
+</code></pre><p>难度：中等&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法一：</span>
+<span class="token comment" spellcheck="true">/**
+ * Note: The returned array must be malloced, assume caller calls free().
  */</span>
-<span class="token keyword">var</span> checkRecord <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">===</span> s<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'LLL'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token keyword">int</span><span class="token operator">*</span> <span class="token function">searchRange</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">*</span> returnSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>result <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>j <span class="token operator">=</span> numsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token operator">&amp;&amp;</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token operator">&amp;&amp;</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token operator">&amp;&amp;</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token punctuation">)</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>target<span class="token operator">&amp;&amp;</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span>
+            j<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token operator">||</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">==</span>j<span class="token operator">&amp;&amp;</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span>target<span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span>numsSize<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">></span>target<span class="token punctuation">)</span><span class="token operator">||</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&lt;</span>target<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token operator">*</span>returnSize <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span><span class="token punctuation">{</span>
+        result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
+        <span class="token operator">*</span>returnSize <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法二</span>
+<span class="token comment" spellcheck="true">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */</span>
+ <span class="token keyword">int</span><span class="token operator">*</span> <span class="token function">searchRange</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">*</span> returnSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token keyword">int</span> i <span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+   <span class="token keyword">int</span> <span class="token operator">*</span>res <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">*</span>returnSize <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> res<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+   <span class="token keyword">if</span><span class="token punctuation">(</span>numsSize <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+           <span class="token keyword">break</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> numsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>j <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           res<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
+           <span class="token keyword">break</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span> 
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 解法一利用双指针，综合考虑各种情况；解法二则2次遍历数组得出答案。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// returns leftmost (or rightmost) index at which `target` should be</span>
+    <span class="token comment" spellcheck="true">// inserted in sorted array `nums` via binary search.</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> <span class="token function">extremeInsertionIndex</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> <span class="token keyword">boolean</span> left<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> lo <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> hi <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>lo <span class="token operator">&lt;</span> hi<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>lo <span class="token operator">+</span> hi<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> target <span class="token operator">||</span> <span class="token punctuation">(</span>left <span class="token operator">&amp;&amp;</span> target <span class="token operator">==</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                hi <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                lo <span class="token operator">=</span> mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> lo<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">searchRange</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> targetRange <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> leftIdx <span class="token operator">=</span> <span class="token function">extremeInsertionIndex</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// assert that `leftIdx` is within the array bounds and that `target`</span>
+        <span class="token comment" spellcheck="true">// is actually in `nums`.</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>leftIdx <span class="token operator">==</span> nums<span class="token punctuation">.</span>length <span class="token operator">||</span> nums<span class="token punctuation">[</span>leftIdx<span class="token punctuation">]</span> <span class="token operator">!=</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> targetRange<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        targetRange<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> leftIdx<span class="token punctuation">;</span>
+        targetRange<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">extremeInsertionIndex</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> targetRange<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 总体算法工作过程与线性扫描方法类似，除了找最左和最右下标的方法。这里我们仅仅做几个微小的调整，用这种修改过的二分查找方法去搜索这个排过序的数组。首先，为了找到最左边（或者最右边）包含 target 的下标（而不是找到的话就返回 true ），所以算法在我们找到一个 target 后不能马上停止。我们需要继续搜索，直到 lo \=\= hi 且它们在某个 target 值处下标相同。<br>&emsp;&emsp;另一个改变是 left 参数的引入，它是一个 boolean 类型的变量，指示我们在遇到 target \=\= nums[mid] 时应该做什么。如果 left 为 true ，那么我们递归查询左区间，否则递归右区间。考虑如果我们在下标为 i 处遇到了 target ，最左边的 target 一定不会出现在下标大于 i 的位置，所以我们永远不需要考虑右子区间。当求最右下标时，道理同样适用。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">searchRange</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        l <span class="token operator">=</span> bisect<span class="token punctuation">.</span>bisect_left<span class="token punctuation">(</span>nums<span class="token punctuation">,</span>target<span class="token punctuation">)</span>
+        r <span class="token operator">=</span> bisect<span class="token punctuation">.</span>bisect_right<span class="token punctuation">(</span>nums<span class="token punctuation">,</span>target<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> l <span class="token operator">>=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">or</span> nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">!=</span> target<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>l<span class="token punctuation">,</span>r<span class="token number">-1</span><span class="token punctuation">]</span>
+</code></pre>
+<p><strong>解释：</strong> 利用Python的模块求解。</p>
+<p><strong>知识点回顾：</strong><br>1、Python 有一个 bisect 模块，用于维护有序列表。bisect 模块实现了一个算法用于插入元素到有序列表。在一些情况下，这比反复排序列表或构造一个大的列表再排序的效率更高。Bisect 是二分法的意思，这里使用二分法来排序，它会将一个元素插入到一个有序列表的合适位置，这使得不需要每次调用 sort 的方式维护有序列表。<br>bisect.bisect_left(a,x, lo=0, hi=len(a))<br>查找在有序列表 a 中插入 x 的index。lo 和 hi 用于指定列表的区间，默认是使用整个列表。如果 x 已经存在，在其左边插入。返回值为 index。<br>bisect.bisect_right(a,x, lo=0, hi=len(a))<br>bisect.bisect(a, x,lo=0, hi=len(a))<br>这2个函数和 bisect_left 类似，但如果 x 已经存在，在其右边插入。<br>bisect.insort_left(a,x, lo=0, hi=len(a))<br>在有序列表 a 中插入 x。和 a.insert(bisect.bisect_left(a,x, lo, hi), x) 的效果相同。<br>bisect.insort_right(a,x, lo=0, hi=len(a))<br>bisect.insort(a, x,lo=0, hi=len(a))<br>和 insort_left 类似，但如果 x 已经存在，在其右边插入。<br>Bisect 模块提供的函数可以分两类： bisect<em> 只用于查找 index， 不进行实际的插入；而 insort</em> 则用于实际插入。</p>
+<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */</span>
+<span class="token keyword">var</span> searchRange <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>nums<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 类似于Java的求解思路。</p>
-<p><strong>知识点回顾：</strong><br>1、lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回  -1 。<br>注意：lastIndexOf() 方法是区分大小写的！<br>语法：string.lastIndexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的最后一个字符处开始检索。<br>返回值：查找的字符串最后出现的位置，如果没有找到匹配字符串则返回  -1。<br>2、indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。<br>语法：string.indexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。<br>返回值：查找指定字符串第一次出现的位置，如果没找到匹配的字符串则返回  -1。</p>
+<p><strong>解释：</strong> 利用JavaScript自带方法求解。</p>
+<p><strong>知识点回顾：</strong><br>1、indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。<br>语法：string.indexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。<br>返回值：查找指定字符串第一次出现的位置，如果没找到匹配的字符串则返回  -1。<br>2、lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回  -1 。<br>注意：lastIndexOf() 方法是区分大小写的！<br>语法：string.lastIndexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的最后一个字符处开始检索。<br>返回值：查找的字符串最后出现的位置，如果没有找到匹配字符串则返回  -1。</p>
 
             </div>
             <hr/>
@@ -653,9 +721,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之551》
+                    《leetcode刷题记录之34》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-551/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/01/leetcode-shua-ti-ji-lu-zhi-34/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -954,29 +1022,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/08/29/leetcode-shua-ti-ji-lu-zhi-520/">
+                <a href="/2019/12/01/leetcode-shua-ti-ji-lu-zhi-34/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="leetcode刷题记录之520">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="leetcode刷题记录之34">
                         
-                        <span class="card-title">leetcode刷题记录之520</span>
+                        <span class="card-title">leetcode刷题记录之34</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            520、检测大写字母给定一个单词，你需要判断单词的大写使用是否正确。我们定义，在以下情况时，单词的大写用法是正确的：&emsp;&emsp;1、全部字母都是大写，比如”USA”。&emsp;&emsp;2、单词中所有字母都不是大写，比如”l
+                            34、在排序数组中查找元素的第一个和最后一个位置&emsp;&emsp;给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。&emsp;&emsp;你的算法时间复杂度必须是 O(
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -989,6 +1058,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -996,8 +1066,12 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/字符串/" target="_blank">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/双指针/" target="_blank">
+                        <span class="chip bg-color">双指针</span>
+                    </a>
+                    
+                    <a href="/tags/二分法/" target="_blank">
+                        <span class="chip bg-color">二分法</span>
                     </a>
                     
                 </div>
@@ -1011,24 +1085,26 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/28/leetcode-shua-ti-ji-lu-zhi-922/">
+                <a href="/2019/12/01/leetcode-shua-ti-ji-lu-zhi-167/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode刷题记录之922">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="leetcode刷题记录之167">
                         
-                        <span class="card-title">leetcode刷题记录之922</span>
+                        <span class="card-title">leetcode刷题记录之167</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            922、按奇偶排序数组 II给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。你可以返回任何满足上述条件的数组作为答案。示例 
+                            167、两数之和 II - 输入有序数组给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。说明：
+
+返回的下标值（
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-01
                             </span>
                         <span class="publish-author">
                             
@@ -1049,8 +1125,12 @@
                         <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/数组/" target="_blank">
-                        <span class="chip bg-color">数组</span>
+                    <a href="/tags/哈希表/" target="_blank">
+                        <span class="chip bg-color">哈希表</span>
+                    </a>
+                    
+                    <a href="/tags/双指针/" target="_blank">
+                        <span class="chip bg-color">双指针</span>
                     </a>
                     
                 </div>
