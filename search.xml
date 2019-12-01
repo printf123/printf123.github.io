@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode刷题记录之167]]></title>
+    <url>%2F2019%2F12%2F01%2Fleetcode-shua-ti-ji-lu-zhi-167%2F</url>
+    <content type="text"><![CDATA[167、两数之和 II - 输入有序数组给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。说明： 返回的下标值（index1 和 index2）不是从零开始的。 你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。 示例： 输入: numbers = [2, 7, 11, 15], target = 9 输出: [1,2] 解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。 难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/ 1、C语言代码：/** * Note: The returned array must be malloced, assume caller calls free(). */ int* twoSum(int* numbers, int numbersSize, int target, int* returnSize){ int *result = (int *)malloc(sizeof(int) * 2); int i = 0,j = numbersSize - 1; while(i&lt;j){ if(numbers[i] + numbers[j] == target) break; if(numbers[i] + numbers[j] &lt; target) i++; else j--; } result[0] = i + 1; result[1] = j + 1; *returnSize = 2; return result; } 解释： 我们使用两个指针，初始分别位于第一个元素和最后一个元素位置，比较这两个元素之和与目标值的大小。如果和等于目标值，我们发现了这个唯一解。如果比目标值小，我们将较小元素指针增加一。如果比目标值大，我们将较大指针减小一。移动指针后重复上述比较知道找到答案。 知识点回顾： 无。 2、Java代码：class Solution { public int[] twoSum(int[] numbers, int target) { int []result = new int[2]; int i = 0,j = numbers.length - 1; while(i&lt;j){ if(numbers[i] + numbers[j] == target) break; if(numbers[i] + numbers[j] > target) j--; else i++; } result[0] = i + 1; result[1] = j + 1; return result; } } 解释： 类似于C语言的解题思路。 知识点回顾： 无。 3、Python代码：class Solution: def twoSum(self, numbers: List[int], target: int) -> List[int]: # 解法1 利用字典映射 dic = dict() for index, value in enumerate(numbers): sub = target - value if sub in dic.keys(): return [dic[sub], index+1] else: dic[value] = index + 1 解释： 利用字典的特性求解。 知识点回顾：1、enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。语法：enumerate(sequence, [start=0])sequence：一个序列、迭代器或其他支持迭代对象。start：下标起始位置。返回值：返回 enumerate(枚举) 对象。 4、JavaScript代码：/** * @param {number[]} numbers * @param {number} target * @return {number[]} */ var twoSum = function(numbers, target) { let map = new Map() for(let i = 0; i &lt; numbers.length; i ++) { if(map.has(target - numbers[i])) { return [map.get(target - numbers[i]) + 1, i + 1] } map.set(numbers[i], i) } }; 解释： 套入题目的例子，遍历数组，数组遍历的当前值为numbers[i]，那么 y 应该是 target - numbers[i]。所以，只要在遍历的时候确定target - numbers[i]在数组里有，返回对应下标。 知识点回顾： 哈希表的运用。1、map.get：返回键对应的值，如果不存在，则返回undefined。2、map.set：设置Map对象中键的值。返回该Map对象。]]></content>
+      <categories>
+        <category>算法刷题</category>
+      </categories>
+      <tags>
+        <tag>leetcode简单题</tag>
+        <tag>哈希表</tag>
+        <tag>双指针</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[以梦为马，不负韶华]]></title>
     <url>%2F2019%2F11%2F28%2Fyi-meng-wei-ma-bu-fu-shao-hua%2F</url>
     <content type="text"><![CDATA[以梦为马，不负韶华&emsp;&emsp;昨天是2019年的11月27日，在日常的刷公众号过程中，我看到了一篇文章，标题是《优秀学生专栏：XX：发表学术期刊论文三篇，手握数项大奖》，这并不是我第一次看见这类文章，每次看到这类文章，总会感叹优秀的人太多，可昨天不知怎么了，这种感觉越发强盛，之后无意中发现了学校吴老师的公众号，里面有很多关于生活、人生思考的文章，还有一些优秀的学长学姐的自传，一时间我开始对这个曾经只有几面之缘的老师有了不一样的感觉。&emsp;&emsp;那篇文章的主角是一位专升本的同学，他大一担任学生会主席，丰富的校园经历令我惊讶不已，他积极参加各类竞赛，发表学术期刊，在文字中体现出的绝不仅仅是那几个冷冰冰的奖项，与此同时，他三年参加了约300个小时的志愿服务，更是让我感叹。其实类似这种文章很多，每一位能受邀被采访的同学，要不是在学科竞赛出取得优异的成绩，就是在各种组织社团志愿活动中与人争先。&emsp;&emsp;2017年的时候，我看了清华大学特等奖学金的答辩视频，他们每一个人都是中国最优秀的学生之一。也许在很多人看来，这些离我们太过遥远，所以我也更喜欢看身边的人和事，以同一种身份进入校园，可是很快，就有了区别，有些人成为了老师、学弟学妹的口中的优秀学长学姐，而有些人却开始浑浑噩噩。&emsp;&emsp;在大学有很多人抱怨学校这个不好那个不好，老师上课水，课程水，好像他们混日子的原因就是因为学校，殊不知在他们抱怨的时候，早已有人成为了更优秀的自己。成功最根本的因素还是靠自己。除了上面那个同学之外，去年专升本的同学之中，还有一个技术大佬，在专科的三年，他天天睡在实验室，无数的项目经历让他成功专升本之后就获得了阿里巴巴集团的面试邀请。在我认识的人之中，在他们学校，老师给同学特权，不用上2个月的课，专心竞赛，只要获奖，老师就承诺他这门课给他优秀。学习永远是自己的事情，外界不会改变你内心的坚定。&emsp;&emsp;我的高中校长曾说在中学阶段能在上千人面前做激情澎湃讲演的人，将来一定是有用之人。&emsp;&emsp;以上只是我看了那篇文章之后，一点感想，不成文章。只愿以梦为马，不负韶华。我们都能成为更好的自己。]]></content>
@@ -414,8 +427,8 @@
       </categories>
       <tags>
         <tag>leetcode简单题</tag>
-        <tag>哈希表</tag>
         <tag>数组</tag>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
