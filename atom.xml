@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://printf123.github.io/"/>
-  <updated>2019-12-01T12:57:59.363Z</updated>
+  <updated>2019-12-02T09:34:47.374Z</updated>
   <id>http://printf123.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode刷题记录之1266</title>
+    <link href="http://printf123.github.io/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1266/"/>
+    <id>http://printf123.github.io/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1266/</id>
+    <published>2019-12-02T03:43:38.000Z</published>
+    <updated>2019-12-02T09:34:47.374Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1266、访问所有点的最小时间&quot;&gt;&lt;a href=&quot;#1266、访问所有点的最小时间&quot; class=&quot;headerlink&quot; title=&quot;1266、访问所有点的最小时间&quot;&gt;&lt;/a&gt;1266、访问所有点的最小时间&lt;/h2&gt;&lt;p&gt;平面上有 n
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="数学" scheme="http://printf123.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode刷题记录之34</title>
@@ -293,9 +323,9 @@
       <category term="程序人生" scheme="http://printf123.github.io/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
     
     
-      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
-    
       <category term="eclipse" scheme="http://printf123.github.io/tags/eclipse/"/>
+    
+      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
     
   </entry>
   
@@ -548,34 +578,6 @@
     
     
       <category term="链表" scheme="http://printf123.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode刷题记录之349</title>
-    <link href="http://printf123.github.io/2019/10/29/leetcode-shua-ti-ji-lu-zhi-349/"/>
-    <id>http://printf123.github.io/2019/10/29/leetcode-shua-ti-ji-lu-zhi-349/</id>
-    <published>2019-10-29T03:18:38.000Z</published>
-    <updated>2019-11-14T05:21:46.975Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;349、两个数组的交集&quot;&gt;&lt;a href=&quot;#349、两个数组的交集&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
-    
-      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
