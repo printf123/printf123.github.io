@@ -418,7 +418,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        599
+                        601
                     </div>
                     
 
@@ -441,7 +441,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1266、访问所有点的最小时间"><a href="#1266、访问所有点的最小时间" class="headerlink" title="1266、访问所有点的最小时间"></a>1266、访问所有点的最小时间</h2><p>平面上有 n 个点，点的位置用整数坐标表示 points[i] = [xi, yi]。请你计算访问所有这些点需要的最小时间（以秒为单位）。<br>你可以按照下面的规则在平面上移动：</p>
+                <h3 id="1266、访问所有点的最小时间"><a href="#1266、访问所有点的最小时间" class="headerlink" title="1266、访问所有点的最小时间"></a>1266、访问所有点的最小时间</h3><p>平面上有 n 个点，点的位置用整数坐标表示 points[i] = [xi, yi]。请你计算访问所有这些点需要的最小时间（以秒为单位）。<br>你可以按照下面的规则在平面上移动：</p>
 <ul>
 <li>每一秒沿水平或者竖直方向移动一个单位长度，或者跨过对角线（可以看作在一秒内向水平和竖直方向各移动一个单位长度）。</li>
 <li>必须按照数组中出现的顺序来访问这些点。</li>
@@ -460,7 +460,7 @@
 <blockquote>
 <p>points.length == n<br>1 &lt;= n &lt;= 100<br>points[i].length == 2<br>-1000 &lt;= points[i][0], points[i][1] &lt;= 1000</p>
 </blockquote>
-<p>难度：简单&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/minimum-time-visiting-all-points/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-time-visiting-all-points/</a></p>
+<p>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/minimum-time-visiting-all-points/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-time-visiting-all-points/</a></p>
 <h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">minTimeToVisitAllPoints</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token operator">*</span> points<span class="token punctuation">,</span> <span class="token keyword">int</span> pointsSize<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">*</span> pointsColSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> pointsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -471,7 +471,6 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p><strong>解释：</strong> 其实本题很好理解，按照题意，2点之间最佳路径的最少次数就是2点横纵坐标相减绝对值大的数的值。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
@@ -484,14 +483,12 @@
         <span class="token keyword">return</span> sum<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
 <p><strong>解释：</strong> 类似于C语言的求解思路。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">minTimeToVisitAllPoints</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> points<span class="token punctuation">:</span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
         <span class="token keyword">return</span> sum<span class="token punctuation">(</span>max<span class="token punctuation">(</span>abs<span class="token punctuation">(</span>points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> points<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> abs<span class="token punctuation">(</span>points<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> points<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
 </code></pre>
 <p><strong>解释：</strong> 类似于C语言的求解思路。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
@@ -509,7 +506,6 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> sum<span class="token punctuation">;</span>  
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
 </code></pre>
 <p><strong>解释：</strong> 类似于C语言的求解思路。</p>
 <p><strong>知识点回顾：</strong> 无。</p>
