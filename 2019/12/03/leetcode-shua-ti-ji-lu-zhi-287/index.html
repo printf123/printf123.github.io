@@ -4,11 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode刷题记录之206, 锦瑟博客">
-    <meta name="description" content="206、反转链表反转一个单链表。示例：
-输入: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL
-输出: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL
-进阶：你可以迭代或递归地反转链表。你能否用两">
+    <meta name="keywords" content="leetcode刷题记录之287, 锦瑟博客">
+    <meta name="description" content="287、寻找重复数&amp;emsp;&amp;emsp;给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。示例 1：
+输入: [1,3">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode刷题记录之206 | 锦瑟博客</title>
+    <title>leetcode刷题记录之287 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        leetcode刷题记录之206
+                        leetcode刷题记录之287
                     </div>
                 </div>
             </div>
@@ -380,12 +378,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode简单题/" target="_blank">
-                                <span class="chip bg-color">leetcode简单题</span>
+                            <a href="/tags/数组/" target="_blank">
+                                <span class="chip bg-color">数组</span>
                             </a>
                         
-                            <a href="/tags/链表/" target="_blank">
-                                <span class="chip bg-color">链表</span>
+                            <a href="/tags/双指针/" target="_blank">
+                                <span class="chip bg-color">双指针</span>
+                            </a>
+                        
+                            <a href="/tags/leetcode中等题/" target="_blank">
+                                <span class="chip bg-color">leetcode中等题</span>
                             </a>
                         
                     </div>
@@ -408,21 +410,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-28
+                    2019-12-03
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        611
+                        1.5k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        6 分
                     </div>
                     
                 
@@ -438,98 +440,107 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="206、反转链表"><a href="#206、反转链表" class="headerlink" title="206、反转链表"></a>206、反转链表</h3><p>反转一个单链表。<br><strong>示例：</strong></p>
-<pre><code>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
-输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL
-</code></pre><p><strong>进阶：</strong><br>你可以迭代或递归地反转链表。你能否用两种方法解决这道题？<br>难度：简单&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/reverse-linked-list/</a></p>
-<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     struct ListNode *next;
- * };
- */</span>
-<span class="token keyword">struct</span> ListNode<span class="token operator">*</span> <span class="token function">reverseList</span><span class="token punctuation">(</span><span class="token keyword">struct</span> ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span><span class="token punctuation">{</span>    
-    <span class="token keyword">struct</span> ListNode <span class="token operator">*</span>p<span class="token punctuation">,</span><span class="token operator">*</span>q<span class="token punctuation">,</span><span class="token operator">*</span>pr<span class="token punctuation">;</span>     
-      p <span class="token operator">=</span> head<span class="token punctuation">;</span>     
-      q <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>         
-      <span class="token keyword">while</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>           
-            pr <span class="token operator">=</span> p<span class="token operator">-></span>next<span class="token punctuation">;</span>            
-            p<span class="token operator">-></span>next <span class="token operator">=</span> q<span class="token punctuation">;</span>            
-            q <span class="token operator">=</span> p<span class="token punctuation">;</span>           
-           p <span class="token operator">=</span> pr<span class="token punctuation">;</span>     
-      <span class="token punctuation">}</span>            
-      <span class="token keyword">return</span> q<span class="token punctuation">;</span>
+                <h3 id="287、寻找重复数"><a href="#287、寻找重复数" class="headerlink" title="287、寻找重复数"></a>287、寻找重复数</h3><p>&emsp;&emsp;给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。<br><strong>示例 1：</strong></p>
+<pre><code>输入: [1,3,4,2,2]
+输出: 2
+</code></pre><p>示例 2：</p>
+<pre><code>输入: [3,1,3,4,2]
+输出: 3
+</code></pre><p><strong>说明：</strong></p>
+<ol>
+<li>不能更改原数组（假设数组是只读的）。</li>
+<li>只能使用额外的 O(1) 的空间。</li>
+<li>时间复杂度小于 O(n2) 。</li>
+<li>数组中只有一个重复的数字，但它可能不止重复出现一次。</li>
+</ol>
+<p>难度：中等&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/find-the-duplicate-number/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/find-the-duplicate-number/</a></p>
+<h4 id="1、C语言代码："><a href="#1、C语言代码：" class="headerlink" title="1、C语言代码："></a>1、C语言代码：</h4><pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法一：暴力法</span>
+<span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> numsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>j <span class="token operator">&lt;</span> numsSize<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 迭代法求解，在遍历列表时，将当前节点的 next 指针改为指向前一个元素。由于节点没有引用其上一个节点，因此必须事先存储其前一个元素。在更改引用之前，还需要另一个指针来存储下一个节点。不要忘记在最后返回新的头引用！</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。<br>可参考我的<a href="https://blog.csdn.net/qq_41278826/article/details/102764836" target="_blank" rel="noopener">《数据结构之单链表》</a>篇，也可以参考B站视频<a href="https://www.bilibili.com/video/av73298775?from=search&amp;seid=4250187824160819708" target="_blank" rel="noopener">反转链表</a>。</p>
-<h4 id="2、Java代码："><a href="#2、Java代码：" class="headerlink" title="2、Java代码："></a>2、Java代码：</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */</span>
+<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//解法二：排序法</span>
+<span class="token keyword">int</span> <span class="token function">cmp</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>a<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">void</span> <span class="token operator">*</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span>a <span class="token operator">-</span> <span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">qsort</span><span class="token punctuation">(</span>nums<span class="token punctuation">,</span> numsSize<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> numsSize <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>    
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>解释：</strong> 方法一暴力求解，双重循环判断是否有重复数。<br>方法二：如果对数字进行排序，则任何重复的数字都将与排序后的数组相邻。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//解法一：集合</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> ListNode <span class="token function">reverseList</span><span class="token punctuation">(</span>ListNode head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> null <span class="token operator">||</span> head<span class="token punctuation">.</span>next <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token keyword">return</span> head<span class="token punctuation">;</span>
-        ListNode p <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>head<span class="token punctuation">.</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        head<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next <span class="token operator">=</span> head<span class="token punctuation">;</span>
-        head<span class="token punctuation">.</span>next <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">return</span> p<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Set<span class="token operator">&lt;</span>Integer<span class="token operator">></span> seen <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span>Integer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>seen<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            seen<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 递归法求解。</p>
-<ul>
-<li>最开始 1 -&gt; 2 -&gt; 3 -&gt; 4</li>
-<li>对于head.next.next = head , 当head在 3 时，相当于加了一个4 -&gt; 3 ，形成回环, 即  1 -&gt; 2 -&gt; 3 <-> 4</-></li>
-<li>然后 head.next = None, 取消回环，消除了 3 -&gt; 4</li>
-<li>1 -&gt; 2 -&gt; 3 &lt;- 4</li>
-</ul>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
-<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Definition for singly-linked list.</span>
-<span class="token comment" spellcheck="true"># class ListNode:</span>
-<span class="token comment" spellcheck="true">#     def __init__(self, x):</span>
-<span class="token comment" spellcheck="true">#         self.val = x</span>
-<span class="token comment" spellcheck="true">#         self.next = None</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
-        p<span class="token punctuation">,</span> rev <span class="token operator">=</span> head<span class="token punctuation">,</span> None
-        <span class="token keyword">while</span> p<span class="token punctuation">:</span>
-            rev<span class="token punctuation">,</span> rev<span class="token punctuation">.</span>next<span class="token punctuation">,</span> p <span class="token operator">=</span> p<span class="token punctuation">,</span> rev<span class="token punctuation">,</span> p<span class="token punctuation">.</span>next
-        <span class="token keyword">return</span> rev
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//解法二：快慢指针法</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> length <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>length <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 找到快慢指针相遇的地方</span>
+            <span class="token keyword">int</span> slow <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> fast <span class="token operator">=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> slow<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                slow <span class="token operator">=</span> nums<span class="token punctuation">[</span>slow<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                fast <span class="token operator">=</span> nums<span class="token punctuation">[</span>nums<span class="token punctuation">[</span>fast<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true">// 用一个新指针从头开始，直到和慢指针相遇</span>
+            fast <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> slow<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                slow <span class="token operator">=</span> nums<span class="token punctuation">[</span>slow<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                fast <span class="token operator">=</span> nums<span class="token punctuation">[</span>fast<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
+<p><strong>解释：</strong> 方法一：如果我们在数组上迭代时存储每个元素，我们可以在数组上迭代时简单地检查每个元素。为了实现线性时间复杂性，我们需要能够在恒定时间内将元素插入数据结构（并查找它们）。set 很好地满足这些约束，所以我们迭代数组并将每个元素插入 seen 中。在插入之前，我们检查它是否已经存在。如果是，那么我们找到了我们的副本，所以我们返回它。<br>方法二：假设数组中没有重复，那我们可以做到这么一点，就是将数组的下标和1到n每一个数一对一的映射起来。比如数组是213,则映射关系为0-&gt;2, 1-&gt;1, 2-&gt;3。假设这个一对一映射关系是一个函数f(n)，其中n是下标，f(n)是映射到的数。如果我们从下标为0出发，根据这个函数计算出一个值，以这个值为新的下标，再用这个函数计算，以此类推，直到下标超界。实际上可以产生一个类似链表一样的序列。比如在这个例子中有两个下标的序列，0-&gt;2-&gt;3。<br>但如果有重复的话，这中间就会产生多对一的映射，比如数组2131,则映射关系为0-&gt;2, {1，3}-&gt;1, 2-&gt;3。这样，我们推演的序列就一定会有环路了，这里下标的序列是0-&gt;2-&gt;3-&gt;1-&gt;1-&gt;1-&gt;1-&gt;…，而环的起点就是重复的数。<br>所以该题实际上就是找环路起点的题。过程是这样的：我们先用快慢两个下标都从0开始，快下标每轮映射两次，慢下标每轮映射一次，直到两个下标再次相同。这时候保持慢下标位置不变，再用一个新的下标从0开始，这两个下标都继续每轮映射一次，当这两个下标相遇时，就是环的起点，也就是重复的数。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">findDuplicate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> int<span class="token punctuation">(</span>abs<span class="token punctuation">(</span>sum<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">-</span>sum<span class="token punctuation">(</span>set<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span>abs<span class="token punctuation">(</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token operator">-</span>len<span class="token punctuation">(</span>set<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>解释：</strong> 重复数字是原始数组和求集合后的差值除以长度差。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 <h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
+ * @param {number[]} nums
+ * @return {number}
  */</span>
-<span class="token comment" spellcheck="true">/**
- * @param {ListNode} head
- * @return {ListNode}
- */</span>
-<span class="token keyword">var</span> reverseList <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> cur <span class="token operator">=</span> head  <span class="token comment" spellcheck="true">//  当前节点</span>
-    <span class="token keyword">let</span> prev <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment" spellcheck="true">//  前置节点初始化（head节点无前置节点）</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">let</span> temp <span class="token operator">=</span> cur<span class="token punctuation">.</span>next <span class="token comment" spellcheck="true">//  保存当前节点的后置节点 之后递归到下一个节点需要</span>
-        cur<span class="token punctuation">.</span>next <span class="token operator">=</span> prev
-        prev <span class="token operator">=</span> cur
-        cur <span class="token operator">=</span> temp
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> prev
+<span class="token keyword">var</span> findDuplicate <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">!==</span> nums<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">return</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+      <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p><strong>解释：</strong> 类似于C语言的求解思路。</p>
-<p><strong>知识点回顾：</strong> 链表的相关知识。</p>
-<p>&emsp;&emsp;<strong>本文最后给大家推荐一篇博客：</strong><a href="https://blog.csdn.net/xyh269/article/details/70238501" target="_blank" rel="noopener">图解反转单向链表</a></p>
+<p><strong>解释：</strong> 直接判断。</p>
+<p><strong>知识点回顾：</strong><br>1、indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。<br>如果没有找到匹配的字符串则返回 -1。<br>注意： indexOf() 方法区分大小写。<br>语法：string.indexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 string Object.length - 1。如省略该参数，则将从字符串的首字符开始检索。<br>返回值：查找指定字符串第一次出现的位置，如果没找到匹配的字符串则返回  -1。<br>2、lastIndexOf() 方法可返回一个指定的字符串值最后出现的位置，如果指定第二个参数 start，则在一个字符串中的指定位置从后向前搜索。<br>注意： 该方法将从后向前检索字符串，但返回是从起始位置 (0) 开始计算子字符串最后出现的位置。 看它是否含有字符串。开始检索的位置在字符串的 start 处或字符串的结尾（没有指定 start 时）。<br>如果没有找到匹配字符串则返回  -1 。<br>注意：lastIndexOf() 方法是区分大小写的！<br>语法：string.lastIndexOf(searchvalue,start)<br>searchvalue：必需。规定需检索的字符串值。<br>start：可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的最后一个字符处开始检索。<br>返回值：查找的字符串最后出现的位置，如果没有找到匹配字符串则返回  -1。</p>
 
             </div>
             <hr/>
@@ -688,9 +699,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《leetcode刷题记录之206》
+                    《leetcode刷题记录之287》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/10/28/leetcode-shua-ti-ji-lu-zhi-206/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/03/leetcode-shua-ti-ji-lu-zhi-287/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -989,33 +1000,89 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/10/29/leetcode-shua-ti-ji-lu-zhi-349/">
+                <a href="/2019/12/03/leetcode-shua-ti-ji-lu-zhi-287/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="leetcode刷题记录之349">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="leetcode刷题记录之287">
                         
-                        <span class="card-title">leetcode刷题记录之349</span>
+                        <span class="card-title">leetcode刷题记录之287</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            349、两个数组的交集给定两个数组，编写一个函数来计算它们的交集。示例 1：
-输入: nums1 = [1,2,2,1], nums2 = [2,2]
-输出: [2]
-示例 2：
-输入: nums1 = [4,9,5], nums2 = [
+                            287、寻找重复数&emsp;&emsp;给定一个包含 n + 1 个整数的数组 nums，其数字都在 1 到 n 之间（包括 1 和 n），可知至少存在一个重复的整数。假设只有一个重复的整数，找出这个重复的数。示例 1：
+输入: [1,3
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-29
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
+                                    算法刷题
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/双指针/" target="_blank">
+                        <span class="chip bg-color">双指针</span>
+                    </a>
+                    
+                    <a href="/tags/leetcode中等题/" target="_blank">
+                        <span class="chip bg-color">leetcode中等题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1252/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="leetcode刷题记录之1252">
+                        
+                        <span class="card-title">leetcode刷题记录之1252</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1252、奇数值单元格的数目&emsp;&emsp;给你一个 n 行 m 列的矩阵，最开始的时候，每个单元格中的值都是 0。&emsp;&emsp;另有一个索引数组 indices，indices[i] = [ri, ci] 中的 ri 和
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1039,73 +1106,8 @@
                         <span class="chip bg-color">数组</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/10/27/shu-ju-jie-gou-zhi-dan-lian-biao/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="数据结构之单链表">
-                        
-                        <span class="card-title">数据结构之单链表</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            0、目录
-定义
-存储表示
-基本操作实现
-初始化
-取值
-查找 
-插入  
-删除
-创建
-前插法创建
-后插法创建
-
-
-求表长
-遍历
-排序
-反转
-
-
-完整代码1、定义&emsp;&emsp;线性表链式存储结构的特点是：用一组任意的存储单元存储线性表
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
-                                    数据结构与算法分析
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/链表/" target="_blank">
-                        <span class="chip bg-color">链表</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
