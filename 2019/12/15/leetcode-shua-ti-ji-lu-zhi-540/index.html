@@ -4,19 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="算法之递归与分治, 锦瑟博客">
-    <meta name="description" content="0、目录
-算法概念与设计分析
-例题
-阶乘
-Hanoi塔]
-整数划分
-
-
-
-1、算法概念与设计分析算法总体思想-大事化小小事化了
-
-&amp;emsp;&amp;emsp;对这k个子问题分别求解。如果子问题的规模仍然不够小，则再划分为k个子问题，如此递归的进">
+    <meta name="keywords" content="leetcode刷题记录之540, 锦瑟博客">
+    <meta name="description" content="540、有序数组中的单一元素&amp;emsp;&amp;emsp;给定一个只包含整数的有序数组，每个元素都会出现两次，唯有一个数只会出现一次，找出这个数。示例 1：
+输入: [1,1,2,3,3,4,4,8,8]
+输出: 2
+示例 2：
+输入: [3,3">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +17,7 @@ Hanoi塔]
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>算法之递归与分治 | 锦瑟博客</title>
+    <title>leetcode刷题记录之540 | 锦瑟博客</title>
     <link rel="icon" type="image/jpeg" href="/touxiang.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -271,13 +264,13 @@ Hanoi塔]
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        算法之递归与分治
+                        leetcode刷题记录之540
                     </div>
                 </div>
             </div>
@@ -388,8 +381,12 @@ Hanoi塔]
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/递归与分治/" target="_blank">
-                                <span class="chip bg-color">递归与分治</span>
+                            <a href="/tags/leetcode中等题/" target="_blank">
+                                <span class="chip bg-color">leetcode中等题</span>
+                            </a>
+                        
+                            <a href="/tags/二分法/" target="_blank">
+                                <span class="chip bg-color">二分法</span>
                             </a>
                         
                     </div>
@@ -400,8 +397,8 @@ Hanoi塔]
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
-                                数据结构与算法分析
+                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
+                                算法刷题
                             </a>
                         
                     </div>
@@ -412,21 +409,21 @@ Hanoi塔]
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-23
+                    2019-12-15
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.3k
+                        564
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        9 分
+                        2 分
                     </div>
                     
                 
@@ -442,141 +439,60 @@ Hanoi塔]
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0、目录"><a href="#0、目录" class="headerlink" title="0、目录"></a>0、目录</h2><ul>
-<li>算法概念与设计分析</li>
-<li>例题<ul>
-<li>阶乘</li>
-<li>Hanoi塔]</li>
-<li>整数划分</li>
-</ul>
-</li>
-</ul>
-<h3 id="1、算法概念与设计分析"><a href="#1、算法概念与设计分析" class="headerlink" title="1、算法概念与设计分析"></a>1、算法概念与设计分析</h3><center><strong>算法总体思想-大事化小小事化了</strong></center>
-
-<p>&emsp;&emsp;对这k个子问题分别求解。如果子问题的规模仍然不够小，则再划分为k个子问题，如此递归的进行下去，直到问题规模足够小，很容易求出其解为止。<br>&emsp;&emsp;将求出的小规模的问题的解合并为一个更大规模的问题的解，自底向上逐步求出原来问题的解。<br>&emsp;&emsp;<strong>分治法的设计思想是</strong>，将一个难以直接解决的大问题，分割成一些规模较小的相同问题，以便各个击破，分而治之。<br>&emsp;&emsp;直接或间接地调用自身的算法称为 <strong>递归算法</strong>。用函数自身给出定义的函数称为 <strong>递归函数</strong>。<br>递归有两种</p>
-<ul>
-<li>直接递归：自己调用自己</li>
-<li>间接递归：A调用B，B调用A</li>
-</ul>
-<pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">//直接递归：自己调用自己</span>
-<span class="token function">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
-   …   
-     <span class="token function">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   …
-<span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//间接递归：A调用B，B调用A</span>
-<span class="token function">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
-   …   
-     <span class="token function">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   …
-<span class="token punctuation">}</span>
-<span class="token function">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
-   …   
-     <span class="token function">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   …
+                <h3 id="540、有序数组中的单一元素"><a href="#540、有序数组中的单一元素" class="headerlink" title="540、有序数组中的单一元素"></a>540、有序数组中的单一元素</h3><p>&emsp;&emsp;给定一个只包含整数的有序数组，每个元素都会出现两次，唯有一个数只会出现一次，找出这个数。<br><strong>示例 1：</strong></p>
+<pre><code>输入: [1,1,2,3,3,4,4,8,8]
+输出: 2
+</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入: [3,3,7,7,10,11,11]
+输出: 10
+</code></pre><p><strong>注意:</strong> 您的方案应该在 O(log n)时间复杂度和 O(1)空间复杂度中运行。<br>难度：中等&emsp;&emsp;&emsp;&emsp;题目地址：<a href="https://leetcode-cn.com/problems/single-element-in-a-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/single-element-in-a-sorted-array/</a></p>
+<h4 id="1、C语言代码"><a href="#1、C语言代码" class="headerlink" title="1、C语言代码:"></a>1、C语言代码:</h4><pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">singleNonDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> numsSize<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">int</span> left<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>right<span class="token operator">=</span>numsSize<span class="token number">-1</span><span class="token punctuation">;</span>
+       <span class="token keyword">while</span><span class="token punctuation">(</span>left<span class="token operator">&lt;</span>right<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+           <span class="token keyword">if</span><span class="token punctuation">(</span>mid<span class="token operator">%</span><span class="token number">2</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+               <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>nums<span class="token punctuation">[</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> right<span class="token operator">=</span>mid<span class="token number">-1</span><span class="token punctuation">;</span>
+               <span class="token keyword">else</span> left<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+               <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token operator">==</span>nums<span class="token punctuation">[</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> left<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">;</span>
+               <span class="token keyword">else</span> right<span class="token operator">=</span>mid<span class="token punctuation">;</span>
+           <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>&emsp;&emsp;由分治法产生的子问题往往是原问题的较小模式，这就为使用递归技术提供了方便。在这种情况下，反复应用分治手段，可以使子问题与原问题类型一致而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解。这自然导致递归过程的产生。<br>&emsp;&emsp;分治与递归像一对孪生兄弟，经常同时应用在算法设计之中，并由此产生许多高效算法。<br><strong>怎么写递归函数：</strong></p>
-<ol>
-<li>相同的事情交给相同的函数做。</li>
-<li>当你在写函数A()时，如果又碰到了同样的事情时，就直接调用自己。</li>
-<li>已找到递归方程（两边都有同一个函数），可以用递归。如n!、Fibonacci数列等。</li>
-<li>没有递归方程的话（例如不是要求算某个数，而是要求做某些事），你要找出分解后小规模问题与原问题的相似之处。如Hanoi塔、全排列; 有时需要利用递归调用、返回的顺序特征。</li>
-<li>一个返回值的话，就直接return；多个的话，作为函数的参数。参数中需要改变的量应该采用引用调用，例如&amp;max,&amp;min。</li>
-<li>别忘了边界条件—出口。</li>
-</ol>
-<p><strong>递归的优缺点：</strong><br><strong>优点：</strong> 结构清晰，可读性强，而且容易用数学归纳法来证明算法的正确性，因此它为设计算法、调试程序带来很大方便。<br><strong>缺点：</strong> 递归算法的运行效率较低，无论是耗费的计算时间还是占用的存储空间都比非递归算法要多。<br><strong>分治法的适用条件：</strong><br>分治法所能解决的问题一般具有以下几个特征：</p>
-<ul>
-<li>该问题的规模缩小到一定的程度就可以容易地解决；</li>
-<li>该问题可以分解为若干个规模较小的相同问题</li>
-<li>利用该问题分解出的子问题的解可以合并为该问题的解；</li>
-<li>该问题所分解出的各个子问题是相互独立的，即子问题之间不重复。 <blockquote>
-<p>这条特征涉及到分治法的效率，如果各子问题是不独立的，则分治法要做许多不必要的工作，重复地解公共的子问题，此时虽然也可用分治法，但一般用动态规划较好。</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>分治法的基本步骤：</strong></p>
-<pre class=" language-c"><code class="language-c">divide<span class="token operator">-</span>and<span class="token operator">-</span><span class="token function">conquer</span><span class="token punctuation">(</span>P<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">|</span> P <span class="token operator">|</span> <span class="token operator">&lt;=</span> n0<span class="token punctuation">)</span> <span class="token function">adhoc</span><span class="token punctuation">(</span>P<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//解决小规模的问题</span>
-    divide P into smaller subinstances P1<span class="token punctuation">,</span>P2<span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>Pk；<span class="token comment" spellcheck="true">//分解问题</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>i<span class="token operator">&lt;=</span>k<span class="token punctuation">,</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-      yi<span class="token operator">=</span>divide<span class="token operator">-</span>and<span class="token operator">-</span><span class="token function">conquer</span><span class="token punctuation">(</span>Pi<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//递归的解各子问题</span>
-    <span class="token keyword">return</span> <span class="token function">merge</span><span class="token punctuation">(</span>y1<span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>yk<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//将各子问题的解合并为原问题的解</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<blockquote>
-<p>人们从大量实践中发现，在用分治法设计算法时，最好使子问题的规模大致相同。即将一个问题分成大小相等的k个子问题的处理方法是行之有效的。这种使子问题规模大致相等的做法是出自一种 <strong>平衡(balancing)子问题</strong> 的思想，它几乎总是比子问题规模不等的做法要好。</p>
-</blockquote>
-<p><strong>分治法的复杂性分析：</strong><br>&emsp;&emsp;一个分治法将规模为n的问题分成k个规模为n／m的子问题去解。设分解阈值n0=1，且adhoc解规模为1的问题耗费1个单位时间。再设将原问题分解为k个子问题以及用merge将k个子问题的解合并为原问题的解需用f(n)个单位时间。用T(n)表示该分治法解规模为|P|=n的问题所需的计算时间，则有：<br><img src="https://img-blog.csdnimg.cn/20191123112627774.png" alt><br>通过迭代法求得方程的解：<img src="https://img-blog.csdnimg.cn/20191123112710367.png" alt><br><img src="https://img-blog.csdnimg.cn/20191123112727638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt></p>
-<h3 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h3><h4 id="2-1-阶乘"><a href="#2-1-阶乘" class="headerlink" title="2.1 阶乘"></a>2.1 阶乘</h4><p>例：  阶乘函数<br>&emsp;&emsp;阶乘函数可递归地定义为：<br><img src="https://img-blog.csdnimg.cn/20191123120052474.png" alt="边界条件、出口"></p>
-<center><strong>边界条件、出口</strong></center>
-
-<p><img src="https://img-blog.csdnimg.cn/20191123120527287.png" alt="递归方程"></p>
-<center><strong>递归方程</strong></center>
-
-<p>&emsp;&emsp;边界条件与递归方程是递归函数的二个要素，递归函数只有具备了这两个要素，才能在有限次计算后得出结果。边界条件一般为显式的，例如if()…</p>
-<p><img src="https://img-blog.csdnimg.cn/20191123122152202.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><br><strong>递归过程与工作栈：</strong></p>
-<ul>
-<li>递归过程在实现时，需要自己调用自己。</li>
-<li>每一次递归调用时，需要为过程中使用的参数、局部变量、返回地址等另外分配存储空间。</li>
-<li>层层向下递归，退出时的次序正好相反：<pre><code> 递归次序--------------------------------&gt;
-</code></pre>n!    –&gt;  (n-1)!  –&gt;    (n-2)!  –&gt;     1! –&gt;    0!=1<pre><code>        &lt;----------------------------------   返回次序
-</code></pre></li>
-<li>因此，每层递归调用需分配的空间形成递归工作记录，按后进先出的栈组织存取。</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20191123122622802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><br><strong>n的阶乘完整代码:</strong></p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">int</span> <span class="token function">fact</span> <span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>      
-    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
-    <span class="token keyword">else</span> <span class="token keyword">return</span><span class="token punctuation">(</span>n<span class="token operator">*</span><span class="token function">fact</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">fact</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h4 id="2-2-Hanoi塔"><a href="#2-2-Hanoi塔" class="headerlink" title="2.2 Hanoi塔"></a>2.2 Hanoi塔</h4><p>例：Hanoi塔问题<br>&emsp;&emsp;设a,b,c是3个塔座。开始时，在塔座a上有一叠共n个圆盘，这些圆盘自下而上，由大到小地叠在一起。各圆盘从小到大编号为1,2,…,n,现要求将塔座a上的这一叠圆盘移到塔座b上，并仍按同样顺序叠置。在移动圆盘时应遵守以下移动规则：<br>规则1：每次只能移动1个圆盘；<br>规则2：任何时刻都不允许将较大的圆盘压在较小的圆盘之上；<br>规则3：在满足移动规则1和2的前提下，可将圆盘移至a,b,c中任一塔座上。<br><img src="https://img-blog.csdnimg.cn/20191123124547380.png" alt><br>==Hanoi塔问题(递归的关键是分解为同结构的小问题)==<br><img src="https://img-blog.csdnimg.cn/20191123124808415.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><br><img src="https://img-blog.csdnimg.cn/20191123124829104.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><br><strong>Hanoi塔问题完整代码:</strong></p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">void</span> <span class="token function">Hanoi</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">char</span> A<span class="token punctuation">,</span> <span class="token keyword">char</span> B<span class="token punctuation">,</span> <span class="token keyword">char</span> C<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c->%c\n"</span><span class="token punctuation">,</span> A<span class="token punctuation">,</span> C<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token function">Hanoi</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">,</span> A<span class="token punctuation">,</span> C<span class="token punctuation">,</span> B<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c->%c\n"</span><span class="token punctuation">,</span> A<span class="token punctuation">,</span> C<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">Hanoi</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">,</span> B<span class="token punctuation">,</span> A<span class="token punctuation">,</span> C<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p><strong>解释：</strong> 因为是有序数组，所以可以用二分法。思路：取数组中间的数，当中间数的下标为奇数，说明前后元素的个数为奇数，偶数则剩余个数为偶数。奇数时：当nums[mid]等于[mid+1],唯一数处于前mid-1,反之处于后mid+1。偶数时：当nums[mid]等于[mid+1]，唯一数处于后mid+2,反之处于前mid.(就是要保证剩余查找元素个数奇数)</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="2、Java代码"><a href="#2、Java代码" class="headerlink" title="2、Java代码:"></a>2、Java代码:</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">singleNonDuplicate</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">:</span> nums<span class="token punctuation">)</span>
+            num <span class="token operator">^=</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> num<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//n为盘子的个数 </span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token function">Hanoi</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
 </code></pre>
-<h4 id="2-3-整数划分"><a href="#2-3-整数划分" class="headerlink" title="2.3 整数划分"></a>2.3 整数划分</h4><p>例：整数划分问题<br>&emsp;&emsp;将正整数n表示成一系列正整数之和：n=n1+n2+…+nk，其中n1≥n2≥…≥nk≥1，k≥1。正整数n的这种表示称为正整数n的划分。求正整数n的不同划分个数。<br>例如:正整数6有如下11种不同的划分：<br>    6；<br>    5+1；<br>    4+2，4+1+1；<br>    3+3，3+2+1，3+1+1+1；<br>    2+2+2，2+2+1+1，2+1+1+1+1；<br>    1+1+1+1+1+1。</p>
-<p><strong>n=n1+n2+…+nk，其中n1≥n2≥…≥nk≥1，k≥1</strong><br>&emsp;&emsp;前面的几个例子中，问题本身都具有比较明显的递归关系，因而容易用递归函数直接求解。<br>&emsp;&emsp;在本例中，如果设p(n)为正整数n的划分数，则难以找到递归关系，因此考虑增加一个自变量：将sum中最大加数n1不大于m的划分个数记作q(n,m)。<br><strong>可以建立q(n,m)的如下递归关系。</strong><br>(1) q(n,1)=1,n ≥ 1;<br>当最大加数n1不大于1时，任何正整数n只有一种划分形式，即<img src="https://img-blog.csdnimg.cn/20191123130020654.png" alt><br>(2) q(n,m)=q(n,n),m ≥ n;<br>最大加数n1实际上不能大于n。因此，q(1,m)=1。<br>将sum中最大加数n1 ≤ m的划分个数记作q(n,m)<br>(3) q(n,n)=1+q(n,n-1);<br>正整数n的划分由n1=n的划分和n1≤n-1的划分组成（n1不可能大于n）。<br>q(6,6)=1+q(6,5)<br>(4) q(n,m)=q(n,m-1)+q(n-m,m),n&gt;m&gt;1;<br>正整数n的最大加数n1不大于m的划分由n1=m的划分和<br>n1≤m-1 的划分组成（思路同(3) ）。<br>q(6,3)=q(6,2)+q(6-3,3)<br>q(n-m,m):  n=m+n2+…,          n2&lt;=n1=m<br>n=n1+n2+…+nk，其中n1≥n2≥…≥nk≥1，k≥1<br><img src="https://img-blog.csdnimg.cn/20191123130538137.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjc4ODI2,size_16,color_FFFFFF,t_70" alt><br><strong>正整数n的划分数p(n)=q(n,n)。</strong><br><strong>整数划分问题完整代码:</strong></p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
-<span class="token keyword">int</span> <span class="token function">q</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span><span class="token keyword">int</span> m<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span> <span class="token operator">||</span> m<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">></span> m<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token function">q</span><span class="token punctuation">(</span>n<span class="token operator">-</span>m<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">q</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">&lt;</span> m<span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token function">q</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token number">1</span><span class="token operator">+</span><span class="token function">q</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p><strong>解释：</strong> 直接用位运算，已知两个相同的数异或之后为0，所以把数组所有的数都异或了之后就是剩下的值了。</p>
+<p><strong>知识点回顾：</strong> ^的运算法则：只有在两个比较的位不同时其结果是1，否则结果为0。</p>
+<h4 id="3、Python代码："><a href="#3、Python代码：" class="headerlink" title="3、Python代码："></a>3、Python代码：</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">singleNonDuplicate</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">2</span><span class="token operator">*</span>sum<span class="token punctuation">(</span>set<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">-</span> sum<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+
+</code></pre>
+<p><strong>解释：</strong> 将原数组去重*2，减去原数组，剩下的就是唯一的值。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
+<h4 id="4、JavaScript代码："><a href="#4、JavaScript代码：" class="headerlink" title="4、JavaScript代码："></a>4、JavaScript代码：</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
+ * @param {number[]} nums
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> singleNonDuplicate <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">+</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">{</span>             
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span>nums<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span><span class="token function">q</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
+<p><strong>解释：</strong> 因为有序数是成对出现，所以特殊数出现的下标一定是偶数位，所以只需要拿偶数位下标去跟下一位下标的值去比较即可。</p>
+<p><strong>知识点回顾：</strong> 无。</p>
 
             </div>
             <hr/>
@@ -735,9 +651,9 @@ Hanoi塔]
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《算法之递归与分治》
+                    《leetcode刷题记录之540》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/23/suan-fa-zhi-di-gui-yu-fen-zhi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/12/15/leetcode-shua-ti-ji-lu-zhi-540/" property="cc:attributionName"
                rel="cc:attributionURL">
                 锦瑟
             </a> 采用
@@ -1036,59 +952,56 @@ Hanoi塔]
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/23/shu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao/">
+                <a href="/2019/12/15/leetcode-shua-ti-ji-lu-zhi-540/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="数据结构之循环链表与双向链表">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="leetcode刷题记录之540">
                         
-                        <span class="card-title">数据结构之循环链表与双向链表</span>
+                        <span class="card-title">leetcode刷题记录之540</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            0、目录
-循环链表
-双向链表
-双向链表的存储结构
-双向链表的插入
-双向链表的删除
-
-
-
-1、循环链表&emsp;&emsp;循环链表 是另一种形式的链式存储结构。其特点是表中最后一个结点的指针域指向头结点，整个链表形成一个环。由此，从表中任
+                            540、有序数组中的单一元素&emsp;&emsp;给定一个只包含整数的有序数组，每个元素都会出现两次，唯有一个数只会出现一次，找出这个数。示例 1：
+输入: [1,1,2,3,3,4,4,8,8]
+输出: 2
+示例 2：
+输入: [3,3
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/数据结构与算法分析/" class="post-category" target="_blank">
-                                    数据结构与算法分析
+                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
+                                    算法刷题
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/循环链表/" target="_blank">
-                        <span class="chip bg-color">循环链表</span>
+                    <a href="/tags/leetcode中等题/" target="_blank">
+                        <span class="chip bg-color">leetcode中等题</span>
                     </a>
                     
-                    <a href="/tags/双向链表/" target="_blank">
-                        <span class="chip bg-color">双向链表</span>
+                    <a href="/tags/二分法/" target="_blank">
+                        <span class="chip bg-color">二分法</span>
                     </a>
                     
                 </div>
@@ -1102,43 +1015,31 @@ Hanoi塔]
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/19/1-2-java-hou-duan-kai-fa-xi-lie-bo-ke-zhi-lei-yu-dui-xiang-ji-chu-pian/">
+                <a href="/2019/12/11/leetcode-shua-ti-ji-lu-zhi-292/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java后端开发系列博客之类与对象（基础篇）">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="leetcode刷题记录之292">
                         
-                        <span class="card-title">Java后端开发系列博客之类与对象（基础篇）</span>
+                        <span class="card-title">leetcode刷题记录之292</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            类与对象Java作为一种面向对象语言。支持以下基本概念：
-
-多态
-继承
-封装
-抽象
-类
-对象
-实例
-方法
-重载
-
-本节我们重点研究对象和类的概念。对象： 对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种
+                            292、 Nim 游戏&emsp;&emsp;你和你的朋友，两个人一起玩 Nim 游戏：桌子上有一堆石头，每次你们轮流拿掉 1 - 3 块石头。 拿掉最后一块石头的人就是获胜者。你作为先手。&emsp;&emsp;你们是聪明人，每一步都是最
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-19
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java后端开发/" class="post-category" target="_blank">
-                                    Java后端开发
+                            <a href="/categories/算法刷题/" class="post-category" target="_blank">
+                                    算法刷题
                                 </a>
                             
                             
@@ -1148,12 +1049,12 @@ Hanoi塔]
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/" target="_blank">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/leetcode简单题/" target="_blank">
+                        <span class="chip bg-color">leetcode简单题</span>
                     </a>
                     
-                    <a href="/tags/类与对象/" target="_blank">
-                        <span class="chip bg-color">类与对象</span>
+                    <a href="/tags/数学/" target="_blank">
+                        <span class="chip bg-color">数学</span>
                     </a>
                     
                 </div>
