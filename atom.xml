@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://printf123.github.io/"/>
-  <updated>2020-03-28T14:02:05.235Z</updated>
+  <updated>2020-04-08T03:32:52.275Z</updated>
   <id>http://printf123.github.io/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Java后</title>
-    <link href="http://printf123.github.io/2021/11/19/1/"/>
-    <id>http://printf123.github.io/2021/11/19/1/</id>
-    <published>2021-11-19T11:30:38.000Z</published>
-    <updated>2020-03-28T14:02:05.235Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;类与对象&quot;&gt;&lt;a href=&quot;#类与对象&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Java后端开发" scheme="http://printf123.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
-    
-      <category term="类与对象" scheme="http://printf123.github.io/tags/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -580,6 +552,34 @@
       <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
     
       <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决eclipse导入工程后出现的乱码问题</title>
+    <link href="http://printf123.github.io/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/"/>
+    <id>http://printf123.github.io/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/</id>
+    <published>2019-11-11T02:29:17.000Z</published>
+    <updated>2019-11-11T03:28:55.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;emsp;&amp;emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的乱码问题，这其中还有几种情况。&lt;b
+        
+      
+    
+    </summary>
+    
+      <category term="程序人生" scheme="http://printf123.github.io/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
+    
+    
+      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
+    
+      <category term="eclipse" scheme="http://printf123.github.io/tags/eclipse/"/>
     
   </entry>
   
