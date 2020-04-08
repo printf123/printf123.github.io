@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java后]]></title>
+    <url>%2F2021%2F11%2F19%2F1%2F</url>
+    <content type="text"><![CDATA[类与对象Java作为一种面向对象语言。支持以下基本概念： 多态]]></content>
+      <categories>
+        <category>Java后端开发</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>类与对象</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2020%2F04%2F08%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode刷题记录之137]]></title>
     <url>%2F2020%2F02%2F03%2Fleetcode-shua-ti-ji-lu-zhi-137%2F</url>
     <content type="text"><![CDATA[137、只出现一次的数字 II&emsp;&emsp;给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素。说明：&emsp;&emsp;你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？示例 1： 输入: [2,2,3,2] 输出: 3 示例 2： 输入: [0,1,0,1,0,1,99] 输出: 99 难度：中等&emsp;&emsp;&emsp;&emsp;题目地址：https://leetcode-cn.com/problems/single-number-ii/ 1、C语言代码：int singleNumber(int* nums, int numsSize){ int one = 0,two = 0; for (unsigned int i = 0; i &lt; numsSize; i++) { one = one ^ nums[i] &amp; ~two; two = two ^ nums[i] &amp; ~one; } return one; } 解释： 参考。 知识点回顾： 位操作。 2、Java代码：class Solution { public int singleNumber(int[] nums) { Arrays.sort(nums); for (int i=0,j=1;j&lt;nums.length;i+=3,j+=3) { if (nums[i] != nums[j]) return nums[i]; } return nums[nums.length-1]; } } 解释： 先排序，再双指针循环遍历，查询是否相等，如果到最后还没有找到不同，那肯定是数组最后一个。 知识点回顾： 无。 3、Python代码：class Solution: def singleNumber(self, nums: List[int]) -> int: return (sum(set(nums))*3 - sum(nums)) // 2 解释： 观察发现，数组去重后的和*3跟原来的数组的和刚好相差要找元素的2倍。 知识点回顾： 无。 4、JavaScript代码：/** * @param {number[]} nums * @return {number} */ var singleNumber = function(nums) { nums = nums.sort((a, b) => a - b); for(var i = 2; i &lt; nums.length; i += 3){ if((nums[i] + nums[i - 1] + nums[i - 2]) !== nums[i]*3){ return nums[i] ^ nums[i - 1] ^ nums[i - 2] } } return nums[nums.length - 1]; }; 解释： 排序，升序或降序均可。 循环，每三组进行相加，并判断是否等于第一项的三倍。 相同的话说明三个数字相同。 不同的话，说明肯定存在不同的数字。 进行异或。 循环完后还没有，则最后一个是。 知识点回顾： 无。]]></content>
@@ -230,8 +247,8 @@
         <category>程序人生</category>
       </categories>
       <tags>
-        <tag>eclipse</tag>
         <tag>Java</tag>
+        <tag>eclipse</tag>
       </tags>
   </entry>
   <entry>
