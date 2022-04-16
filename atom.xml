@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>锦瑟博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://printf123.github.io/"/>
+  <updated>2021-03-05T10:36:46.580Z</updated>
+  <id>http://printf123.github.io/</id>
+  
+  <author>
+    <name>锦瑟</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《软件工程导论》第一章</title>
+    <link href="http://printf123.github.io/2021/03/05/ruan-jian-gong-cheng-dao-lun-di-yi-zhang/"/>
+    <id>http://printf123.github.io/2021/03/05/ruan-jian-gong-cheng-dao-lun-di-yi-zhang/</id>
+    <published>2021-03-05T10:30:38.000Z</published>
+    <updated>2021-03-05T10:36:46.580Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、软件工程学概述&quot;&gt;&lt;a href=&quot;#一、软件工程学概述&quot; class=&quot;headerlink&quot; title=&quot;一、软件工程学概述&quot;&gt;&lt;/a&gt;一、软件工程学概述&lt;/h2&gt;&lt;h4 id=&quot;1-1软件危机&quot;&gt;&lt;a href=&quot;#1-1软件危机&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="软件工程" scheme="http://printf123.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+    
+      <category term="软件工程" scheme="http://printf123.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之137</title>
+    <link href="http://printf123.github.io/2020/02/03/leetcode-shua-ti-ji-lu-zhi-137/"/>
+    <id>http://printf123.github.io/2020/02/03/leetcode-shua-ti-ji-lu-zhi-137/</id>
+    <published>2020-02-03T13:55:38.000Z</published>
+    <updated>2020-02-03T14:50:15.124Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;137、只出现一次的数字-II&quot;&gt;&lt;a href=&quot;#137、只出现一次的数字-II&quot; class=&quot;headerlink&quot; title=&quot;137、只出现一次的数字 II&quot;&gt;&lt;/a&gt;137、只出现一次的数字
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode中等题" scheme="http://printf123.github.io/tags/leetcode%E4%B8%AD%E7%AD%89%E9%A2%98/"/>
+    
+      <category term="位操作" scheme="http://printf123.github.io/tags/%E4%BD%8D%E6%93%8D%E4%BD%9C/"/>
+    
+      <category term="排序" scheme="http://printf123.github.io/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之540</title>
+    <link href="http://printf123.github.io/2019/12/15/leetcode-shua-ti-ji-lu-zhi-540/"/>
+    <id>http://printf123.github.io/2019/12/15/leetcode-shua-ti-ji-lu-zhi-540/</id>
+    <published>2019-12-15T09:23:38.000Z</published>
+    <updated>2019-12-15T09:50:43.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;540、有序数组中的单一元素&quot;&gt;&lt;a href=&quot;#540、有序数组中的单一元素&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode中等题" scheme="http://printf123.github.io/tags/leetcode%E4%B8%AD%E7%AD%89%E9%A2%98/"/>
+    
+      <category term="二分法" scheme="http://printf123.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之292</title>
+    <link href="http://printf123.github.io/2019/12/11/leetcode-shua-ti-ji-lu-zhi-292/"/>
+    <id>http://printf123.github.io/2019/12/11/leetcode-shua-ti-ji-lu-zhi-292/</id>
+    <published>2019-12-11T08:01:13.000Z</published>
+    <updated>2019-12-11T07:54:52.378Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;292、-Nim-游戏&quot;&gt;&lt;a href=&quot;#292、-Nim-游戏&quot; class=&quot;headerlink&quot; title=&quot;292、 Nim 游戏&quot;&gt;&lt;/a&gt;292、 Nim 游戏&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;你和你的朋友，两个人一起玩 Nim
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数学" scheme="http://printf123.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之852</title>
+    <link href="http://printf123.github.io/2019/12/09/leetcode-shua-ti-ji-lu-zhi-852/"/>
+    <id>http://printf123.github.io/2019/12/09/leetcode-shua-ti-ji-lu-zhi-852/</id>
+    <published>2019-12-09T13:48:38.000Z</published>
+    <updated>2019-12-09T14:06:44.037Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;852、山脉数组的峰顶索引&quot;&gt;&lt;a href=&quot;#852、山脉数组的峰顶索引&quot; class=&quot;headerlink&quot; title=&quot;852、山脉数组的峰顶索引&quot;&gt;&lt;/a&gt;852、山脉数组的峰顶索引&lt;/h3&gt;&lt;p&gt;我们把符合下列属性的数组 A
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="二分法" scheme="http://printf123.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之1221</title>
+    <link href="http://printf123.github.io/2019/12/07/leetcode-shua-ti-ji-lu-zhi-1221/"/>
+    <id>http://printf123.github.io/2019/12/07/leetcode-shua-ti-ji-lu-zhi-1221/</id>
+    <published>2019-12-07T08:43:38.000Z</published>
+    <updated>2019-12-07T09:02:21.017Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1221、分割平衡字符串&quot;&gt;&lt;a href=&quot;#1221、分割平衡字符串&quot; class=&quot;headerlink&quot; title=&quot;1221、分割平衡字符串&quot;&gt;&lt;/a&gt;1221、分割平衡字符串&lt;/h3&gt;&lt;p&gt;在一个「平衡字符串」中，’L’ 和 ‘R’
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="贪心算法" scheme="http://printf123.github.io/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="栈" scheme="http://printf123.github.io/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之704</title>
+    <link href="http://printf123.github.io/2019/12/04/leetcode-shua-ti-ji-lu-zhi-704/"/>
+    <id>http://printf123.github.io/2019/12/04/leetcode-shua-ti-ji-lu-zhi-704/</id>
+    <published>2019-12-04T13:13:38.000Z</published>
+    <updated>2019-12-04T13:36:33.837Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;704、二分查找&quot;&gt;&lt;a href=&quot;#704、二分查找&quot; class=&quot;headerlink&quot; title=&quot;704、二分查找&quot;&gt;&lt;/a&gt;704、二分查找&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="二分法" scheme="http://printf123.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之287</title>
+    <link href="http://printf123.github.io/2019/12/03/leetcode-shua-ti-ji-lu-zhi-287/"/>
+    <id>http://printf123.github.io/2019/12/03/leetcode-shua-ti-ji-lu-zhi-287/</id>
+    <published>2019-12-03T03:01:13.000Z</published>
+    <updated>2019-12-03T04:36:53.161Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;287、寻找重复数&quot;&gt;&lt;a href=&quot;#287、寻找重复数&quot; class=&quot;headerlink&quot; title=&quot;287、寻找重复数&quot;&gt;&lt;/a&gt;287、寻找重复数&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给定一个包含 n + 1 个整数的数组
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="leetcode中等题" scheme="http://printf123.github.io/tags/leetcode%E4%B8%AD%E7%AD%89%E9%A2%98/"/>
+    
+      <category term="双指针" scheme="http://printf123.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之1252</title>
+    <link href="http://printf123.github.io/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1252/"/>
+    <id>http://printf123.github.io/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1252/</id>
+    <published>2019-12-02T10:43:38.000Z</published>
+    <updated>2019-12-02T11:24:19.790Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1252、奇数值单元格的数目&quot;&gt;&lt;a href=&quot;#1252、奇数值单元格的数目&quot; class=&quot;headerlink&quot; title=&quot;1252、奇数值单元格的数目&quot;&gt;&lt;/a&gt;1252、奇数值单元格的数目&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;给你一个 n 行
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="数学" scheme="http://printf123.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之1266</title>
+    <link href="http://printf123.github.io/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1266/"/>
+    <id>http://printf123.github.io/2019/12/02/leetcode-shua-ti-ji-lu-zhi-1266/</id>
+    <published>2019-12-02T03:43:38.000Z</published>
+    <updated>2019-12-02T09:51:50.061Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1266、访问所有点的最小时间&quot;&gt;&lt;a href=&quot;#1266、访问所有点的最小时间&quot; class=&quot;headerlink&quot; title=&quot;1266、访问所有点的最小时间&quot;&gt;&lt;/a&gt;1266、访问所有点的最小时间&lt;/h3&gt;&lt;p&gt;平面上有 n
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="数学" scheme="http://printf123.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之34</title>
+    <link href="http://printf123.github.io/2019/12/01/leetcode-shua-ti-ji-lu-zhi-34/"/>
+    <id>http://printf123.github.io/2019/12/01/leetcode-shua-ti-ji-lu-zhi-34/</id>
+    <published>2019-12-01T11:55:38.000Z</published>
+    <updated>2019-12-01T12:57:59.363Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;34、在排序数组中查找元素的第一个和最后一个位置&quot;&gt;&lt;a href=&quot;#34、在排序数组中查找元素的第一个和最后一个位置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode中等题" scheme="http://printf123.github.io/tags/leetcode%E4%B8%AD%E7%AD%89%E9%A2%98/"/>
+    
+      <category term="双指针" scheme="http://printf123.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+      <category term="二分法" scheme="http://printf123.github.io/tags/%E4%BA%8C%E5%88%86%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之167</title>
+    <link href="http://printf123.github.io/2019/12/01/leetcode-shua-ti-ji-lu-zhi-167/"/>
+    <id>http://printf123.github.io/2019/12/01/leetcode-shua-ti-ji-lu-zhi-167/</id>
+    <published>2019-12-01T01:55:38.000Z</published>
+    <updated>2019-12-01T02:19:49.461Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;167、两数之和-II-输入有序数组&quot;&gt;&lt;a href=&quot;#167、两数之和-II-输入有序数组&quot; class=&quot;headerlink&quot; title=&quot;167、两数之和 II - 输入有序数组&quot;&gt;&lt;/a&gt;167、两数之和 II -
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="哈希表" scheme="http://printf123.github.io/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+      <category term="双指针" scheme="http://printf123.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>以梦为马，不负韶华</title>
+    <link href="http://printf123.github.io/2019/11/28/yi-meng-wei-ma-bu-fu-shao-hua/"/>
+    <id>http://printf123.github.io/2019/11/28/yi-meng-wei-ma-bu-fu-shao-hua/</id>
+    <published>2019-11-28T05:00:38.000Z</published>
+    <updated>2019-11-28T05:36:17.267Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;以梦为马，不负韶华&quot;&gt;&lt;a href=&quot;#以梦为马，不负韶华&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="程序人生" scheme="http://printf123.github.io/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
+    
+    
+      <category term="导航" scheme="http://printf123.github.io/tags/%E5%AF%BC%E8%88%AA/"/>
+    
+      <category term="分享" scheme="http://printf123.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本科教育下的计算机相关专业培养方案</title>
+    <link href="http://printf123.github.io/2019/11/25/ben-ke-jiao-yu-xia-de-ji-suan-ji-xiang-guan-zhuan-ye-pei-yang-fang-an/"/>
+    <id>http://printf123.github.io/2019/11/25/ben-ke-jiao-yu-xia-de-ji-suan-ji-xiang-guan-zhuan-ye-pei-yang-fang-an/</id>
+    <published>2019-11-25T09:00:38.000Z</published>
+    <updated>2019-11-27T03:13:47.380Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="程序人生" scheme="http://printf123.github.io/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
+    
+    
+      <category term="导航" scheme="http://printf123.github.io/tags/%E5%AF%BC%E8%88%AA/"/>
+    
+      <category term="分享" scheme="http://printf123.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构之循环链表与双向链表</title>
+    <link href="http://printf123.github.io/2019/11/23/shu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao/"/>
+    <id>http://printf123.github.io/2019/11/23/shu-ju-jie-gou-zhi-xun-huan-lian-biao-yu-shuang-xiang-lian-biao/</id>
+    <published>2019-11-23T09:29:17.000Z</published>
+    <updated>2019-11-23T10:18:18.490Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0、目录&quot;&gt;&lt;a href=&quot;#0、目录&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据结构与算法分析" scheme="http://printf123.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="循环链表" scheme="http://printf123.github.io/tags/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/"/>
+    
+      <category term="双向链表" scheme="http://printf123.github.io/tags/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法之递归与分治</title>
+    <link href="http://printf123.github.io/2019/11/23/suan-fa-zhi-di-gui-yu-fen-zhi/"/>
+    <id>http://printf123.github.io/2019/11/23/suan-fa-zhi-di-gui-yu-fen-zhi/</id>
+    <published>2019-11-23T05:29:17.000Z</published>
+    <updated>2019-11-23T08:59:47.056Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;0、目录&quot;&gt;&lt;a href=&quot;#0、目录&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据结构与算法分析" scheme="http://printf123.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/"/>
+    
+    
+      <category term="递归与分治" scheme="http://printf123.github.io/tags/%E9%80%92%E5%BD%92%E4%B8%8E%E5%88%86%E6%B2%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java后端开发系列博客之类与对象（基础篇）</title>
+    <link href="http://printf123.github.io/2019/11/19/1-2-java-hou-duan-kai-fa-xi-lie-bo-ke-zhi-lei-yu-dui-xiang-ji-chu-pian/"/>
+    <id>http://printf123.github.io/2019/11/19/1-2-java-hou-duan-kai-fa-xi-lie-bo-ke-zhi-lei-yu-dui-xiang-ji-chu-pian/</id>
+    <published>2019-11-19T11:30:38.000Z</published>
+    <updated>2020-12-30T13:09:39.394Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;类与对象&quot;&gt;&lt;a href=&quot;#类与对象&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Java后端开发" scheme="http://printf123.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
+    
+      <category term="类与对象" scheme="http://printf123.github.io/tags/%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java后端开发系列博客之基础语法（基础篇）</title>
+    <link href="http://printf123.github.io/2019/11/18/1-1-java-hou-duan-kai-fa-xi-lie-bo-ke-zhi-ji-chu-yu-fa-ji-chu-pian/"/>
+    <id>http://printf123.github.io/2019/11/18/1-1-java-hou-duan-kai-fa-xi-lie-bo-ke-zhi-ji-chu-yu-fa-ji-chu-pian/</id>
+    <published>2019-11-18T13:30:38.000Z</published>
+    <updated>2020-03-28T14:01:13.970Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Java的基础语法&quot;&gt;&lt;a href=&quot;#Java的基础语法&quot; class=&quot;headerlink&quot; title=&quot;Java的基础语法&quot;&gt;&lt;/a&gt;Java的基础语法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Java后端开发" scheme="http://printf123.github.io/categories/Java%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
+    
+      <category term="基础语法" scheme="http://printf123.github.io/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题记录之88</title>
+    <link href="http://printf123.github.io/2019/11/11/leetcode-shua-ti-ji-lu-zhi-88/"/>
+    <id>http://printf123.github.io/2019/11/11/leetcode-shua-ti-ji-lu-zhi-88/</id>
+    <published>2019-11-11T10:55:38.000Z</published>
+    <updated>2020-02-03T14:56:14.503Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;88、合并两个有序数组&quot;&gt;&lt;a href=&quot;#88、合并两个有序数组&quot; class=&quot;headerlink&quot; title=&quot;88、合并两个有序数组&quot;&gt;&lt;/a&gt;88、合并两个有序数组&lt;/h3&gt;&lt;p&gt;给定两个有序整数数组 nums1 和 nums2，将 nums2
+        
+      
+    
+    </summary>
+    
+      <category term="算法刷题" scheme="http://printf123.github.io/categories/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/"/>
+    
+    
+      <category term="leetcode简单题" scheme="http://printf123.github.io/tags/leetcode%E7%AE%80%E5%8D%95%E9%A2%98/"/>
+    
+      <category term="数组" scheme="http://printf123.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决eclipse导入工程后出现的乱码问题</title>
+    <link href="http://printf123.github.io/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/"/>
+    <id>http://printf123.github.io/2019/11/11/jie-jue-eclipse-dao-ru-gong-cheng-hou-chu-xian-de-luan-ma-wen-ti/</id>
+    <published>2019-11-11T02:29:17.000Z</published>
+    <updated>2019-11-11T03:28:55.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;emsp;&amp;emsp;eclipse之所以会出现乱码问题是因为eclipse编辑器选择的编码规则是可变的。一般默认都是UTF-8或者GBK，当从外部导入的一个工程时，如果该工程的编码方式与eclipse中设置的编码方式不同，就会产生中文的乱码问题，这其中还有几种情况。&lt;b
+        
+      
+    
+    </summary>
+    
+      <category term="程序人生" scheme="http://printf123.github.io/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/"/>
+    
+    
+      <category term="Java" scheme="http://printf123.github.io/tags/Java/"/>
+    
+      <category term="eclipse" scheme="http://printf123.github.io/tags/eclipse/"/>
+    
+  </entry>
+  
+</feed>
